@@ -40,6 +40,22 @@
 
 
     <dependencies>
+    
+    
+        <dependency>
+      <groupId>org.camunda.bpm</groupId>
+      <artifactId>camunda-engine</artifactId>
+      <scope>provided</scope>
+    </dependency>
+ 
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+    
+    
         <!-- Camunda Spring Boot -->
         <dependency>
             <groupId>org.camunda.bpm.springboot</groupId>
@@ -109,6 +125,7 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
             <plugin>
