@@ -1,4 +1,4 @@
-# DigiBP Camunda Template
+# DigiBP Säntis Incident Management
 
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
