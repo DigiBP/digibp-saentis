@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
+  <bpmn:process id="Microflow" name="Test Process Name" isExecutable="true" camunda:versionTag="v.0.1">
+    <bpmn:startEvent id="StartEvent_1" name="Start Event">
+      <bpmn:outgoing>SequenceFlow_1fs2r0c</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1fs2r0c" sourceRef="StartEvent_1" targetRef="Task_11pgyh7" />
+    <bpmn:userTask id="Task_11pgyh7" name="User Task" camunda:assignee="demo">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="AffectedApplication" label="Affected Application" type="string">
+            <camunda:properties>
+              <camunda:property id="Property_2ahim38" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="TweetStatus" label="TweetStatus?" type="boolean" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1fs2r0c</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_09xhco1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_0a63vr7" name="End Event">
+      <bpmn:incoming>SequenceFlow_0dlwu3c</bpmn:incoming>
+      <bpmn:incoming>no</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_09xhco1" sourceRef="Task_11pgyh7" targetRef="TestTask" />
+    <bpmn:sequenceFlow id="SequenceFlow_0dlwu3c" sourceRef="SendTweet" targetRef="EndEvent_0a63vr7" />
+    <bpmn:exclusiveGateway id="AffectedApplicationCheck">
+      <bpmn:incoming>SequenceFlow_067deqo</bpmn:incoming>
+      <bpmn:outgoing>yes</bpmn:outgoing>
+      <bpmn:outgoing>no</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="SendTweet" name="Send Tweet">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url"><![CDATA[https://hooks.zapier.com/hooks/catch/3017214/kyf0iq/
+]]></camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="payload">
+              <camunda:script scriptFormat="JavaScript"><![CDATA[var data = execution.getVariable("AffectedApplication");
+var out = {"data":data};
+JSON.stringify(out);]]></camunda:script>
+            </camunda:inputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+        <camunda:properties>
+          <camunda:property name="KPI-Ratio" value="Tweet Approved" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>yes</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0dlwu3c</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_067deqo" sourceRef="TestTask" targetRef="AffectedApplicationCheck" />
+    <bpmn:userTask id="TestTask" name="Test Task" camunda:assignee="demo">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Priority" type="enum">
+            <camunda:value id="prio1" name="Priority 1" />
+            <camunda:value id="prio2" name="Priority 2" />
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_09xhco1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_067deqo</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="yes" name="yes" sourceRef="AffectedApplicationCheck" targetRef="SendTweet">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{TweetStatus}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="no" name="no" sourceRef="AffectedApplicationCheck" targetRef="EndEvent_0a63vr7">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{!TweetStatus}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Microflow">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="122" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="115" y="138" width="55" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1fs2r0c_di" bpmnElement="SequenceFlow_1fs2r0c">
+        <di:waypoint xsi:type="dc:Point" x="158" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="194" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="131" y="99" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1fgzjd1_di" bpmnElement="Task_11pgyh7">
+        <dc:Bounds x="194" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0a63vr7_di" bpmnElement="EndEvent_0a63vr7">
+        <dc:Bounds x="764" y="214" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="757" y="254" width="51" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_09xhco1_di" bpmnElement="SequenceFlow_09xhco1">
+        <di:waypoint xsi:type="dc:Point" x="294" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="325" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="264.5" y="99" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0dlwu3c_di" bpmnElement="SequenceFlow_0dlwu3c">
+        <di:waypoint xsi:type="dc:Point" x="693" y="121" />
+        <di:waypoint xsi:type="dc:Point" x="782" y="122" />
+        <di:waypoint xsi:type="dc:Point" x="782" y="214" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="737.5" y="100.5" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1dgo3vm_di" bpmnElement="AffectedApplicationCheck" isMarkerVisible="true">
+        <dc:Bounds x="458" y="95" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="483" y="149" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_17s13n5_di" bpmnElement="SendTweet">
+        <dc:Bounds x="593" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_067deqo_di" bpmnElement="SequenceFlow_067deqo">
+        <di:waypoint xsi:type="dc:Point" x="425" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="458" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="441.5" y="99" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_0qf7z8m_di" bpmnElement="TestTask">
+        <dc:Bounds x="325" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_19pv3fl_di" bpmnElement="yes">
+        <di:waypoint xsi:type="dc:Point" x="508" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="593" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="541" y="99" width="19" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0mtjnen_di" bpmnElement="no">
+        <di:waypoint xsi:type="dc:Point" x="483" y="145" />
+        <di:waypoint xsi:type="dc:Point" x="483" y="232" />
+        <di:waypoint xsi:type="dc:Point" x="764" y="232" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="492" y="183" width="12" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

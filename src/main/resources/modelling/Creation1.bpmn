@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
-  <bpmn:process id="Creation" isExecutable="true">
+  <bpmn:process id="CreationProcess" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1" name="Incident">
       <bpmn:outgoing>SequenceFlow_1ucblq1</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="SequenceFlow_1ucblq1" sourceRef="StartEvent_1" targetRef="Task_0esq8b7" />
     <bpmn:sequenceFlow id="SequenceFlow_0dcx5n8" sourceRef="Task_0esq8b7" targetRef="Task_1qe1a0a" />
-    <bpmn:scriptTask id="Task_1qe1a0a" name="Incident Logging">
-      <bpmn:incoming>SequenceFlow_0dcx5n8</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_0umyzo2</bpmn:outgoing>
-    </bpmn:scriptTask>
     <bpmn:sequenceFlow id="SequenceFlow_0umyzo2" sourceRef="Task_1qe1a0a" targetRef="Task_0x8aupd" />
-    <bpmn:sendTask id="Task_0x8aupd" name="Send notification">
+    <bpmn:sendTask id="Task_0x8aupd" name="Send notification" camunda:class="ch.fhnw.digibp.MySendTaskCreated">
       <bpmn:incoming>SequenceFlow_0umyzo2</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1kdsqhb</bpmn:outgoing>
     </bpmn:sendTask>
@@ -23,6 +19,10 @@
       <bpmn:incoming>SequenceFlow_1ucblq1</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0dcx5n8</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:serviceTask id="Task_1qe1a0a" name="Incident Logging" camunda:class="ch.fhnw.digibp.MyServiceTaskLogging">
+      <bpmn:incoming>SequenceFlow_0dcx5n8</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0umyzo2</bpmn:outgoing>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Creation">
@@ -46,14 +46,11 @@
           <dc:Bounds x="488.5" y="99" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="ScriptTask_0y08s8g_di" bpmnElement="Task_1qe1a0a">
-        <dc:Bounds x="663" y="80" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0umyzo2_di" bpmnElement="SequenceFlow_0umyzo2">
         <di:waypoint xsi:type="dc:Point" x="763" y="120" />
         <di:waypoint xsi:type="dc:Point" x="929" y="120" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="846" y="99" width="0" height="12" />
+          <dc:Bounds x="801" y="99" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="SendTask_0saksyz_di" bpmnElement="Task_0x8aupd">
@@ -74,6 +71,9 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="UserTask_0fmd83d_di" bpmnElement="Task_0esq8b7">
         <dc:Bounds x="304" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0bo4g31_di" bpmnElement="Task_1qe1a0a">
+        <dc:Bounds x="663" y="80" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

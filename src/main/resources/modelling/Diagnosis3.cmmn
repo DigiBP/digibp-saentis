@@ -69,7 +69,7 @@
     </cmmn:casePlanModel>
   </cmmn:case>
   <cmmndi:CMMNDI>
-    <cmmndi:CMMNDiagram id="_5a66685b-5f57-4e2f-b1d1-acca4fae04b2">
+    <cmmndi:CMMNDiagram id="Diagnosis">
       <cmmndi:Size xsi:type="dc:Dimension" width="500" height="500" />
       <cmmndi:CMMNShape id="DI_CasePlanModel_1" cmmnElementRef="CasePlanModel_1">
         <dc:Bounds x="114" y="63" width="950" height="696" />
