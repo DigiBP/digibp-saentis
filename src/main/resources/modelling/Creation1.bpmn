@@ -23,12 +23,16 @@
     <bpmn:serviceTask id="IncidentLogging" name="Incident Logging" camunda:class="ch.fhnw.digibp.MyServiceTaskLogging">
       <bpmn:incoming>SequenceFlow_0dcx5n8</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0umyzo2</bpmn:outgoing>
+      <bpmn:dataOutputAssociation id="DataOutputAssociation_14jdzlm">
+        <bpmn:targetRef>IncidentDataStore</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="SequenceFlow_0nooqk4" sourceRef="EMailIncident" targetRef="Task_0esq8b7" />
     <bpmn:startEvent id="EMailIncident" name="EMailIncident">
       <bpmn:outgoing>SequenceFlow_0nooqk4</bpmn:outgoing>
       <bpmn:messageEventDefinition messageRef="Message_1v12bib" />
     </bpmn:startEvent>
+    <bpmn:dataStoreReference id="IncidentDataStore" name="IncidentDataStore" />
   </bpmn:process>
   <bpmn:message id="Message_1v12bib" name="Message_06oeion" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
@@ -97,6 +101,16 @@
           <dc:Bounds x="159" y="253" width="65" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DataStoreReference_10h9a3w_di" bpmnElement="IncidentDataStore">
+        <dc:Bounds x="676" y="245" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="658" y="299" width="87" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_14jdzlm_di" bpmnElement="DataOutputAssociation_14jdzlm">
+        <di:waypoint xsi:type="dc:Point" x="709" y="160" />
+        <di:waypoint xsi:type="dc:Point" x="701" y="245" />
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
