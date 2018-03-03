@@ -20,11 +20,11 @@
       <bpmn:outgoing>SequenceFlow_09xhco1</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:endEvent id="EndEvent_0a63vr7" name="End Event">
-      <bpmn:incoming>SequenceFlow_0dlwu3c</bpmn:incoming>
       <bpmn:incoming>no</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_14ncex6</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_09xhco1" sourceRef="Task_11pgyh7" targetRef="TestTask" />
-    <bpmn:sequenceFlow id="SequenceFlow_0dlwu3c" sourceRef="SendTweet" targetRef="EndEvent_0a63vr7" />
+    <bpmn:sequenceFlow id="SequenceFlow_0dlwu3c" sourceRef="SendTweet" targetRef="ConfirmTweet" />
     <bpmn:exclusiveGateway id="AffectedApplicationCheck">
       <bpmn:incoming>SequenceFlow_067deqo</bpmn:incoming>
       <bpmn:outgoing>yes</bpmn:outgoing>
@@ -95,6 +95,16 @@ JSON.stringify(out);]]></camunda:script>
     <bpmn:sequenceFlow id="SequenceFlow_0tmqbym" name="small than 20" sourceRef="CheckAmount" targetRef="EndEvent_0jctym5">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${amount<20}]]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_14ncex6" sourceRef="ConfirmTweet" targetRef="EndEvent_0a63vr7" />
+    <bpmn:userTask id="ConfirmTweet" camunda:assignee="demo">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="ConfirmTweet" label="This has been tweetet" type="boolean" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0dlwu3c</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_14ncex6</bpmn:outgoing>
+    </bpmn:userTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Microflow">
@@ -130,9 +140,9 @@ JSON.stringify(out);]]></camunda:script>
       <bpmndi:BPMNEdge id="SequenceFlow_0dlwu3c_di" bpmnElement="SequenceFlow_0dlwu3c">
         <di:waypoint xsi:type="dc:Point" x="693" y="121" />
         <di:waypoint xsi:type="dc:Point" x="782" y="122" />
-        <di:waypoint xsi:type="dc:Point" x="782" y="214" />
+        <di:waypoint xsi:type="dc:Point" x="782" y="124" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="737.5" y="100.5" width="0" height="12" />
+          <dc:Bounds x="692.5" y="100.5" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="ExclusiveGateway_1dgo3vm_di" bpmnElement="AffectedApplicationCheck" isMarkerVisible="true">
@@ -206,6 +216,16 @@ JSON.stringify(out);]]></camunda:script>
           <dc:Bounds x="121" y="183" width="64" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_14ncex6_di" bpmnElement="SequenceFlow_14ncex6">
+        <di:waypoint xsi:type="dc:Point" x="782" y="204" />
+        <di:waypoint xsi:type="dc:Point" x="782" y="214" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="797" y="203" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1dtu1g9_di" bpmnElement="ConfirmTweet">
+        <dc:Bounds x="732" y="124" width="100" height="80" />
+      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
