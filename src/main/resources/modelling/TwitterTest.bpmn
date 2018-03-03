@@ -96,7 +96,7 @@ JSON.stringify(out);]]></camunda:script>
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${amount<20}]]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_14ncex6" sourceRef="ConfirmTweet" targetRef="EndEvent_0a63vr7" />
-    <bpmn:userTask id="ConfirmTweet" camunda:assignee="demo">
+    <bpmn:userTask id="ConfirmTweet" name="Test" camunda:assignee="demo">
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="ConfirmTweet" label="This has been tweetet" type="boolean" />
