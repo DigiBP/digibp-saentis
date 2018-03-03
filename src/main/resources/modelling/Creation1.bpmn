@@ -24,11 +24,13 @@
       <bpmn:incoming>SequenceFlow_0dcx5n8</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0umyzo2</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0nooqk4" sourceRef="EMailIncident" targetRef="Task_0esq8b7" />
     <bpmn:startEvent id="EMailIncident" name="EMailIncident">
       <bpmn:outgoing>SequenceFlow_0nooqk4</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_1v12bib" />
     </bpmn:startEvent>
-    <bpmn:sequenceFlow id="SequenceFlow_0nooqk4" sourceRef="EMailIncident" targetRef="Task_0esq8b7" />
   </bpmn:process>
+  <bpmn:message id="Message_1v12bib" name="Message_06oeion" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="CreationProcess">
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
@@ -80,12 +82,6 @@
       <bpmndi:BPMNShape id="ServiceTask_0bo4g31_di" bpmnElement="IncidentLogging">
         <dc:Bounds x="663" y="80" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="StartEvent_0hmsty6_di" bpmnElement="EMailIncident">
-        <dc:Bounds x="173" y="213" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="159" y="253" width="65" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0nooqk4_di" bpmnElement="SequenceFlow_0nooqk4">
         <di:waypoint xsi:type="dc:Point" x="209" y="231" />
         <di:waypoint xsi:type="dc:Point" x="257" y="231" />
@@ -95,6 +91,12 @@
           <dc:Bounds x="272" y="169.5" width="0" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="StartEvent_1rc23d2_di" bpmnElement="EMailIncident">
+        <dc:Bounds x="173" y="213" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="159" y="253" width="65" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
