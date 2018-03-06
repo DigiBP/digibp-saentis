@@ -1,0 +1,100 @@
+/* myStyle.css */
+         body > * 
+         {
+            padding: 0 1em;
+         }
+         ul.menu-list
+         {
+            list-style-type: none;
+            padding: 0;
+            margin: 1em 0em;
+            text-align: center;
+         }
+
+		.mytext {
+	    width: 400px;
+		}
+
+		table {
+			border: 0px solid black;
+		}
+		
+		.tabledata {
+			font-family: "Bebas Neue",Calibri,Arial,Helvetica,sans-serif;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline;
+            position: relative;
+		}
+		
+		h1 {
+			margin-top: 10px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			margin-left: 10px;
+			font-family: "Bebas Neue",Calibri,Arial,Helvetica,sans-serif;
+			text-align: left;
+		}
+		
+         li.pure-menu-selected
+         {
+            display: inline;
+            margin: 0em 1.5em;
+         }
+
+         a.menu-item-link
+         {
+            font-family: "Bebas Neue",Calibri,Arial,Helvetica,sans-serif;
+            font-size: 1.3em;
+            text-decoration: none;
+            color: #c31f05 !important;
+            display: inline;
+            position: relative;
+         }
+
+         a.menu-item-link:hover
+         {
+            color: #000000 !important;
+         }
+
+         a.menu-item-link:active
+         {
+            top: 0.1em;
+            left: 0.1em;
+         }
+         .shadow
+         {
+            -webkit-box-shadow: 0.4em 0.4em 0.2em #5C5B5B;
+            box-shadow: 0.4em 0.4em 0.2em #5C5B5B;
+         }
+         
+         .small-box
+         {
+            background-color: #cdcdcd;
+            padding: 1em 0.3em;
+           
+         }
+
+         #twitter-box
+         {
+            background-color: #1a98e7;
+            
+         }
+         
+         *
+         {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+         
+         .pure-form label {
+            color: #000000;
+         }
+         .pure-table thead {
+            white-space: normal; 
+         }
+         .pure-form.pure-form-stacked textarea {
+            display: block;
+            margin: 1em;
+         }

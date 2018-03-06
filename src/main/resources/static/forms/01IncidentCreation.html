@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <title>Open new ticket</title>
+      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">    
+      <link rel = "stylesheet"
+            type = "text/css"
+            href = "myStyle.css" />
+	</head>   
+    <body>
+		<form class="pure-form pure-form-aligned">
+		<h1>Open new ticket</h1>
+		    <fieldset>
+		    	<div class="pure-control-group">
+		        	<label for="impact">Impact</label>
+		        	<select cam-variable-name="impact" cam-variable-type="String" name="impact">
+		            	<option>1 - High</option>
+						<option>2 - Medium</option>
+		            	<option>3 - Low</option> 
+		        	</select>
+		        	
+		    	</div>
+		    	<div class="pure-control-group">
+		        	<label for="urgency">Urgency</label>
+		        	<select cam-variable-name="urgency" cam-variable-type="String" name="urgency">
+		            	<option>1 - High</option>
+						<option>2 - Medium</option>
+		            	<option>3 - Low</option>  
+		        	</select>
+		    	</div>
+				<div class="pure-control-group">
+		        	<label for="priority">Priority</label>
+		        	<select cam-variable-name="priority" cam-variable-type="String" name="priority">
+		            	<option>1 - High</option>
+						<option>2 - Medium</option>
+		            	<option>3 - Low</option>  
+		        	</select>
+		    	</div>
+				<div class="pure-control-group">
+		        	<label for="AffectedApplication">Affected Application</label>
+		        	<select cam-variable-name="AffectedApplication" cam-variable-type="String" name="AffectedApplication">
+		            	<option>none</option>
+						<option>Excel</option>
+		            	<option>Word</option>  
+		            	<option>Lotus Notes</option>  						
+		        	</select>
+		    	</div>
+		    	<div class="pure-control-group">
+		        	<label for="shortDescription">Short Description of Issue</label>
+		        	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="shortDescription" name="shortDescription" placeholder="Please describe your issue here"></textarea>
+		    	</div>
+		    </fieldset>
+		</form>
+	</body>
+</html>
+
