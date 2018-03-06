@@ -9,10 +9,10 @@
       <bpmn:outgoing>SequenceFlow_1ucblq1</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sendTask id="Task_0x8aupd" name="Send confirmation" camunda:class="ch.fhnw.digibp.MySendTaskCreated">
-        <bpmn:extensionElements>
+      <bpmn:extensionElements>
         <camunda:connector>
           <camunda:inputOutput>
-            <camunda:inputParameter name="url"><![CDATA[https://hooks.zapier.com/hooks/catch/3025599/k32qw2/]]></camunda:inputParameter>
+            <camunda:inputParameter name="url">https://hooks.zapier.com/hooks/catch/3025599/k32qw2/</camunda:inputParameter>
             <camunda:inputParameter name="method">POST</camunda:inputParameter>
             <camunda:inputParameter name="headers">
               <camunda:map>
@@ -30,7 +30,7 @@ JSON.stringify(out);]]></camunda:script>
         <camunda:properties>
           <camunda:property name="KPI-Ratio" value="E-Mail sent" />
         </camunda:properties>
-      </bpmn:extensionElements>   
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_0umyzo2</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1kdsqhb</bpmn:outgoing>
     </bpmn:sendTask>
@@ -38,7 +38,7 @@ JSON.stringify(out);]]></camunda:script>
       <bpmn:incoming>SequenceFlow_1kdsqhb</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:userTask id="Task_0esq8b7" name="Create Ticket in Webform">
-     <bpmn:extensionElements>
+      <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="AffectedApplication" label="Affected Application" type="string" />
           <camunda:formField id="customerId" label="Customer ID" type="string" />
@@ -57,7 +57,6 @@ JSON.stringify(out);]]></camunda:script>
       </bpmn:dataOutputAssociation>
     </bpmn:serviceTask>
     <bpmn:startEvent id="EMailIncident" name="EMailIncident">
- 
       <bpmn:outgoing>SequenceFlow_0nooqk4</bpmn:outgoing>
       <bpmn:messageEventDefinition messageRef="Message_1v12bib" />
     </bpmn:startEvent>

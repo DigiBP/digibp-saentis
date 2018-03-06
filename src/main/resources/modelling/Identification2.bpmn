@@ -2,22 +2,18 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
   <bpmn:process id="Identification" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
-      <bpmn:outgoing>SequenceFlow_0t9950f</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1etbd41</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:exclusiveGateway id="ExclusiveGateway_1sxijcd" name="Is this really an incident?">
       <bpmn:incoming>SequenceFlow_0t9950f</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1yuux8x</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_1x00iuf</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="SequenceFlow_0t9950f" sourceRef="StartEvent_1" targetRef="ExclusiveGateway_1sxijcd" />
+    <bpmn:sequenceFlow id="SequenceFlow_0t9950f" sourceRef="FirstSight" targetRef="ExclusiveGateway_1sxijcd" />
     <bpmn:sequenceFlow id="SequenceFlow_1yuux8x" name="yes" sourceRef="ExclusiveGateway_1sxijcd" targetRef="TaskCategorisation" />
     <bpmn:sequenceFlow id="SequenceFlow_1x00iuf" name="no" sourceRef="ExclusiveGateway_1sxijcd" targetRef="TaskSendEmail">
-              <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{!RealIncident}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{!RealIncident}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sendTask id="TaskSendEmail" name="Send e-Mail to customer" camunda:class="ch.fhnw.digibp.MySendTaskEmailToCustomer">
-      <bpmn:incoming>SequenceFlow_1x00iuf</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_1mr4uk6</bpmn:outgoing>
-    </bpmn:sendTask>
     <bpmn:sequenceFlow id="SequenceFlow_1mr4uk6" sourceRef="TaskSendEmail" targetRef="TaskCloseIncident" />
     <bpmn:endEvent id="EndEvent_1l6wg2f">
       <bpmn:incoming>SequenceFlow_10ziamp</bpmn:incoming>
@@ -27,9 +23,8 @@
       <bpmn:incoming>SequenceFlow_14yr20b</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0i3hv5o</bpmn:outgoing>
     </bpmn:task>
-    
     <bpmn:sequenceFlow id="SequenceFlow_14yr20b" sourceRef="TaskCategorisation" targetRef="TaskPriorisation">
-          <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{RealIncident}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{RealIncident}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:exclusiveGateway id="ExclusiveGateway_0i1mbe7" name="Is critical incident?">
       <bpmn:incoming>SequenceFlow_0i3hv5o</bpmn:incoming>
@@ -42,7 +37,7 @@
       <bpmn:outgoing>SequenceFlow_0vcef8d</bpmn:outgoing>
     </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_12r9d0f" name="yes" sourceRef="ExclusiveGateway_0i1mbe7" targetRef="TaskEscalation">
-                      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{IsCritical}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{IsCritical}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:task id="TaskAddticket" name="Add to ticket pool">
       <bpmn:incoming>SequenceFlow_0wjx52r</bpmn:incoming>
@@ -50,7 +45,7 @@
       <bpmn:outgoing>SequenceFlow_0gghv4h</bpmn:outgoing>
     </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_0wjx52r" name="no" sourceRef="ExclusiveGateway_0i1mbe7" targetRef="TaskAddticket">
-                  <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{!IsCritical}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{!IsCritical}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_0gghv4h" sourceRef="TaskAddticket" targetRef="TaskNotify2ndLevel" />
     <bpmn:sequenceFlow id="SequenceFlow_0vcef8d" sourceRef="TaskEscalation" targetRef="TaskAddticket" />
@@ -63,20 +58,40 @@
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_16cc2wu" sourceRef="TaskNotify2ndLevel" targetRef="EndEvent_1n27h4c" />
     <bpmn:userTask id="TaskCategorisation" name="Categorisation">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="IsCritical" label="Critical Incident" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_1yuux8x</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_14yr20b</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:serviceTask id="TaskCloseIncident" name="Close Incident" camunda:class="ch.fhnw.digibp.MyServiceTaskLogging">
+    <bpmn:userTask id="TaskSendEmail" name="Send e-Mail to customer">
+      <bpmn:incoming>SequenceFlow_1x00iuf</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1mr4uk6</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="TaskCloseIncident" name="Close Incident">
       <bpmn:incoming>SequenceFlow_1mr4uk6</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_10ziamp</bpmn:outgoing>
-    </bpmn:serviceTask>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1etbd41" sourceRef="StartEvent_1" targetRef="FirstSight" />
+    <bpmn:userTask id="FirstSight" name="First Sight">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="AffectedApplication" label="Affected Application" type="string" />
+          <camunda:formField id="RealIncident" label="Real Incident" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1etbd41</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0t9950f</bpmn:outgoing>
+    </bpmn:userTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Identification">
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
-        <dc:Bounds x="168" y="272" width="36" height="36" />
+        <dc:Bounds x="126" y="272" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="141" y="308" width="90" height="20" />
+          <dc:Bounds x="99" y="308" width="90" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ExclusiveGateway_1sxijcd_di" bpmnElement="ExclusiveGateway_1sxijcd" isMarkerVisible="true">
@@ -86,10 +101,12 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0t9950f_di" bpmnElement="SequenceFlow_0t9950f">
-        <di:waypoint xsi:type="dc:Point" x="204" y="290" />
+        <di:waypoint xsi:type="dc:Point" x="294" y="290" />
+        <di:waypoint xsi:type="dc:Point" x="347" y="290" />
+        <di:waypoint xsi:type="dc:Point" x="347" y="290" />
         <di:waypoint xsi:type="dc:Point" x="387" y="290" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="295.5" y="269" width="0" height="12" />
+          <dc:Bounds x="317" y="284" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1yuux8x_di" bpmnElement="SequenceFlow_1yuux8x">
@@ -108,9 +125,6 @@
           <dc:Bounds x="421" y="373" width="12" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="SendTask_08zo4kc_di" bpmnElement="TaskSendEmail">
-        <dc:Bounds x="573" y="403" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1mr4uk6_di" bpmnElement="SequenceFlow_1mr4uk6">
         <di:waypoint xsi:type="dc:Point" x="673" y="443" />
         <di:waypoint xsi:type="dc:Point" x="828" y="443" />
@@ -210,8 +224,21 @@
       <bpmndi:BPMNShape id="UserTask_0mdg3w2_di" bpmnElement="TaskCategorisation">
         <dc:Bounds x="573" y="172" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="ServiceTask_18oysb3_di" bpmnElement="TaskCloseIncident">
+      <bpmndi:BPMNShape id="UserTask_0mxr5o4_di" bpmnElement="TaskSendEmail">
+        <dc:Bounds x="573" y="403" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0ca3oo4_di" bpmnElement="TaskCloseIncident">
         <dc:Bounds x="828" y="403" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1etbd41_di" bpmnElement="SequenceFlow_1etbd41">
+        <di:waypoint xsi:type="dc:Point" x="162" y="290" />
+        <di:waypoint xsi:type="dc:Point" x="194" y="290" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="178" y="269" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_01yku9f_di" bpmnElement="FirstSight">
+        <dc:Bounds x="194" y="250" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
