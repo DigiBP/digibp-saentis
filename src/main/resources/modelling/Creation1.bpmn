@@ -38,19 +38,12 @@ JSON.stringify(out);]]></camunda:script>
       <bpmn:incoming>SequenceFlow_1kdsqhb</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:userTask id="Task_0esq8b7" name="Create Ticket in Webform" camunda:formKey="embedded:app:forms/01IncidentCreation.html">
-      <!--<bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="AffectedApplication" label="Affected Application" type="string" />
-          <camunda:formField id="customerId" label="Customer ID" type="string" />
-          <camunda:formField id="emailAddress" label="E-Mail Address" type="string" />
-        </camunda:formData>
-      </bpmn:extensionElements>!-->
       <bpmn:incoming>SequenceFlow_1ucblq1</bpmn:incoming>
       <bpmn:incoming>SequenceFlow_0nooqk4</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0dcx5n8</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:serviceTask id="IncidentLogging" name="Incident Logging" camunda:class="ch.fhnw.digibp.MyServiceTaskLogging">
-      <bpmn:incoming>SequenceFlow_0dcx5n8</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_05mbb2l</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0umyzo2</bpmn:outgoing>
       <bpmn:dataOutputAssociation id="DataOutputAssociation_14jdzlm">
         <bpmn:targetRef>IncidentDataStore</bpmn:targetRef>
@@ -65,7 +58,12 @@ JSON.stringify(out);]]></camunda:script>
     <bpmn:sequenceFlow id="SequenceFlow_0umyzo2" sourceRef="IncidentLogging" targetRef="Task_0x8aupd" />
     <bpmn:sequenceFlow id="SequenceFlow_1kdsqhb" sourceRef="Task_0x8aupd" targetRef="EndEvent_01c45o1" />
     <bpmn:sequenceFlow id="SequenceFlow_0nooqk4" sourceRef="EMailIncident" targetRef="Task_0esq8b7" />
-    <bpmn:sequenceFlow id="SequenceFlow_0dcx5n8" sourceRef="Task_0esq8b7" targetRef="IncidentLogging" />
+    <bpmn:sequenceFlow id="SequenceFlow_0dcx5n8" sourceRef="Task_0esq8b7" targetRef="Task_1131vvg" />
+    <bpmn:sequenceFlow id="SequenceFlow_05mbb2l" sourceRef="Task_1131vvg" targetRef="IncidentLogging" />
+    <bpmn:userTask id="Task_1131vvg" name="Do Something">
+      <bpmn:incoming>SequenceFlow_0dcx5n8</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_05mbb2l</bpmn:outgoing>
+    </bpmn:userTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_00eofab">
@@ -137,15 +135,27 @@ JSON.stringify(out);]]></camunda:script>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_0dcx5n8_di" bpmnElement="SequenceFlow_0dcx5n8">
         <di:waypoint xsi:type="dc:Point" x="404" y="120" />
-        <di:waypoint xsi:type="dc:Point" x="663" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="474" y="120" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="489" y="99" width="90" height="12" />
+          <dc:Bounds x="394" y="99" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataOutputAssociation_14jdzlm_di" bpmnElement="DataOutputAssociation_14jdzlm">
         <di:waypoint xsi:type="dc:Point" x="713" y="160" />
         <di:waypoint xsi:type="dc:Point" x="713" y="260" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_05mbb2l_di" bpmnElement="SequenceFlow_05mbb2l">
+        <di:waypoint xsi:type="dc:Point" x="574" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="620" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="620" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="663" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="635" y="114" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1uh8ffs_di" bpmnElement="Task_1131vvg">
+        <dc:Bounds x="474" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

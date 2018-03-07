@@ -20,6 +20,8 @@ public class ProcessApplicationServlet extends SpringBootServletInitializer {
 			//	  .createProcessEngineConfigurationFromResourceDefault()
 				//  .setHistory(ProcessEngineConfiguration.HISTORY_FULL)
 				  //.buildProcessEngine();
+		
+		
 	}
 
 	@Override
