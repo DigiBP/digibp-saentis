@@ -13,19 +13,23 @@
     <bpmn:startEvent id="StartEvent_1" name="CamundaIncidentStart">
       <bpmn:outgoing>SequenceFlow_1ucblq1</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:userTask id="TaskCreateTicketinCamunda" name="Create Ticket in Camunda" camunda:formKey="embedded:app:forms/01Incident.html">
+    <bpmn:userTask id="TaskCreateTicketinCamunda" name="Create Ticket in Camunda" camunda:formKey="embedded:app:forms/01IncidentCreation.html">
       <bpmn:incoming>SequenceFlow_1qh8gtq</bpmn:incoming>
     </bpmn:userTask>
-    <bpmn:exclusiveGateway id="CheckIfPrefilled" name="CheckIfPrefilled">
+    <bpmn:exclusiveGateway id="CheckIfPrefilled" name="CheckIfPrefilled" default="SequenceFlow_1qh8gtq">
       <bpmn:incoming>SequenceFlow_1ucblq1</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1qh8gtq</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_034r351</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="SequenceFlow_1qh8gtq" sourceRef="CheckIfPrefilled" targetRef="TaskCreateTicketinCamunda" />
+    <bpmn:sequenceFlow id="SequenceFlow_1qh8gtq" sourceRef="CheckIfPrefilled" targetRef="TaskCreateTicketinCamunda">
+    	<!--<bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ticketOrigin == "INTERNAL" || ticketOrigin == ""}</bpmn:conditionExpression> -->
+    </bpmn:sequenceFlow>    
     <bpmn:task id="TaskValidation" name="Validation">
       <bpmn:incoming>SequenceFlow_034r351</bpmn:incoming>
     </bpmn:task>
-    <bpmn:sequenceFlow id="SequenceFlow_034r351" sourceRef="CheckIfPrefilled" targetRef="TaskValidation" />
+    <bpmn:sequenceFlow id="SequenceFlow_034r351" sourceRef="CheckIfPrefilled" targetRef="TaskValidation">
+    	<bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ticketOrigin == "WEBFORM" || ticketOrigin == "EMAIL"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
   </bpmn:process>
   <bpmn:process id="Process_0lvlgnd" isExecutable="false">
     <bpmn:serviceTask id="IncidentLogging" name="Incident Logging" camunda:class="ch.fhnw.digibp.MyServiceTaskLogging">
