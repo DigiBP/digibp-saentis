@@ -55,11 +55,11 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Specify Validation Task (Creation1.bpmn) (Moritz)
 - [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
 - [ ] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
-  - [ ] Hosting auf Heroku (PHP) -> App freigeben für Team
-  - [ ] GitHub Repo erstellen (Joël) 
+  - [x] Hosting auf Heroku (PHP) -> App freigeben für Team
+  - [x] GitHub Repo erstellen (Joël) 
 - [ ] Use of a DMN Decision Model (Assign to specific application depending on content keywords) (Joël) Analog Beispiel AutoCreateTweet (ServiceTasks)
 - [ ] Identification Task (Tweet, Priorisitation) (Joël)
-- [ ] Create Zapier Student Account (Joël)
+- [x] Create Zapier Student Account (Joël) -> not needed, 100 request per month are for free
 - [ ] Diagnosis mit CMMN erstellen (Moritz)
 - [ ] What are properties used for?
 - [ ] Ticket assignment (Routing? How to do it? Skill based routing)
