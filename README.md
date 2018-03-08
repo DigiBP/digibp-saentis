@@ -42,9 +42,9 @@ The following tools and software has been used for implementing the incident man
 ## Instructions for Testing
 Following steps provide instructions on how to test the Incident Management process as described in the Process chapter.
 - Open the [Säntis Heroku App](https://saentisincident.herokuapp.com/) (this might take a while zZZzzZZZ)
-- Login using the following user (Username: demo, Password: demo)
-- Start a new process by clicking on 'Home' > 'Tasklist' and choose 'Start process'
-- Choose the 'Overall process' to start the entire incident management workflow
+- Login using the following user (Username: `demo`, Password: `demo`)
+- Start a new process by clicking on `Home` > `Tasklist` and choose `Start process`
+- Choose the `Overall process` to start the entire incident management workflow
 
 ## License
 
