@@ -1,7 +1,7 @@
 # DigiBP Säntis Incident Management [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalisation of the Business Processes (SS18) Module at the FHNW.
 
-Authors
+*Authors*
 * Jaime Ramirez, [jaime.ramirez@students.fhnw.ch](mailto:jaime.ramirez@students.fhnw.ch)
 * Moritz Armingeon, [moritz.armingeon@students.fhnw.ch](mailto:moritz.armingeon@students.fhnw.ch)
 * Joël Schmid, [joel.schmid@students.fhnw.ch](mailto:joel.schmid@students.fhnw.ch)
@@ -51,14 +51,14 @@ Following steps provide instructions on how to test the Incident Management proc
 - [Apache License, Version 2.0](https://github.com/DigiBP/digibp-archetype-camunda-boot/blob/master/LICENSE)
 
 ## ToDo
-- [ ] Use of Versioning / Releases? 
 - [ ] Finalizing the process
+- [ ] Use of a DMN Decision Model
+- [ ] Use of Versioning / Releases? 
 - [ ] External page to create tickets
 - [ ] Status page for open tickets (Security?)
 - [ ] Ticket assignment / Skill based routing
 - [ ] Trial account zapier - how to deal with that
 - [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com)
-- [ ] Use of a DMN Decision Model
 - [ ] Deploy on Heroku Button for quick installation
 - [ ] Documentation (Installation, Guidelines, ...)
 - [x] Test Post Twitter Status
