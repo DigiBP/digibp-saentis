@@ -1,5 +1,5 @@
 # DigiBP Säntis Incident Management
-This repository contains an incident management process running on the Camunda.
+This repository contains an incident management process running on [Camunda BPM](https://docs.camunda.org). 
 
 ## Incident Management Workflow
 ... 
