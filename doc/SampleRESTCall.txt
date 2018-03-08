@@ -1,0 +1,63 @@
+Method: POST
+URL: http://localhost:8080
+	https://saentisincident.herokuapp.com
+
+PATH: /rest/engine/default/process-definition/key/OverallIncident/start
+
+
+HEADER:
+content-type	application/json
+
+PAYLOAD
+{
+  "variables": {
+    "impact": {
+      "value": "3_MEDIUM",
+      "type": "String"
+    },
+    "urgency": {
+      "value": "3_MEDIUM",
+      "type": "String"
+    },
+	"affectedApplication": {
+      "value": "",
+      "type": "String"
+    },
+    "summary": {
+      "value": "This is my e-Mail header",
+      "type": "String"
+    },
+    "description": {
+      "value": "This is my e-Mail Body",
+      "type": "String"
+    },
+    "SystemID": {
+      "value": "",
+      "type": "String"
+    },
+    "stepByStep": {
+      "value": "",
+      "type": "String"
+    },
+    "customerName": {
+      "value": "Moritz Armingeon",
+      "type": "String"
+    },	
+    "customerMail": {
+      "value": "moritz.armingeon@gmail.com",
+      "type": "String"
+    },	
+	"customerPhone": {
+      "value": "",
+      "type": "String"
+    },	
+    "ticketStatus": {
+      "value": "NEW",
+      "type": "String"
+    },	
+	"ticketOrigin": {
+      "value": "EMAIL",
+      "type": "String"
+    }	
+  }
+}
