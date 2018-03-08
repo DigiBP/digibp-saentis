@@ -19,33 +19,7 @@
       <bpmn:incoming>SequenceFlow_10ziamp</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_10ziamp" sourceRef="TaskCloseIncident" targetRef="EndEvent_1l6wg2f" />
-    <bpmn:task id="TaskPriorisation" name="Prioritisation">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="customerMail" label="Customer E-Mail Address" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="summary" label="Description of the issue" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="impact" label="impact" type="string" />
-          <camunda:formField id="urgency" label="impact" type="string" />
-          <camunda:formField id="priority" label="impact" type="string" />
-          <camunda:formField id="affectedApplication" label="impact" type="string" />
-          <camunda:formField id="description" label="impact" type="string" />
-          <camunda:formField id="SystemID" label="impact" type="string" />
-          <camunda:formField id="stepByStep" label="impact" type="string" />
-          <camunda:formField id="customerName" label="impact" type="string" />
-          <camunda:formField id="customerPhone" label="impact" type="string" />
-          <camunda:formField id="ticketOpenDate" label="impact" type="string" />
-          <camunda:formField id="ticketStatus" label="impact" type="string" />
-          <camunda:formField id="ticketOrigin" label="impact" type="string" />
-        </camunda:formData>
-      </bpmn:extensionElements>
+    <bpmn:task id="TaskPriorisation" name="Prioritisation" camunda:formKey="embedded:app:forms/02IncidentView.html">
       <bpmn:incoming>SequenceFlow_0zl4y60</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0i3hv5o</bpmn:outgoing>
     </bpmn:task>
@@ -55,66 +29,14 @@
       <bpmn:outgoing>SequenceFlow_0wjx52r</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="SequenceFlow_0i3hv5o" sourceRef="TaskPriorisation" targetRef="ExclusiveGateway_0i1mbe7" />
-    <bpmn:task id="TaskEscalation" name="Escalation: Inform case manager &#38; send tweet">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="customerMail" label="Customer E-Mail Address" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="summary" label="Description of the issue" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="impact" label="impact" type="string" />
-          <camunda:formField id="urgency" label="impact" type="string" />
-          <camunda:formField id="priority" label="impact" type="string" />
-          <camunda:formField id="affectedApplication" label="impact" type="string" />
-          <camunda:formField id="description" label="impact" type="string" />
-          <camunda:formField id="SystemID" label="impact" type="string" />
-          <camunda:formField id="stepByStep" label="impact" type="string" />
-          <camunda:formField id="customerName" label="impact" type="string" />
-          <camunda:formField id="customerPhone" label="impact" type="string" />
-          <camunda:formField id="ticketOpenDate" label="impact" type="string" />
-          <camunda:formField id="ticketStatus" label="impact" type="string" />
-          <camunda:formField id="ticketOrigin" label="impact" type="string" />
-        </camunda:formData>
-      </bpmn:extensionElements>
+    <bpmn:task id="TaskEscalation" name="Escalation: Inform case manager &#38; send tweet"  camunda:formKey="embedded:app:forms/02IncidentView.html">
       <bpmn:incoming>SequenceFlow_12r9d0f</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0vcef8d</bpmn:outgoing>
     </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_12r9d0f" name="yes" sourceRef="ExclusiveGateway_0i1mbe7" targetRef="TaskEscalation">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{IsCritical}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:task id="TaskAddticket" name="Add to ticket pool">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="customerMail" label="Customer E-Mail Address" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="summary" label="Description of the issue" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="impact" label="impact" type="string" />
-          <camunda:formField id="urgency" label="impact" type="string" />
-          <camunda:formField id="priority" label="impact" type="string" />
-          <camunda:formField id="affectedApplication" label="impact" type="string" />
-          <camunda:formField id="description" label="impact" type="string" />
-          <camunda:formField id="SystemID" label="impact" type="string" />
-          <camunda:formField id="stepByStep" label="impact" type="string" />
-          <camunda:formField id="customerName" label="impact" type="string" />
-          <camunda:formField id="customerPhone" label="impact" type="string" />
-          <camunda:formField id="ticketOpenDate" label="impact" type="string" />
-          <camunda:formField id="ticketStatus" label="impact" type="string" />
-          <camunda:formField id="ticketOrigin" label="impact" type="string" />
-        </camunda:formData>
-      </bpmn:extensionElements>
+    <bpmn:task id="TaskAddticket" name="Add to ticket pool"  camunda:formKey="embedded:app:forms/02IncidentView.html">
       <bpmn:incoming>SequenceFlow_0wjx52r</bpmn:incoming>
       <bpmn:incoming>SequenceFlow_0vcef8d</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0gghv4h</bpmn:outgoing>
@@ -124,33 +46,7 @@
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_0gghv4h" sourceRef="TaskAddticket" targetRef="TaskNotify2ndLevel" />
     <bpmn:sequenceFlow id="SequenceFlow_0vcef8d" sourceRef="TaskEscalation" targetRef="TaskAddticket" />
-    <bpmn:sendTask id="TaskNotify2ndLevel" name="Notify 2nd level" camunda:class="ch.fhnw.digibp.MySendTaskNotify2ndLevel">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="customerMail" label="Customer E-Mail Address" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="summary" label="Description of the issue" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="impact" label="impact" type="string" />
-          <camunda:formField id="urgency" label="impact" type="string" />
-          <camunda:formField id="priority" label="impact" type="string" />
-          <camunda:formField id="affectedApplication" label="impact" type="string" />
-          <camunda:formField id="description" label="impact" type="string" />
-          <camunda:formField id="SystemID" label="impact" type="string" />
-          <camunda:formField id="stepByStep" label="impact" type="string" />
-          <camunda:formField id="customerName" label="impact" type="string" />
-          <camunda:formField id="customerPhone" label="impact" type="string" />
-          <camunda:formField id="ticketOpenDate" label="impact" type="string" />
-          <camunda:formField id="ticketStatus" label="impact" type="string" />
-          <camunda:formField id="ticketOrigin" label="impact" type="string" />
-        </camunda:formData>
-      </bpmn:extensionElements>
+    <bpmn:sendTask id="TaskNotify2ndLevel" name="Notify 2nd level" camunda:class="ch.fhnw.digibp.MySendTaskNotify2ndLevel"  camunda:formKey="embedded:app:forms/02IncidentView.html">
       <bpmn:incoming>SequenceFlow_0gghv4h</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_16cc2wu</bpmn:outgoing>
     </bpmn:sendTask>
@@ -158,94 +54,16 @@
       <bpmn:incoming>SequenceFlow_16cc2wu</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_16cc2wu" sourceRef="TaskNotify2ndLevel" targetRef="EndEvent_1n27h4c" />
-    <bpmn:userTask id="TaskSendEmail" name="Send e-Mail to customer">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="customerMail" label="Customer E-Mail Address" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="summary" label="Description of the issue" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="impact" label="impact" type="string" />
-          <camunda:formField id="urgency" label="impact" type="string" />
-          <camunda:formField id="priority" label="impact" type="string" />
-          <camunda:formField id="affectedApplication" label="impact" type="string" />
-          <camunda:formField id="description" label="impact" type="string" />
-          <camunda:formField id="SystemID" label="impact" type="string" />
-          <camunda:formField id="stepByStep" label="impact" type="string" />
-          <camunda:formField id="customerName" label="impact" type="string" />
-          <camunda:formField id="customerPhone" label="impact" type="string" />
-          <camunda:formField id="ticketOpenDate" label="impact" type="string" />
-          <camunda:formField id="ticketStatus" label="impact" type="string" />
-          <camunda:formField id="ticketOrigin" label="impact" type="string" />
-        </camunda:formData>
-      </bpmn:extensionElements>
+    <bpmn:userTask id="TaskSendEmail" name="Send e-Mail to customer"  camunda:formKey="embedded:app:forms/02IncidentView.html">
       <bpmn:incoming>SequenceFlow_1x00iuf</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1mr4uk6</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="TaskCloseIncident" name="Close Incident">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="customerMail" label="Customer E-Mail Address" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="summary" label="Description of the issue" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="impact" label="impact" type="string" />
-          <camunda:formField id="urgency" label="impact" type="string" />
-          <camunda:formField id="priority" label="impact" type="string" />
-          <camunda:formField id="affectedApplication" label="impact" type="string" />
-          <camunda:formField id="description" label="impact" type="string" />
-          <camunda:formField id="SystemID" label="impact" type="string" />
-          <camunda:formField id="stepByStep" label="impact" type="string" />
-          <camunda:formField id="customerName" label="impact" type="string" />
-          <camunda:formField id="customerPhone" label="impact" type="string" />
-          <camunda:formField id="ticketOpenDate" label="impact" type="string" />
-          <camunda:formField id="ticketStatus" label="impact" type="string" />
-          <camunda:formField id="ticketOrigin" label="impact" type="string" />
-        </camunda:formData>
-      </bpmn:extensionElements>
+    <bpmn:userTask id="TaskCloseIncident" name="Close Incident"  camunda:formKey="embedded:app:forms/02IncidentView.html">
       <bpmn:incoming>SequenceFlow_1mr4uk6</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_10ziamp</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="SequenceFlow_1etbd41" sourceRef="StartEvent_1" targetRef="CheckIncident" />
-    <bpmn:userTask id="CheckIncident" name="Check if is really an incident?">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="customerMail" label="Customer E-Mail Address" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="summary" label="Description of the issue" type="string">
-            <camunda:validation>
-              <camunda:constraint name="required" />
-            </camunda:validation>
-          </camunda:formField>
-          <camunda:formField id="impact" label="impact" type="string" />
-          <camunda:formField id="urgency" label="impact" type="string" />
-          <camunda:formField id="priority" label="impact" type="string" />
-          <camunda:formField id="affectedApplication" label="impact" type="string" />
-          <camunda:formField id="description" label="impact" type="string" />
-          <camunda:formField id="SystemID" label="impact" type="string" />
-          <camunda:formField id="stepByStep" label="impact" type="string" />
-          <camunda:formField id="customerName" label="impact" type="string" />
-          <camunda:formField id="customerPhone" label="impact" type="string" />
-          <camunda:formField id="ticketOpenDate" label="impact" type="string" />
-          <camunda:formField id="ticketStatus" label="impact" type="string" />
-          <camunda:formField id="ticketOrigin" label="impact" type="string" />
-        </camunda:formData>
-      </bpmn:extensionElements>
+    <bpmn:userTask id="CheckIncident" name="Check if is really an incident?"  camunda:formKey="embedded:app:forms/02IncidentView.html">
       <bpmn:incoming>SequenceFlow_1etbd41</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0t9950f</bpmn:outgoing>
     </bpmn:userTask>
