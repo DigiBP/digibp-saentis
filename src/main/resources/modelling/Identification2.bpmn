@@ -46,12 +46,9 @@
           <camunda:formField id="ticketOrigin" label="impact" type="string" />
         </camunda:formData>
       </bpmn:extensionElements>
-      <bpmn:incoming>SequenceFlow_14yr20b</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0zl4y60</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0i3hv5o</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:sequenceFlow id="SequenceFlow_14yr20b" sourceRef="ExtractCategory" targetRef="TaskPriorisation">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{RealIncident}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
     <bpmn:exclusiveGateway id="ExclusiveGateway_0i1mbe7" name="Is critical incident?">
       <bpmn:incoming>SequenceFlow_0i3hv5o</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_12r9d0f</bpmn:outgoing>
@@ -254,8 +251,9 @@
     </bpmn:userTask>
     <bpmn:serviceTask id="ExtractCategory" name="Extract Category" camunda:class="ch.fhnw.digibp.ApplicationCategorization">
       <bpmn:incoming>SequenceFlow_1yuux8x</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_14yr20b</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0zl4y60</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0zl4y60" sourceRef="ExtractCategory" targetRef="TaskPriorisation" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Identification">
@@ -319,13 +317,6 @@
       <bpmndi:BPMNShape id="Task_0xtx74x_di" bpmnElement="TaskPriorisation">
         <dc:Bounds x="828" y="172" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SequenceFlow_14yr20b_di" bpmnElement="SequenceFlow_14yr20b">
-        <di:waypoint xsi:type="dc:Point" x="673" y="212" />
-        <di:waypoint xsi:type="dc:Point" x="828" y="212" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="705.5" y="191" width="90" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="ExclusiveGateway_0i1mbe7_di" bpmnElement="ExclusiveGateway_0i1mbe7" isMarkerVisible="true">
         <dc:Bounds x="1049" y="187" width="50" height="50" />
         <bpmndi:BPMNLabel>
@@ -411,6 +402,13 @@
       <bpmndi:BPMNShape id="ServiceTask_175wqes_di" bpmnElement="ExtractCategory">
         <dc:Bounds x="573" y="172" width="100" height="80" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0zl4y60_di" bpmnElement="SequenceFlow_0zl4y60">
+        <di:waypoint xsi:type="dc:Point" x="673" y="212" />
+        <di:waypoint xsi:type="dc:Point" x="828" y="212" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="750.5" y="190" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
