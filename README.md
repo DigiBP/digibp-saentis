@@ -30,8 +30,9 @@ The following packages and libraries are used (see pom.xml file fore more inform
 
 ## Tools and Software
 The following tools and software has been used for implementing the incident management process.
+
 | Tool / Software  | Description |
-| ------------- | ------------- |
+| ------------- | ------------------ |
 | Camunda Modeler  | The Camunda Modeler is used to create BPMN, CMMN and DMN models. The modeler is based on [bpmn.io](http://bpmn.io/).  |
 | GitHub| Github is used for collaboration and versioning of the programming code as well as the models. |
 |Heroku|Heroku is a PaaS (Platform as a Services) which is used to quickly build, run, and operate the Camunda in the cloud. |
