@@ -51,18 +51,22 @@ Following steps provide instructions on how to test the Incident Management proc
 - [Apache License, Version 2.0](https://github.com/DigiBP/digibp-archetype-camunda-boot/blob/master/LICENSE)
 
 ## ToDo
-- [ ] Finalizing the process
-- [ ] Use of a DMN Decision Model
-- [ ] Use of Versioning / Releases? 
-- [ ] External page to create tickets
-- [ ] Status page for open tickets (Security?)
-- [ ] Ticket assignment / Skill based routing
-- [ ] Trial account zapier - how to deal with that
-- [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com)
-- [ ] Deploy on Heroku Button for quick installation
+- [ ] Creation Process (Check variables, finalize, ) (Moritz)
+- [ ] Specify Validation Task (Creation1.bpmn) (Moritz)
+- [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
+- [ ] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
+  - [ ] Hosting auf Heroku (PHP) -> App freigeben für Team
+  - [ ] GitHub Repo erstellen (Joël) 
+- [ ] Use of a DMN Decision Model (Assign to specific application depending on content keywords) (Joël) Analog Beispiel AutoCreateTweet (ServiceTasks)
+- [ ] Identification Task (Tweet, Priorisitation) (Joël)
+- [ ] Create Zapier Student Account (Joël)
+- [ ] Diagnosis mit CMMN erstellen (Moritz)
+- [ ] What are properties used for?
+- [ ] Ticket assignment (Routing? How to do it? Skill based routing)
+- [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
+- [ ] Reporting overview: Page with dashboard of all tickets... for Case Manager
 - [ ] Documentation (Installation, Guidelines, ...)
 - [x] Test Post Twitter Status
-- [ ] Where to get statistical data from? Using Properties?
 
 ## Nice to Have
 - [ ] Ticket opening via google voice
