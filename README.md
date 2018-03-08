@@ -67,6 +67,7 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Reporting overview: Page with dashboard of all tickets... for Case Manager
 - [ ] Documentation (Installation, Guidelines, ...)
 - [x] Test Post Twitter Status
+- [ ] Speaker Deck Presentation
 
 ## Nice to Have
 - [ ] Ticket opening via google voice
