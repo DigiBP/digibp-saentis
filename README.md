@@ -69,4 +69,5 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Monitoring of open tickets
 - [ ] Reporting and Statistics on Tableau
 - [ ] Switch to postgres sql (?)
+- [ ] Open ticked depending on social media actions [more](https://developer.twitter.com/en/docs/tweets/search/overview) 
 
