@@ -70,4 +70,5 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Reporting and Statistics on Tableau
 - [ ] Switch to postgres sql (?)
 - [ ] Open ticked depending on social media actions [more](https://developer.twitter.com/en/docs/tweets/search/overview) 
+- [ ] Text recogniztion to assign to specific application (DMN)
 
