@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.fhnw.digibp</groupId>
-    <artifactId>digibp-camunda-template</artifactId>
+    <artifactId>digibp-saentis-incidentmanagement</artifactId>
     <version>2.0.3</version>
     <packaging>${packaging.type}</packaging>
 
