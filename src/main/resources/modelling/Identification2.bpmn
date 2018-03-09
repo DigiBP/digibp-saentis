@@ -11,10 +11,10 @@
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="SequenceFlow_0t9950f" sourceRef="CheckIncident" targetRef="ExclusiveGateway_1sxijcd" />
     <bpmn:sequenceFlow id="SequenceFlow_1yuux8x" name="yes" sourceRef="ExclusiveGateway_1sxijcd" targetRef="ExtractCategory">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{isReallyIncident}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${isReallyIncident}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_1x00iuf" name="no" sourceRef="ExclusiveGateway_1sxijcd" targetRef="TaskSendEmail">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{!isReallyIncident}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${!isReallyIncident}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_1mr4uk6" sourceRef="TaskSendEmail" targetRef="TaskCloseIncident" />
     <bpmn:endEvent id="EndEvent_1l6wg2f">
