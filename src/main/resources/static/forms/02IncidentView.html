@@ -9,144 +9,183 @@
             type = "text/css"
             href = "myStyle.css" />	  -->
      <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">    -->
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
 	</head>   
     <body>
-		<form class="pure-form pure-form-aligned">
-		<h1>View Ticket Details</h1>
-		    <fieldset>
-				<table class="tabledata">
-				
-				<tr>
-                <div class="pure-control-group">
-		        <td>	<label for="customerName">Customer Name</label></td>
-		        <td>	<input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerName" name="customerName" placeholder=""></input></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-                <div class="pure-control-group">
-		        <td>	<label for="customerMail">Customer E-Mail Address</label></td>
-		        <td>	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerMail" name="customerMail" placeholder=""></input></td>
-		    	</div>
-				</tr>
+	<form class="form-horizontal">
+	<fieldset>
 
-				<tr>
-				<div class="pure-control-group">
-		        <td>	<label for="customerPhone">Customer Phone Number</label></td>
-		        <td>	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerPhone" name="customerPhone" placeholder=""></input></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-                <div class="pure-control-group">
-		        <td>	<label for="ticketOpenDate">Ticket Open Date</label></td>
-		        <td>	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="ticketOpenDate" name="ticketOpenDate" placeholder=""></input></td>
-		    	</div>
-				</tr>
+	<!-- Form Name -->
+	<legend>Incident View</legend>
 
-				<tr>
-				<div class="pure-control-group">
-		        <td>	<label for="ticketStatus">Ticket Status</label></td>
-		        <td>	<select cam-variable-name="ticketStatus" cam-variable-type="String" name="ticketStatus">
-		            	<option value="NEW">New</option>
-						<option value="UNDER_INVESTIGATION">Under Investigation</option>
-		            	<option value="DIAGNOSIS">Diagnosis</option>
-                        <option value="DIAGNOSIS_2nd">Diagnosis in 2nd Level</option> 
-                        <option value="REJECTED">Rejected</option> 
-                        <option value="CANNOT_REPRODUCE">Cannot Reproduce</option> 
-                        <option value="SOLVED">Solved</option> 						
-		        	</select></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-				<div class="pure-control-group">
-		        <td>	<label for="ticketOrigin">Ticket Origin</label></td>
-		        <td>	<select cam-variable-name="ticketOrigin" cam-variable-type="String" name="ticketOrigin">
-		            	<option value="INTERNAL">1 - Critical</option>
-						<option value="WEBFORM">2 - High</option>
-		            	<option value="EMAIL">3 - Medium</option>
-		        	</select></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-		    	<div class="pure-control-group">
-		        <td>	<label for="impact">Impact</label></td>
-		        <td>	<select cam-variable-name="impact" cam-variable-type="String" name="impact">
-		            	<option value="1_CRITICAL">1 - Critical</option>
-						<option value="2_HIGH">2 - High</option>
-		            	<option value="3_MEDIUM">3 - Medium</option>
-                        <option value="4_LOW">4 - Low</option> 
-		        	</select></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-		    	<div class="pure-control-group">
-		        <td>	<label for="urgency">Urgency</label></td>
-		        <td>	<select cam-variable-name="urgency" cam-variable-type="String" name="urgency">
-		            	<option value="1_CRITICAL">1 - Critical</option>
-						<option value="2_HIGH">2 - High</option>
-		            	<option value="3_MEDIUM">3 - Medium</option>
-                        <option value="4_LOW">4 - Low</option> 
-		        	</select></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-				<div class="pure-control-group">
-		        <td>	<label for="priority">Priority</label></td>
-		        <td>	<select cam-variable-name="priority" cam-variable-type="String" name="priority">
-		            	<option value="1_CRITICAL">1 - Critical</option>
-						<option value="2_HIGH">2 - High</option>
-		            	<option value="3_MEDIUM">3 - Medium</option>
-                        <option value="4_LOW">4 - Low</option> 
-		        	</select></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-				 <div class="pure-control-group">
-		       <td> 	<label for="affectedApplication">Affected Application</label></td>
-		        <td>	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="affectedApplication" name="Summary" placeholder="Which application is affected?"></input></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-                <div class="pure-control-group">
-		        <td>	<label for="Summary">Summary</label></td>
-		        <td>	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Summary" name="Summary" placeholder="Please describe your issue here"></textarea></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-                <div class="pure-control-group">
-		        <td>	<label for="Description">Description of Issue</label></td>
-		        <td>	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Description" name="Description" placeholder="Please describe your issue here"></textarea></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-                <div class="pure-control-group">
-		        <td>	<label for="SystemID">SystemID</label></td>
-		        <td>	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="SystemID" name="SytemID" placeholder="Indication on which System the user is located"></input></td>
-		    	</div>
-				</tr>
-				
-				<tr>
-                <div class="pure-control-group">
-		        <td>	<label for="stepByStep">Step-by-Step</label></td>
-		        <td>	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="stepByStep" name="stepByStep" placeholder="Provide detailed step-by-step description to reproduce the issue, including screenshots and relevant parameters"></textarea></td>
-		    	</div>
-				</tr>
-				
-				
-			</table>
-				
-            </fieldset>
-		</form>
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="customerName">Customer Name</label>  
+	  <div class="col-md-4">
+	  <input id="customerName" name="customerName" type="text" placeholder="Firstname Lastname" class="form-control input-md">
+	  <span class="help-block">Please complete the customer name.</span>  
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="customerMail">Customer E-Mail Address</label>  
+	  <div class="col-md-4">
+	  <input id="customerMail" name="customerMail" type="text" placeholder="E-Mail" class="form-control input-md" required="">
+    
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="customerPhone">Customer Phone Address</label>  
+	  <div class="col-md-4">
+	  <input id="customerPhone" name="customerPhone" type="text" placeholder="+41 " class="form-control input-md">
+    
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="ticketOpenDate">Ticket Opening Date</label>  
+	  <div class="col-md-4">
+	  <input id="ticketOpenDate" name="ticketOpenDate" type="text" placeholder="" class="form-control input-md">
+    
+	  </div>
+	</div>
+
+	<!-- Select Basic -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="ticketStatus">Ticket Status</label>
+	  <div class="col-md-4">
+	    <select id="ticketStatus" name="ticketStatus" class="form-control">
+	      <option value="NEW">NEW</option>
+	      <option value="UNDER_INVESTIGATION">UNDER_INVESTIGATION</option>
+	      <option value="DIAGNOSIS">DIAGNOSIS</option>
+	      <option value="DIAGNOSIS_2nd">DIAGNOSIS_2nd</option>
+	      <option value="REJECTED">REJECTED</option>
+	      <option value="CANNOT_REPRODUCE">CANNOT_REPRODUCE</option>
+	      <option value="SOLVED">SOLVED</option>
+	    </select>
+	  </div>
+	</div>
+
+	<!-- Select Basic -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="ticketOrigin">Ticket Opening Method</label>
+	  <div class="col-md-4">
+	    <select id="ticketOrigin" name="ticketOrigin" class="form-control">
+	      <option value="INTERNAL">INTERNAL</option>
+	      <option value="WEBFORM">WEBFORM</option>
+	      <option value="EMAIL">EMAIL</option>
+	    </select>
+	  </div>
+	</div>
+
+	<!-- Select Basic -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="impact">Impact</label>
+	  <div class="col-md-4">
+	    <select id="impact" name="impact" class="form-control">
+	      <option value="1_CRITICAL">1_CRITICAL</option>
+	      <option value="2_HIGH">2_HIGH</option>
+	      <option value="3_MEDIUM">3_MEDIUM</option>
+	      <option value="4_LOW">4_LOW</option>
+	    </select>
+	  </div>
+	</div>
+
+	<!-- Select Basic -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="urgency">Urgency</label>
+	  <div class="col-md-4">
+	    <select id="urgency" name="urgency" class="form-control">
+	      <option value="1_CRITICAL">1_CRITICAL</option>
+	      <option value="2_HIGH">2_HIGH</option>
+	      <option value="3_MEDIUM">3_MEDIUM</option>
+	      <option value="4_LOW">4_LOW</option>
+	    </select>
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="affectedApplication">Affected Application</label>  
+	  <div class="col-md-4">
+	  <input id="affectedApplication" name="affectedApplication" type="text" placeholder="" class="form-control input-md">
+    
+	  </div>
+	</div>
+
+	<!-- Select Basic -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="priority">Priority</label>
+	  <div class="col-md-4">
+	    <select id="priority" name="priority" class="form-control">
+	      <option value="1_CRITICAL">1_CRITICAL</option>
+	      <option value="2_HIGH">2_HIGH</option>
+	      <option value="3_MEDIUM">3_MEDIUM</option>
+	      <option value="4_LOW">4_LOW</option>
+	    </select>
+	  </div>
+	</div>
+
+	<!-- Textarea -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="summary">Summary</label>
+	  <div class="col-md-4">                     
+	    <textarea class="form-control" id="summary" name="summary">summary of the incident</textarea>
+	  </div>
+	</div>
+
+	<!-- Textarea -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="description">Description of the Issue</label>
+	  <div class="col-md-4">                     
+	    <textarea class="form-control" id="description" name="description">Please describe your issue here.</textarea>
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="SystemID">System ID</label>  
+	  <div class="col-md-4">
+	  <input id="SystemID" name="SystemID" type="text" placeholder="" class="form-control input-md">
+    
+	  </div>
+	</div>
+
+	<!-- Textarea -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="stepByStep">Step by Step Description</label>
+	  <div class="col-md-4">                     
+	    <textarea class="form-control" id="stepByStep" name="stepByStep">Provide a detailed step-by-step description to reproduce the incident.</textarea>
+	  </div>
+	</div>
+
+	<!-- Multiple Radios -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="isReallyIncident">Is this really an Incident?</label>
+	  <div class="col-md-4">
+	  <div class="radio">
+	    <label for="isReallyIncident-0">
+	      <input type="radio" name="isReallyIncident" id="isReallyIncident-0" value="true" checked="checked">
+	      Yes
+	    </label>
+		</div>
+	  <div class="radio">
+	    <label for="isReallyIncident-1">
+	      <input type="radio" name="isReallyIncident" id="isReallyIncident-1" value="false">
+	      No
+	    </label>
+		</div>
+	  </div>
+	</div>
+
+	</fieldset>
+	</form>
+	
 	</body>
 </html>
 
