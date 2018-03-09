@@ -48,7 +48,7 @@
 				<tr>
 				<div class="pure-control-group">
 		        <td>	<label for="ticketStatus">Ticket Status</label></td>
-		        <td>	<select cam-variable-name="ticketStatus" cam-variable-type="String" name="ticketStatus">
+		        <td>	<select cam-variable-name="ticketStatus" cam-variable-type="String"  cam-choices="TICKET_STATUS_CHOICES" name="ticketStatus">
 		            	<option value="NEW">New</option>
 						<option value="UNDER_INVESTIGATION">Under Investigation</option>
 		            	<option value="DIAGNOSIS">Diagnosis</option>
@@ -141,7 +141,19 @@
 		        <td>	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="stepByStep" name="stepByStep" placeholder="Provide detailed step-by-step description to reproduce the issue, including screenshots and relevant parameters"></textarea></td>
 		    	</div>
 				</tr>
+				<tr>
+	                  <div class="pure-control-group">
+	  		        <td>	<label for="isReallyIncident">Is this really an Incident?</label></td>
+	  		        <td>	<select cam-variable-name="isReallyIncident"
+				        cam-variable-type="Boolean"
+					  	>
+				  <option value="true">Yes</option>
+				  <option value="false">No</option>
+				</select></td>
+	  		    	</div>
 				
+					
+				</tr>
 				
 			</table>
 				
@@ -149,4 +161,3 @@
 		</form>
 	</body>
 </html>
-

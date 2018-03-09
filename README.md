@@ -69,6 +69,7 @@ Following steps provide instructions on how to test the Incident Management proc
 - [x] Test Post Twitter Status
 - [ ] Speaker Deck Presentation
 
+
 ## Nice to Have
 - [ ] Ticket opening via google voice
 - [ ] Monitoring of open tickets
@@ -76,4 +77,5 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Switch to postgres sql (?)
 - [ ] Open ticked depending on social media actions [more](https://developer.twitter.com/en/docs/tweets/search/overview) 
 - [ ] Text recogniztion to assign to specific application (DMN)
+- [ ] Complete customer data with CRM?
 
