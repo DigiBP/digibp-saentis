@@ -23,7 +23,7 @@
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="customerName">Customer Name</label>  
 	  <div class="col-md-4">
-	  <input id="customerName" name="customerName" type="text" placeholder="Firstname Lastname" class="form-control input-md">
+	  <input id="customerName" name="customerName" type="text" placeholder="Firstname Lastname" class="form-control input-md" cam-variable-type="String" cam-variable-name="customerName">
 	  <span class="help-block">Please complete the customer name.</span>  
 	  </div>
 	</div>
@@ -170,13 +170,15 @@
 	  <div class="col-md-4">
 	  <div class="radio">
 	    <label for="isReallyIncident-0">
-	      <input type="radio" name="isReallyIncident" id="isReallyIncident-0" value="true" checked="checked">
+	      <input type="radio" name="isReallyIncident" id="isReallyIncident-0" value="true" checked="checked" cam-variable-name="isReallyIncident"
+        cam-variable-type="Boolean">
 	      Yes
 	    </label>
 		</div>
 	  <div class="radio">
 	    <label for="isReallyIncident-1">
-	      <input type="radio" name="isReallyIncident" id="isReallyIncident-1" value="false">
+	      <input type="radio" name="isReallyIncident" id="isReallyIncident-1" value="false" cam-variable-name="isReallyIncident"
+        cam-variable-type="Boolean">
 	      No
 	    </label>
 		</div>
