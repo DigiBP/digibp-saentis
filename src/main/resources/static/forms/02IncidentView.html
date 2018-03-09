@@ -4,39 +4,51 @@
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <title>View Ticket Details</title>
-      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">    
-      <link rel = "stylesheet"
+	  
+      <!--<link rel = "stylesheet"
             type = "text/css"
-            href = "myStyle.css" />
+            href = "myStyle.css" />	  -->
+     <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">    -->
+
 	</head>   
     <body>
 		<form class="pure-form pure-form-aligned">
 		<h1>View Ticket Details</h1>
 		    <fieldset>
-			
-                <div class="pure-control-group">
-		        	<label for="customerName">Customer Name</label>
-		        	<input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerName" name="customerName" placeholder=""></input>
-		    	</div>
-
-                <div class="pure-control-group">
-		        	<label for="customerMail">Customer E-Mail Address</label>
-		        	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerMail" name="customerMail" placeholder=""></input>
-		    	</div>
-
-				<div class="pure-control-group">
-		        	<label for="customerPhone">Customer Phone Number</label>
-		        	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerPhone" name="customerPhone" placeholder=""></input>
-		    	</div>
+				<table class="tabledata">
 				
+				<tr>
                 <div class="pure-control-group">
-		        	<label for="ticketOpenDate">Ticket Open Date</label>
-		        	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="ticketOpenDate" name="ticketOpenDate" placeholder=""></input>
+		        <td>	<label for="customerName">Customer Name</label></td>
+		        <td>	<input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerName" name="customerName" placeholder=""></input></td>
 		    	</div>
+				</tr>
+				
+				<tr>
+                <div class="pure-control-group">
+		        <td>	<label for="customerMail">Customer E-Mail Address</label></td>
+		        <td>	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerMail" name="customerMail" placeholder=""></input></td>
+		    	</div>
+				</tr>
 
+				<tr>
 				<div class="pure-control-group">
-		        	<label for="ticketStatus">Ticket Status</label>
-		        	<select cam-variable-name="ticketStatus" cam-variable-type="String" name="ticketStatus">
+		        <td>	<label for="customerPhone">Customer Phone Number</label></td>
+		        <td>	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerPhone" name="customerPhone" placeholder=""></input></td>
+		    	</div>
+				</tr>
+				
+				<tr>
+                <div class="pure-control-group">
+		        <td>	<label for="ticketOpenDate">Ticket Open Date</label></td>
+		        <td>	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="ticketOpenDate" name="ticketOpenDate" placeholder=""></input></td>
+		    	</div>
+				</tr>
+
+				<tr>
+				<div class="pure-control-group">
+		        <td>	<label for="ticketStatus">Ticket Status</label></td>
+		        <td>	<select cam-variable-name="ticketStatus" cam-variable-type="String" name="ticketStatus">
 		            	<option value="NEW">New</option>
 						<option value="UNDER_INVESTIGATION">Under Investigation</option>
 		            	<option value="DIAGNOSIS">Diagnosis</option>
@@ -44,70 +56,94 @@
                         <option value="REJECTED">Rejected</option> 
                         <option value="CANNOT_REPRODUCE">Cannot Reproduce</option> 
                         <option value="SOLVED">Solved</option> 						
-		        	</select>
+		        	</select></td>
 		    	</div>
+				</tr>
 				
+				<tr>
 				<div class="pure-control-group">
-		        	<label for="ticketOrigin">Ticket Origin</label>
-		        	<select cam-variable-name="ticketOrigin" cam-variable-type="String" name="ticketOrigin">
+		        <td>	<label for="ticketOrigin">Ticket Origin</label></td>
+		        <td>	<select cam-variable-name="ticketOrigin" cam-variable-type="String" name="ticketOrigin">
 		            	<option value="INTERNAL">1 - Critical</option>
 						<option value="WEBFORM">2 - High</option>
 		            	<option value="EMAIL">3 - Medium</option>
-		        	</select>
+		        	</select></td>
 		    	</div>
+				</tr>
 				
-				
+				<tr>
 		    	<div class="pure-control-group">
-		        	<label for="impact">Impact</label>
-		        	<select cam-variable-name="impact" cam-variable-type="String" name="impact">
+		        <td>	<label for="impact">Impact</label></td>
+		        <td>	<select cam-variable-name="impact" cam-variable-type="String" name="impact">
 		            	<option value="1_CRITICAL">1 - Critical</option>
 						<option value="2_HIGH">2 - High</option>
 		            	<option value="3_MEDIUM">3 - Medium</option>
                         <option value="4_LOW">4 - Low</option> 
-		        	</select>
+		        	</select></td>
 		    	</div>
+				</tr>
+				
+				<tr>
 		    	<div class="pure-control-group">
-		        	<label for="urgency">Urgency</label>
-		        	<select cam-variable-name="urgency" cam-variable-type="String" name="urgency">
+		        <td>	<label for="urgency">Urgency</label></td>
+		        <td>	<select cam-variable-name="urgency" cam-variable-type="String" name="urgency">
 		            	<option value="1_CRITICAL">1 - Critical</option>
 						<option value="2_HIGH">2 - High</option>
 		            	<option value="3_MEDIUM">3 - Medium</option>
                         <option value="4_LOW">4 - Low</option> 
-		        	</select>
+		        	</select></td>
 		    	</div>
+				</tr>
+				
+				<tr>
 				<div class="pure-control-group">
-		        	<label for="priority">Priority</label>
-		        	<select cam-variable-name="priority" cam-variable-type="String" name="priority">
+		        <td>	<label for="priority">Priority</label></td>
+		        <td>	<select cam-variable-name="priority" cam-variable-type="String" name="priority">
 		            	<option value="1_CRITICAL">1 - Critical</option>
 						<option value="2_HIGH">2 - High</option>
 		            	<option value="3_MEDIUM">3 - Medium</option>
                         <option value="4_LOW">4 - Low</option> 
-		        	</select>
+		        	</select></td>
 		    	</div>
-
+				</tr>
+				
+				<tr>
 				 <div class="pure-control-group">
-		        	<label for="affectedApplication">Affected Application</label>
-		        	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="affectedApplication" name="Summary" placeholder="Which application is affected?"></input>
+		       <td> 	<label for="affectedApplication">Affected Application</label></td>
+		        <td>	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="affectedApplication" name="Summary" placeholder="Which application is affected?"></input></td>
 		    	</div>
+				</tr>
+				
+				<tr>
                 <div class="pure-control-group">
-		        	<label for="Summary">Summary</label>
-		        	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Summary" name="Summary" placeholder="Please describe your issue here"></textarea>
+		        <td>	<label for="Summary">Summary</label></td>
+		        <td>	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Summary" name="Summary" placeholder="Please describe your issue here"></textarea></td>
 		    	</div>
+				</tr>
+				
+				<tr>
                 <div class="pure-control-group">
-		        	<label for="Description">Description of Issue</label>
-		        	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Description" name="Description" placeholder="Please describe your issue here"></textarea>
+		        <td>	<label for="Description">Description of Issue</label></td>
+		        <td>	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Description" name="Description" placeholder="Please describe your issue here"></textarea></td>
 		    	</div>
+				</tr>
+				
+				<tr>
                 <div class="pure-control-group">
-		        	<label for="SystemID">SystemID</label>
-		        	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="SystemID" name="SytemID" placeholder="Indication on which System the user is located"></input>
+		        <td>	<label for="SystemID">SystemID</label></td>
+		        <td>	<input type="text"  class="form-control mytext" cam-variable-type="String" required cam-variable-name="SystemID" name="SytemID" placeholder="Indication on which System the user is located"></input></td>
 		    	</div>
+				</tr>
+				
+				<tr>
                 <div class="pure-control-group">
-		        	<label for="stepByStep">Provide detailed step-by-step description</label>
-		        	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="stepByStep" name="stepByStep" placeholder="Provide detailed step-by-step description to reproduce the issue, including screenshots and relevant parameters"></textarea>
+		        <td>	<label for="stepByStep">Step-by-Step</label></td>
+		        <td>	<textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="stepByStep" name="stepByStep" placeholder="Provide detailed step-by-step description to reproduce the issue, including screenshots and relevant parameters"></textarea></td>
 		    	</div>
+				</tr>
 				
 				
-
+			</table>
 				
             </fieldset>
 		</form>
