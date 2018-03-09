@@ -4,16 +4,16 @@
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>SequenceFlow_1etbd41</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:exclusiveGateway id="ExclusiveGateway_1sxijcd" name="Is this really an incident?">
+    <bpmn:exclusiveGateway id="ReallyIncident" name="Is this really an incident?">
       <bpmn:incoming>SequenceFlow_0t9950f</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1yuux8x</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_1x00iuf</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="SequenceFlow_0t9950f" sourceRef="CheckIncident" targetRef="ExclusiveGateway_1sxijcd" />
-    <bpmn:sequenceFlow id="SequenceFlow_1yuux8x" name="yes" sourceRef="ExclusiveGateway_1sxijcd" targetRef="ExtractCategory">
+    <bpmn:sequenceFlow id="SequenceFlow_0t9950f" sourceRef="CheckIncident" targetRef="ReallyIncident" />
+    <bpmn:sequenceFlow id="SequenceFlow_1yuux8x" name="yes" sourceRef="ReallyIncident" targetRef="ExtractCategory">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${isReallyIncident}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="SequenceFlow_1x00iuf" name="no" sourceRef="ExclusiveGateway_1sxijcd" targetRef="TaskSendEmail">
+    <bpmn:sequenceFlow id="SequenceFlow_1x00iuf" name="no" sourceRef="ReallyIncident" targetRef="TaskSendEmail">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${!isReallyIncident}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_1mr4uk6" sourceRef="TaskSendEmail" targetRef="TaskCloseIncident" />
@@ -83,10 +83,10 @@
           <dc:Bounds x="99" y="308" width="90" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="ExclusiveGateway_1sxijcd_di" bpmnElement="ExclusiveGateway_1sxijcd" isMarkerVisible="true">
+      <bpmndi:BPMNShape id="ExclusiveGateway_1sxijcd_di" bpmnElement="ReallyIncident" isMarkerVisible="true">
         <dc:Bounds x="387" y="265" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="325" y="303" width="73" height="24" />
+          <dc:Bounds x="325" y="303" width="74" height="25" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0t9950f_di" bpmnElement="SequenceFlow_0t9950f">
