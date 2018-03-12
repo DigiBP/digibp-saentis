@@ -2,75 +2,105 @@
 <form role="form"
    name="variablesForm">
    <div class="row">
-   <div class="col-xs-6">
-      <h2>Please provide some information about your Incident.</h2>
-      <!-- Impact -->
-      <div class="form-group">
-         <label for="impact">Type of the loan</label>
-         <div class="controls">
-            <!--select box -->
-            <select required
-               lass="form-control"
-               name="impact"
-               cam-variable-name="impact" 
-               cam-variable-type="String">
-               <option value="1_CRITICAL">1 - Critical</option>
-               <option value="2_HIGH">2 - High</option>
-               <option value="3_MEDIUM">3 - Medium</option>
-               <option value="4_LOW">4 - Low</option>
-            </select>
-         </div>
-	   </div>
-	   
-         <!-- Impact -->
+      <div class="col-xs-6">
+         <h2>Please provide some information about your Incident.</h2>
+         <!-- Impact-->
          <div class="form-group">
-            <label for="impact">Is this a real incident?</label>
+            <label for="impact">Impact</label>
             <div class="controls">
-               <!--select box -->
-               <select required
-                  lass="form-control"
-                  name="isReallyIncident"
-                  cam-variable-name="isReallyIncident" 
-                  cam-variable-type="String">
-                  <option value="true">True</option>
-                  <option value="false">False</option>
+               <select cam-variable-name="impact" 
+                  cam-variable-type="String" 
+                  name="impact">
+                  <option>1 - Critical</option>
+                  <option>2 - High</option>
+                  <option>3 - Medium</option>
+                  <option>4 - Low</option>
                </select>
             </div>
-   	   </div>
-	   
-	   
-         <!-- Summary of Issue -->
+         </div>
+         <!-- Urgency -->
          <div class="form-group">
-            <label for="summary">Summary</label>
+            <label for="urgency">Urgency</label>
             <div class="controls">
-               <textarea class="form-control"
-                  cam-variable-name="summary"
-                  cam-variable-type="String"
-                  rows="4"></textarea>
+               <select cam-variable-name="urgency" 
+                  cam-variable-type="String" 
+                  name="urgency">
+                  <option>1 - High</option>
+                  <option>2 - Medium</option>
+                  <option>3 - Low</option>
+               </select>
             </div>
          </div>
-      </div>
-      <div class="col-xs-6">
-         <h2>Further Information</h2>
-         <!-- Email -->
+         <!-- Priority -->
          <div class="form-group">
-            <label for="inputEmail">Email</label>
+            <label for="priority">Priority</label>
             <div class="controls">
-               <input class="form-control"
-                  required
-                  type="text"
-                  cam-variable-name="email"
-                  cam-variable-type="String"
-                  placeholder="john.doe@camunda.org"
-                  ng-minlength="2"
-                  ng-maxlength="20" />
+               <select cam-variable-name="priority" 
+                  cam-variable-type="String" 
+                  name="priority">
+                  <option>1 - High</option>
+                  <option>2 - Medium</option>
+                  <option>3 - Low</option>
+               </select>
             </div>
          </div>
-         <!-- Address -->
+         <!-- Affected Application -->
+         <div class="form-group">
+            <label for="AffectedApplication">Affected Application</label>
+            <div class="controls">
+               <select cam-variable-name="AffectedApplication" 				cam-variable-type="String" name="AffectedApplication">
+                  <option>none</option>
+                  <option>Excel</option>
+                  <option>Word</option>
+                  <option>Lotus Notes</option>
+               </select>
+            </div>
+         </div>
+         <!-- Summary -->
+         <div class="form-group">
+            <label for="Summary">Summary</label>
+            <div class="controls">
+               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Summary" name="Summary" placeholder="Please describe your issue here"></textarea>
+            </div>
+         </div>
+         <!-- Description of Issue -->
          <div class="form-group">
             <label for="Description">Description of Issue</label>
-            <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Description" name="Description" placeholder="Please describe your issue here"></textarea>
+            <div class="controls">
+               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Description" name="Description" placeholder="Please describe your issue here"></textarea>
+            </div>
+         </div>
+         <!-- SystemID -->
+         <div class="form-group">
+            <label for="Description">SystemID</label>
+            <div class="controls">
+               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="SystemID" name="SytemID" placeholder="Indication on which System the user is located"></textarea>
+            </div>
+         </div>
+         <!-- Step by Step -->
+         <div class="form-group">
+            <label for="Description">Provide detailed step-by-step Description</label>
+            <div class="controls">
+               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="StepByStep" name="StepByStep" placeholder="Provide detailed step-by-step description to reproduce the issue, including screenshots and relevant parameters"></textarea>
+            </div>
          </div>
       </div>
+      <!-- close col div -->
+      <div class="col-xs-6">
+         <h2>Please provide some information about you.</h2>
+	   
+         <!-- E-Mail -->
+         <div class="form-group">
+            <label for="E-Mail">E-Mail</label>
+            <div class="controls">
+               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="Email" name="Email" placeholder="email@domain.com" />
+            </div>
+         </div>
+      </div>
+	
+      <div class="form-group">
+        <input type="checkbox" cam-variable-name="isReallyIncident" cam-variable-type="Boolean" />
+      <!-- close col div -->
    </div>
+   <!-- row -->
 </form>
