@@ -1,7 +1,7 @@
 {
-  "name": "digibp-camunda-template",
-  "description": "digibp-microflow",
-  "repository": "https://github.com/DigiBP/digibp-camunda-template/tree/master",
+  "name": "digibp-saentis-incidentmanagement",
+  "description": "digibp-saentis-incidentmanagement",
+  "repository": "https://github.com/DigiBP/digibp-saentis/tree/master",
   "addons": ["heroku-postgresql:hobby-dev"],
   "logo": "https://avatars3.githubusercontent.com/u/25099178?s=200&v=4",
   "keywords": ["FHNW"]
