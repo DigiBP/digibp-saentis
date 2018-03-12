@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
+  <bpmn:process id="TestProcess" name="TestProcess" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_0akw5kb</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1jedb8o" sourceRef="Task_1y4j1lu" targetRef="Task_0eyh0m8" />
+    <bpmn:sequenceFlow id="SequenceFlow_0akw5kb" sourceRef="StartEvent_1" targetRef="Task_1y4j1lu" />
+    <bpmn:userTask id="Task_1y4j1lu" name="Input data" camunda:formKey="embedded:app:forms/test.html" camunda:assignee="demo">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="gender1">gender111</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0akw5kb</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1jedb8o</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_0eyh0m8" name="check data" camunda:formKey="embedded:app:forms/test1.html" camunda:assignee="demo">
+      <bpmn:incoming>SequenceFlow_1jedb8o</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0mxyhbg</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_11rbfyn">
+      <bpmn:incoming>SequenceFlow_0pob1lb</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0mxyhbg" sourceRef="Task_0eyh0m8" targetRef="TestForm" />
+    <bpmn:userTask id="TestForm" name="Web Form">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="lastname2" label="Lastname" type="string" />
+          <camunda:formField id="lastname" label="Lastname" type="string" />
+          <camunda:formField id="gender2" type="enum">
+            <camunda:value id="man" name="man" />
+            <camunda:value id="woman" name="woman" />
+            <camunda:value id="else" name="else" />
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0mxyhbg</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0id84tz</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0id84tz" sourceRef="TestForm" targetRef="Task_0ftz7un" />
+    <bpmn:sequenceFlow id="SequenceFlow_0pob1lb" sourceRef="Task_0ftz7un" targetRef="EndEvent_11rbfyn" />
+    <bpmn:userTask id="Task_0ftz7un" name="WebForm2">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="gender2" label="test" type="enum">
+            <camunda:value id="man" name="man" />
+            <camunda:value id="woman" name="woman" />
+            <camunda:value id="else" name="else" />
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0id84tz</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0pob1lb</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="TestProcess">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="173" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1jedb8o_di" bpmnElement="SequenceFlow_1jedb8o">
+        <di:waypoint xsi:type="dc:Point" x="385" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="461" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="423" y="98.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0akw5kb_di" bpmnElement="SequenceFlow_0akw5kb">
+        <di:waypoint xsi:type="dc:Point" x="209" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="285" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="247" y="98.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_0ggx8c4_di" bpmnElement="Task_1y4j1lu">
+        <dc:Bounds x="285" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1yp2htc_di" bpmnElement="Task_0eyh0m8">
+        <dc:Bounds x="461" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_11rbfyn_di" bpmnElement="EndEvent_11rbfyn">
+        <dc:Bounds x="871" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="889" y="141" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0mxyhbg_di" bpmnElement="SequenceFlow_0mxyhbg">
+        <di:waypoint xsi:type="dc:Point" x="561" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="582" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="582" y="186" />
+        <di:waypoint xsi:type="dc:Point" x="602" y="186" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="597" y="146.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_19utdb2_di" bpmnElement="TestForm">
+        <dc:Bounds x="602" y="146" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0id84tz_di" bpmnElement="SequenceFlow_0id84tz">
+        <di:waypoint xsi:type="dc:Point" x="702" y="186" />
+        <di:waypoint xsi:type="dc:Point" x="741" y="186" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="721.5" y="164.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0pob1lb_di" bpmnElement="SequenceFlow_0pob1lb">
+        <di:waypoint xsi:type="dc:Point" x="835" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="871" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="853" y="98.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1dhrm0n_di" bpmnElement="Task_0ftz7un">
+        <dc:Bounds x="737" y="112" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

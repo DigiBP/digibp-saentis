@@ -1,0 +1,63 @@
+<h3>Embedded Forms Quickstart</h3>
+<form role="form"
+      name="variablesForm">
+
+<div class="row">
+
+  <div class="col-xs-6">
+    <h2>Loan Data</h2>
+
+  <div class="col-xs-6">
+    <h2>Contact Data</h2>
+
+    <!-- Gender -->
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <div class="controls">
+
+        <!--select box -->
+        <select class="form-control"
+           cam-variable-name="gender"
+           cam-variable-type="String">
+          <option value="m" checked>Mr.</option>
+          <option value="f">Mrs.</option>
+        </select>
+
+    </div>
+    </div>
+
+    <!-- Firstname -->
+    <div class="form-group">
+      <label for="inputFirstname">Firstname</label>
+      <div class="controls">
+        <input class="form-control"
+               required
+               type="text"
+               cam-variable-name="firstname"
+               cam-variable-type="String"
+               placeholder="John"
+               ng-minlength="2"
+               ng-maxlength="20" />
+      </div>
+    </div>
+
+    <!-- Lastname -->
+    <div class="form-group">
+      <label for="inputLastname">Lastname</label>
+      <div class="controls">
+        <input class="form-control"
+               required
+               type="text"
+               cam-variable-name="lastname"
+               cam-variable-type="String"
+               placeholder="Doe"
+               ng-minlength="2"
+               ng-maxlength="20" />
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+</form>

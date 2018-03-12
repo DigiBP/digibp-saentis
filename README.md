@@ -80,4 +80,5 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Text recogniztion to assign to specific application (DMN)
 - [ ] Complete customer data with CRM?
 - [ ] Complete First/Lastname from Mailchimp API
+- [ ] Welcome the logged in user: https://docs.camunda.org/manual/7.6/reference/embedded-forms/javascript/examples/
 
