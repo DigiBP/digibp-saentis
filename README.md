@@ -78,4 +78,5 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Open ticked depending on social media actions [more](https://developer.twitter.com/en/docs/tweets/search/overview) 
 - [ ] Text recogniztion to assign to specific application (DMN)
 - [ ] Complete customer data with CRM?
+- [ ] Complete First/Lastname from Mailchimp API
 
