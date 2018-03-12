@@ -61,7 +61,7 @@
       <bpmn:outgoing>SequenceFlow_10ziamp</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="SequenceFlow_1etbd41" sourceRef="StartEvent_1" targetRef="CheckIncident" />
-    <bpmn:userTask id="CheckIncident" name="Check if is really an incident?" camunda:formKey="embedded:app:forms/02IncidentView.html">
+    <bpmn:userTask id="CheckIncident" name="Check if is really an incident?" camunda:formKey="embedded:app:forms/incidentCreation.html">
       <bpmn:incoming>SequenceFlow_1etbd41</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0t9950f</bpmn:outgoing>
     </bpmn:userTask>
@@ -70,7 +70,7 @@
       <bpmn:outgoing>SequenceFlow_0zl4y60</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="SequenceFlow_0zl4y60" sourceRef="ExtractCategory" targetRef="TaskPriorisation" />
-    <bpmn:userTask id="TaskPriorisation" name="Prioritisation (View Form) and check variables" camunda:formKey="embedded:app:forms/02IncidentView.html">
+    <bpmn:userTask id="TaskPriorisation" name="Prioritisation (View Form) and check variables" camunda:formKey="embedded:app:forms/incidentCreation.html">
       <bpmn:incoming>SequenceFlow_0zl4y60</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0i3hv5o</bpmn:outgoing>
     </bpmn:userTask>
