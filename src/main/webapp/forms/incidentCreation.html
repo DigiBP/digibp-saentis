@@ -20,6 +20,25 @@
                <option value="4_LOW">4 - Low</option>
             </select>
          </div>
+	   </div>
+	   
+         <!-- Impact -->
+         <div class="form-group">
+            <label for="impact">Is this a real incident?</label>
+            <div class="controls">
+               <!--select box -->
+               <select required
+                  lass="form-control"
+                  name="isReallyIncident"
+                  cam-variable-name="isReallyIncident" 
+                  cam-variable-type="String">
+                  <option value="true">True</option>
+                  <option value="false">False</option>
+               </select>
+            </div>
+   	   </div>
+	   
+	   
          <!-- Summary of Issue -->
          <div class="form-group">
             <label for="summary">Summary</label>
