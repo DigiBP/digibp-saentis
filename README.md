@@ -53,6 +53,7 @@ Following steps provide instructions on how to test the Incident Management proc
 ## ToDo
 - [ ] Creation Process (Check variables, finalize, ) (Moritz)
 - [ ] Specify Validation Task (Creation1.bpmn) (Moritz)
+- [ ] The start event can contain a webform!
 - [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
 - [ ] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
   - [x] Hosting auf Heroku (PHP) -> App freigeben für Team
