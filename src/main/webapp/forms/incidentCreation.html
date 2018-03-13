@@ -46,9 +46,9 @@
          </div>
          <!-- Affected Application -->
          <div class="form-group">
-            <label for="AffectedApplication">Affected Application</label>
+            <label for="affectedApplication">Affected Application</label>
             <div class="controls">
-               <select cam-variable-name="AffectedApplication" 				cam-variable-type="String" name="AffectedApplication">
+               <select cam-variable-name="affectedApplication" 				cam-variable-type="String" name="affectedApplication">
                   <option>none</option>
                   <option>Excel</option>
                   <option>Word</option>
@@ -58,49 +58,44 @@
          </div>
          <!-- Summary -->
          <div class="form-group">
-            <label for="Summary">Summary</label>
+            <label for="summary">Summary</label>
             <div class="controls">
-               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Summary" name="Summary" placeholder="Please describe your issue here"></textarea>
+               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="summary" name="summary" placeholder="Please describe your issue here"></textarea>
             </div>
          </div>
          <!-- Description of Issue -->
          <div class="form-group">
-            <label for="Description">Description of Issue</label>
+            <label for="description">Description of Issue</label>
             <div class="controls">
-               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="Description" name="Description" placeholder="Please describe your issue here"></textarea>
+               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="description" name="description" placeholder="Please describe your issue here"></textarea>
             </div>
          </div>
          <!-- SystemID -->
          <div class="form-group">
-            <label for="Description">SystemID</label>
+            <label for="systemID">SystemID</label>
             <div class="controls">
-               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="SystemID" name="SytemID" placeholder="Indication on which System the user is located"></textarea>
+               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="systemID" name="systemID" placeholder="Indication on which System the user is located"></textarea>
             </div>
          </div>
          <!-- Step by Step -->
          <div class="form-group">
-            <label for="Description">Provide detailed step-by-step Description</label>
+            <label for="stepByStep">Provide detailed step-by-step Description</label>
             <div class="controls">
-               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="StepByStep" name="StepByStep" placeholder="Provide detailed step-by-step description to reproduce the issue, including screenshots and relevant parameters"></textarea>
+               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="stepByStep" name="stepByStep" placeholder="Provide detailed step-by-step description to reproduce the issue, including screenshots and relevant parameters"></textarea>
             </div>
          </div>
       </div>
       <!-- close col div -->
       <div class="col-xs-6">
          <h2>Please provide some information about you.</h2>
-	   
          <!-- E-Mail -->
          <div class="form-group">
-            <label for="E-Mail">E-Mail</label>
+            <label for="customerMail">E-Mail</label>
             <div class="controls">
-               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="Email" name="Email" placeholder="email@domain.com" />
+               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerMail" name="customerMail" placeholder="email@domain.com" />
             </div>
          </div>
-      </div>
-	
-      <div class="form-group">
-        <input type="checkbox" cam-variable-name="isReallyIncident" cam-variable-type="Boolean" />
-      <!-- close col div -->
+      </div><!-- col-xs-6 -->
    </div>
    <!-- row -->
 </form>

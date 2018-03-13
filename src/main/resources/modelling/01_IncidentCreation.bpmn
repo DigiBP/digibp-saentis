@@ -16,16 +16,13 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${ticketOrigin == "WEBFORM" || ticketOrigin == "EMAIL" }]]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_1qh8gtq" sourceRef="CheckIfPrefilled" targetRef="TaskCreateTicketinCamunda" />
-    <bpmn:startEvent id="StartEvent_1" name="CamundaIncidentStart">
-      <bpmn:outgoing>SequenceFlow_1ucblq1</bpmn:outgoing>
-    </bpmn:startEvent>
     <bpmn:userTask id="InitVars" name="Init Vars">
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="ticketOrigin" label="Ticket Origin" type="string" />
         </camunda:formData>
       </bpmn:extensionElements>
-      <bpmn:incoming>SequenceFlow_1ucblq1</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1q5dche</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0j2pig2</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:exclusiveGateway id="CheckIfPrefilled" name="CheckIfPrefilled" default="SequenceFlow_1qh8gtq">
@@ -33,11 +30,14 @@
       <bpmn:outgoing>SequenceFlow_1qh8gtq</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_034r351</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="SequenceFlow_1ucblq1" sourceRef="StartEvent_1" targetRef="InitVars" />
     <bpmn:sequenceFlow id="SequenceFlow_0j2pig2" sourceRef="InitVars" targetRef="CheckIfPrefilled" />
-    <bpmn:userTask id="TaskCreateTicketinCamunda" name="Create Ticket in Camunda" camunda:formKey="embedded:app:forms/02IncidentView.html">
+    <bpmn:userTask id="TaskCreateTicketinCamunda" name="Create Ticket in Camunda" camunda:formKey="embedded:app:forms/incidentCreation.html">
       <bpmn:incoming>SequenceFlow_1qh8gtq</bpmn:incoming>
     </bpmn:userTask>
+    <bpmn:startEvent id="StartEvent_1" name="CamundaIncidentStart">
+      <bpmn:outgoing>SequenceFlow_1q5dche</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1q5dche" sourceRef="StartEvent_1" targetRef="InitVars" />
   </bpmn:process>
   <bpmn:process id="Process_0lvlgnd" isExecutable="false">
     <bpmn:serviceTask id="IncidentLogging" name="Incident Logging" camunda:class="ch.fhnw.digibp.MyServiceTaskLogging">
@@ -85,9 +85,9 @@ JSON.stringify(out);]]></camunda:script>
         <dc:Bounds x="123" y="47" width="1142" height="270" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
-        <dc:Bounds x="182" y="164" width="36" height="36" />
+        <dc:Bounds x="190" y="164" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="158" y="200" width="87" height="25" />
+          <dc:Bounds x="166" y="200" width="87" height="25" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="SendTask_0saksyz_di" bpmnElement="Task_0x8aupd">
@@ -111,15 +111,6 @@ JSON.stringify(out);]]></camunda:script>
           <dc:Bounds x="650" y="555" width="87" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SequenceFlow_1ucblq1_di" bpmnElement="SequenceFlow_1ucblq1">
-        <di:waypoint xsi:type="dc:Point" x="218" y="182" />
-        <di:waypoint xsi:type="dc:Point" x="239" y="182" />
-        <di:waypoint xsi:type="dc:Point" x="239" y="182" />
-        <di:waypoint xsi:type="dc:Point" x="269" y="182" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="209" y="176" width="90" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataOutputAssociation_14jdzlm_di" bpmnElement="DataOutputAssociation_14jdzlm">
         <di:waypoint xsi:type="dc:Point" x="692" y="459" />
         <di:waypoint xsi:type="dc:Point" x="691" y="501" />
@@ -206,6 +197,13 @@ JSON.stringify(out);]]></camunda:script>
       <bpmndi:BPMNShape id="UserTask_0x20w9q_di" bpmnElement="InitVars">
         <dc:Bounds x="269" y="142" width="100" height="80" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1q5dche_di" bpmnElement="SequenceFlow_1q5dche">
+        <di:waypoint xsi:type="dc:Point" x="226" y="182" />
+        <di:waypoint xsi:type="dc:Point" x="269" y="182" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="247.5" y="160" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
