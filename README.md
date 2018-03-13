@@ -50,6 +50,10 @@ Following steps provide instructions on how to test the Incident Management proc
 
 - [Apache License, Version 2.0](https://github.com/DigiBP/digibp-archetype-camunda-boot/blob/master/LICENSE)
 
+## Infos
+- Bitte Webforms unter src/main/webapp/forms/ ablegen
+- 
+
 ## ToDo
 - [ ] Creation Process (Check variables, finalize, ) (Moritz)
 - [ ] Specify Validation Task (Creation1.bpmn) (Moritz)

@@ -27,14 +27,17 @@
    <div class="row">
       <div class="col-xs-6">
          <h2>Please provide some information about your Incident.</h2>
-	   	<table>
+	   	<table class="table" stlye="width:100%;">
+		   <tr><th scope="col">Field</th><th scope="col">Value</th></tr>
 		   <tr><td>Impact</td><td>{{impact}}</td></tr>
 		   <tr><td>Urgency</td><td>{{urgency}}</td></tr>
-		   <tr><td></td><td>{{priority}}</td></tr>
-		   <tr><td></td><td>{{affectedApplication}}</td></tr>
-		   <tr><td></td><td>{{summary}}</td></tr>
-		   <tr><td></td><td>{{description}}</td></tr>
-		   <tr><td></td><td>{{systemID}}</td></tr>
+		   <tr><td>Priority</td><td>{{priority}}</td></tr>
+		   <tr><td>Affected Application</td><td>{{affectedApplication}}</td></tr>
+		   <tr><td>Summary</td><td>{{summary}}</td></tr>
+		   <tr><td>Description</td><td>{{description}}</td></tr>
+		   <tr><td>SystemID</td><td>{{systemID}}</td></tr>
+		   <tr><td>Step by Step</td><td>{{stepByStep}}</td></tr>
+		   
 		</table>  
       <div class="form-group">Is this incident supported?
         <input type="checkbox" cam-variable-name="incidentSupported" cam-variable-type="Boolean" />
