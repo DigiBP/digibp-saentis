@@ -94,7 +94,7 @@
     <bpmn:sequenceFlow id="SequenceFlow_1mr4uk6" sourceRef="TaskSendEmail" targetRef="TaskCloseIncident" />
     <bpmn:sequenceFlow id="SequenceFlow_1etbd41" sourceRef="StartEvent_1" targetRef="CheckIncident" />
     <bpmn:sequenceFlow id="SequenceFlow_02t7je2" sourceRef="GetAffectedApplication" targetRef="ExclusiveGateway_18q8gzp" />
-    <bpmn:businessRuleTask id="GetAffectedApplication" name="Get the affected application" camunda:resultVariable="affectedApplicationDefinitive" camunda:decisionRef="AffectedApplicationDMN">
+    <bpmn:businessRuleTask id="GetAffectedApplication" name="Get the affected application" camunda:resultVariable="responsible" camunda:decisionRef="AffectedApplicationDMN">
       <bpmn:incoming>SequenceFlow_1yuux8x</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_02t7je2</bpmn:outgoing>
     </bpmn:businessRuleTask>
@@ -108,7 +108,7 @@
       <bpmn:incoming>SequenceFlow_16mwlgo</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_16mwlgo" name="SAP" sourceRef="ExclusiveGateway_18q8gzp" targetRef="EndEvent_19wiqby">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${affectedApplicationDefinitive == "SAP"}]]></bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${responsible == "SAP"}]]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
   </bpmn:process>
   <bpmn:process id="Process_0s8cjsm" isExecutable="false" />
