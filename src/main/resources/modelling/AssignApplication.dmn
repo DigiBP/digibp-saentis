@@ -1,71 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="definitions_0e7lhfq" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="definitions_083ksgf" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
   <decision id="AssignApplication" name="AssignApplication">
-    <extensionElements>
-      <biodi:bounds x="200" y="200" width="180" height="80" />
-      <biodi:edge source="InputData_0sqvs5e">
-        <biodi:waypoints x="475" y="243" />
-        <biodi:waypoints x="380" y="243" />
-      </biodi:edge>
-    </extensionElements>
-    <informationRequirement>
-      <requiredInput href="#InputData_0sqvs5e" />
-    </informationRequirement>
     <decisionTable id="decisionTable">
-      <input id="input1" label="Affected Application">
+      <input id="input1" label="affectedApplication" camunda:inputVariable="affectedApplication">
         <inputExpression id="inputExpression1" typeRef="string">
-          <text></text>
+          <text>affectedApplication</text>
         </inputExpression>
-        <inputValues id="UnaryTests_0lxhhom">
-          <text><![CDATA["SAP","Microsoft Office","TeamViewer","Outlook","Website","none"]]></text>
+        <inputValues id="UnaryTests_1yootvy">
+          <text><![CDATA["affectedApplication","SAP"]]></text>
         </inputValues>
       </input>
-      <output id="output1" label="Responsible" name="" typeRef="string" />
-      <rule id="row-806031197-2">
-        <inputEntry id="UnaryTests_12mgfqv">
+      <output id="output1" label="Team" name="team" typeRef="string" />
+      <rule id="row-806031197-7">
+        <inputEntry id="UnaryTests_1gholsk">
           <text><![CDATA["SAP"]]></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0nx07cy">
-          <text><![CDATA["Assign to SAP Support"]]></text>
+        <outputEntry id="LiteralExpression_1ey6f35">
+          <text><![CDATA["SAP"]]></text>
         </outputEntry>
       </rule>
-      <rule id="row-806031197-3">
-        <inputEntry id="UnaryTests_01ek5bw">
-          <text><![CDATA["Microsoft Office", "Outlook"]]></text>
+      <rule id="row-806031197-8">
+        <inputEntry id="UnaryTests_0vngo6s">
+          <text><![CDATA[not("SAP")]]></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1fn9gkh">
-          <text><![CDATA["Assign to Microsoft Support"]]></text>
-        </outputEntry>
-      </rule>
-      <rule id="row-806031197-4">
-        <inputEntry id="UnaryTests_0hlrqct">
-          <text><![CDATA["Website"]]></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1dkmgl9">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="row-806031197-5">
-        <inputEntry id="UnaryTests_19ivpmh">
-          <text><![CDATA["TeamViewer"]]></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ye3bwl">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="row-806031197-6">
-        <inputEntry id="UnaryTests_0qz3grs">
+        <outputEntry id="LiteralExpression_1kkmd25">
           <text><![CDATA["none"]]></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1f0oojc">
-          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
   </decision>
-  <inputData id="InputData_0sqvs5e" name="Form Inputs">
-    <extensionElements>
-      <biodi:bounds x="475" y="220" width="125" height="45" />
-    </extensionElements>
-  </inputData>
 </definitions>
