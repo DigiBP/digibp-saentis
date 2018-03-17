@@ -55,6 +55,7 @@ Following steps provide instructions on how to test the Incident Management proc
 - 
 
 ## ToDo
+- [ ] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
 - [ ] Creation Process (Check variables, finalize, ) (Moritz)
 - [ ] Specify Validation Task (Creation1.bpmn) (Moritz)
 - [ ] The start event can contain a webform!
