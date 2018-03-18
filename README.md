@@ -88,3 +88,8 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Complete First/Lastname from Mailchimp API
 - [ ] Welcome the logged in user: https://docs.camunda.org/manual/7.6/reference/embedded-forms/javascript/examples/
 
+ ____                                 _         ____  ____  __  __
+/ ___| __ _ _ __ ___  _   _ _ __   __| | __ _  | __ )|  _ \|  \/  |
+| |   / _` | '_ ` _ \| | | | '_ \ / _` |/ _` | |  _ \| |_) | |\/| |
+| |__| (_| | | | | | | |_| | | | | (_| | (_| | | |_) |  __/| |  | |
+\____/\__,_|_| |_| |_|\__,_|_| |_|\__,_|\__,_| |____/|_|   |_|  |_|
