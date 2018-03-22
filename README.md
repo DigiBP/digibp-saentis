@@ -71,9 +71,9 @@ Following steps provide instructions on how to test the Incident Management proc
 - Hook: t700agmb@robot.zapier.com
 
 ## ToDo
-- [ ] Zapier Migration (Moritz)
+- [x] Zapier Migration (Moritz)
 - [ ] Set Ticket Orign and DateCreated in Init Vars (Moritz)
-- [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
+- [x] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
 - [ ] Cleanup forms (Moritz)
 - [ ] Dokumentieren Prozesse (Jaime)
 - [ ] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
