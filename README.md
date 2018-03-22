@@ -52,7 +52,14 @@ Following steps provide instructions on how to test the Incident Management proc
 
 ## Infos
 - Bitte Webforms unter src/main/webapp/forms/ ablegen
-- 
+
+## Zapier
+### E-Mail Outbound
+- Hook: https://hooks.zapier.com/hooks/catch/3017214/katznf/
+- Test with:  curl -v -H "Accept: application/json"         -H "Content-Type: application/json"         -X POST         -d '{"email":"moritz.armingeon@gmail.com","msg":"This is a Test","title":"Incident Notification123"}'    https://hooks.zapier.com/hooks/catch/3017214/katznf/
+
+### E-Mail Inbound
+- Hook: t700agmb@robot.zapier.com
 
 ## ToDo
 - [ ] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
