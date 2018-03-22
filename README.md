@@ -58,6 +58,7 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Zapier Migration (Moritz)
 - [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
 - [ ] Cleanup forms (Moritz)
+- [ ] Dokumentieren Prozesse (Jaime)
 - [ ] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
 - [ ] Creation Process (Check variables, finalize, ) (Moritz)
 - [x] Specify Validation Task (Creation1.bpmn) (Moritz)
