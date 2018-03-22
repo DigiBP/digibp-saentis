@@ -1,4 +1,13 @@
 # DigiBP Säntis Incident Management [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+```
+________  .__       .______________________    _________       __  .__        
+\______ \ |__| ____ |__\______   \______   \  /   _____/ _____/  |_|__| ______
+ |    |  \|  |/ ___\|  ||    |  _/|     ___/  \_____  \ /    \   __\  |/  ___/
+ |    `   \  / /_/  >  ||    |   \|    |      /        \   |  \  | |  |\___ \ 
+/_______  /__\___  /|__||______  /|____|     /_______  /___|  /__| |__/____  >
+        \/  /_____/            \/                    \/     \/             \/ 
+```                                                                       
+                                                                          
 This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalisation of the Business Processes (SS18) Module at the FHNW.
 
 *Authors*
