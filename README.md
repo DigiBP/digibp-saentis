@@ -1,4 +1,13 @@
 # DigiBP Säntis Incident Management [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+```
+________  .__       .______________________    _________  _ _  __  .__        
+\______ \ |__| ____ |__\______   \______   \  /   _____/ _____/  |_|__| ______
+ |    |  \|  |/ ___\|  ||    |  _/|     ___/  \_____  \ /    \   __\  |/  ___/
+ |    `   \  / /_/  >  ||    |   \|    |      /        \   |  \  | |  |\___ \ 
+/_______  /__\___  /|__||______  /|____|     /_______  /___|  /__| |__/____  >
+        \/  /_____/            \/                    \/     \/             \/ 
+```                                                                       
+                                                                          
 This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalisation of the Business Processes (SS18) Module at the FHNW.
 
 *Authors*
@@ -62,11 +71,15 @@ Following steps provide instructions on how to test the Incident Management proc
 - Hook: t700agmb@robot.zapier.com
 
 ## ToDo
+- [ ] Zapier Migration (Moritz)
+- [ ] Set Ticket Orign and DateCreated in Init Vars (Moritz)
+- [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
+- [ ] Cleanup forms (Moritz)
+- [ ] Dokumentieren Prozesse (Jaime)
 - [ ] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
 - [ ] Creation Process (Check variables, finalize, ) (Moritz)
-- [ ] Specify Validation Task (Creation1.bpmn) (Moritz)
-- [ ] The start event can contain a webform!
-- [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
+- [x] Specify Validation Task (Creation1.bpmn) (Moritz)
+- [ ] The start event can contain a webform! (Moritz)
 - [ ] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
   - [x] Hosting auf Heroku (PHP) -> App freigeben für Team
   - [x] GitHub Repo erstellen (Joël) 
@@ -76,7 +89,6 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Diagnosis mit CMMN erstellen (Moritz)
 - [ ] What are properties used for?
 - [ ] Ticket assignment (Routing? How to do it? Skill based routing)
-- [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
 - [ ] Reporting overview: Page with dashboard of all tickets... for Case Manager
 - [ ] Documentation (Installation, Guidelines, ...)
 - [x] Test Post Twitter Status
@@ -85,6 +97,8 @@ Following steps provide instructions on how to test the Incident Management proc
 
 
 ## Nice to Have
+- [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
+
 - [ ] Ticket opening via google voice
 - [ ] Monitoring of open tickets
 - [ ] Reporting and Statistics on Tableau
@@ -94,9 +108,10 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Complete customer data with CRM?
 - [ ] Complete First/Lastname from Mailchimp API
 - [ ] Welcome the logged in user: https://docs.camunda.org/manual/7.6/reference/embedded-forms/javascript/examples/
-
- ____                                 _         ____  ____  __  __
+```
+  ___                                 _         ____  ____  __  __
 / ___| __ _ _ __ ___  _   _ _ __   __| | __ _  | __ )|  _ \|  \/  |
 | |   / _` | '_ ` _ \| | | | '_ \ / _` |/ _` | |  _ \| |_) | |\/| |
 | |__| (_| | | | | | | |_| | | | | (_| | (_| | | |_) |  __/| |  | |
 \____/\__,_|_| |_| |_|\__,_|_| |_|\__,_|\__,_| |____/|_|   |_|  |_|
+```

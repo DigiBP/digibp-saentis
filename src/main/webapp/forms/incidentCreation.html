@@ -4,34 +4,7 @@
    <div class="row">
       <div class="col-xs-6">
          <h2>Please provide some information about your Incident.</h2>
-         <!-- Impact-->
-         <div class="form-group">
-            <label for="impact">Impact</label>
-            <div class="controls">
-               <select cam-variable-name="impact" 
-                  cam-variable-type="String" 
-                  name="impact">
-                  <option>1 - Critical</option>
-                  <option>2 - High</option>
-                  <option>3 - Medium</option>
-                  <option>4 - Low</option>
-               </select>
-            </div>
-         </div>
-         <!-- Urgency -->
-         <div class="form-group">
-            <label for="urgency">Urgency</label>
-            <div class="controls">
-               <select cam-variable-name="urgency" 
-                  cam-variable-type="String" 
-                  name="urgency">
-                  <option>1 - High</option>
-                  <option>2 - Medium</option>
-                  <option>3 - Low</option>
-               </select>
-            </div>
-         </div>
-         <!-- Priority -->
+           <!-- Priority -->
          <div class="form-group">
             <label for="priority">Priority</label>
             <div class="controls">
@@ -53,19 +26,13 @@
                   <option>Excel</option>
                   <option>Word</option>
                   <option>Lotus Notes</option>
-			<option>Outlook</option>
-			<option>Website</option>
-			<option>SAP</option>
+			     <option>Outlook</option>
+			     <option>Website</option>
+			     <option>SAP</option>
                </select>
             </div>
          </div>
-         <!-- SystemID -->
-         <div class="form-group">
-            <label for="systemID">SystemID</label>
-            <div class="controls">
-               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="systemID" name="systemID" placeholder="Indication on which System the user is located" />
-            </div>
-         </div>
+       
          <!-- Summary -->
          <div class="form-group">
             <label for="summary">Summary</label>
@@ -80,23 +47,38 @@
                <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="description" name="description" placeholder="Please describe your issue here"></textarea>
             </div>
          </div>
+                  
 
-         <!-- Step by Step -->
-         <div class="form-group">
-            <label for="stepByStep">Provide detailed step-by-step Description</label>
-            <div class="controls">
-               <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="stepByStep" name="stepByStep" placeholder="Provide detailed step-by-step description to reproduce the issue, including screenshots and relevant parameters"></textarea>
-            </div>
-         </div>
+    
       </div>
       <!-- close col div -->
       <div class="col-xs-6">
          <h2>Please provide some information about you.</h2>
+   
+          
+            <!-- Customer Name  -->
+         <div class="form-group">
+            <label for="customerMail">Customer Name</label>
+            <div class="controls">
+               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerName" name="customerName" placeholder="Please enter yuor name here" />
+            </div>
+         </div>
+          
+          
          <!-- E-Mail -->
          <div class="form-group">
             <label for="customerMail">E-Mail</label>
             <div class="controls">
-               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerMail" name="customerMail" placeholder="email@domain.com" />
+               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerMail" name="customerName" placeholder="email@domain.com" />
+            </div>
+         </div>
+          
+                    
+          <!-- Customer Phone -->
+         <div class="form-group">
+            <label for="customerMail">Customer Phone</label>
+            <div class="controls">
+               <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerPhone" name="Customer Phone Adress" placeholder="Please enter your phone number" />
             </div>
          </div>
       </div><!-- col-xs-6 -->
