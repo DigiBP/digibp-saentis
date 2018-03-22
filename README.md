@@ -55,11 +55,13 @@ Following steps provide instructions on how to test the Incident Management proc
 - 
 
 ## ToDo
+- [ ] Zapier Migration (Moritz)
+- [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
+- [ ] Cleanup forms (Moritz)
 - [ ] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
 - [ ] Creation Process (Check variables, finalize, ) (Moritz)
-- [ ] Specify Validation Task (Creation1.bpmn) (Moritz)
-- [ ] The start event can contain a webform!
-- [ ] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
+- [x] Specify Validation Task (Creation1.bpmn) (Moritz)
+- [ ] The start event can contain a webform! (Moritz)
 - [ ] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
   - [x] Hosting auf Heroku (PHP) -> App freigeben für Team
   - [x] GitHub Repo erstellen (Joël) 
@@ -69,7 +71,6 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Diagnosis mit CMMN erstellen (Moritz)
 - [ ] What are properties used for?
 - [ ] Ticket assignment (Routing? How to do it? Skill based routing)
-- [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
 - [ ] Reporting overview: Page with dashboard of all tickets... for Case Manager
 - [ ] Documentation (Installation, Guidelines, ...)
 - [x] Test Post Twitter Status
@@ -78,6 +79,8 @@ Following steps provide instructions on how to test the Incident Management proc
 
 
 ## Nice to Have
+- [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
+
 - [ ] Ticket opening via google voice
 - [ ] Monitoring of open tickets
 - [ ] Reporting and Statistics on Tableau
