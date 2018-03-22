@@ -7,7 +7,7 @@
           <text>affectedApplication</text>
         </inputExpression>
         <inputValues id="UnaryTests_1yootvy">
-          <text><![CDATA["affectedApplication","SAP"]]></text>
+          <text><![CDATA["affectedApplication","SAP","Microsoft","Excel","World","Outlook"]]></text>
         </inputValues>
       </input>
       <output id="output1" label="Team" name="team" typeRef="string" />
@@ -21,10 +21,18 @@
       </rule>
       <rule id="row-806031197-8">
         <inputEntry id="UnaryTests_0vngo6s">
-          <text><![CDATA[not("SAP")]]></text>
+          <text><![CDATA["Microsoft", "Excel", "World", "Outlook"]]></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1kkmd25">
-          <text><![CDATA["none"]]></text>
+          <text><![CDATA["Microsoft"]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-471990625-1">
+        <inputEntry id="UnaryTests_1vfa81f">
+          <text><![CDATA[not("SAP", "Microsoft")]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ez9drj">
+          <text><![CDATA["Helpdesk"]]></text>
         </outputEntry>
       </rule>
     </decisionTable>
