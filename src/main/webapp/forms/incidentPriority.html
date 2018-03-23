@@ -16,6 +16,7 @@
        $scope.impact = camForm.variableManager.variableValue('impact');
        $scope.urgency = camForm.variableManager.variableValue('urgency');
        $scope.priority = camForm.variableManager.variableValue('priority');
+	   console.log("IncidentPriority: fetch priority with value: " + $scope.priority);	   
        $scope.affectedApplication = camForm.variableManager.variableValue('affectedApplication');
        $scope.summary = camForm.variableManager.variableValue('summary');
        $scope.description = camForm.variableManager.variableValue('description');
@@ -25,7 +26,8 @@
      });
      camForm.on('submit', function(evt) {
        // set value in variable manager so that it can be sent to backend
-       variableManager.variableValue('333', $scope.priority);
+	   console.log("IncidentSupport: set priority with value: " + $scope.priority);
+       camForm.variableManager.variableValue('priority', $scope.priority);
      });
 
    </script>
@@ -48,9 +50,7 @@
         <!-- Priority -->
            <label for="priority">Priority</label>
            <div class="controls">
-              <select cam-variable-name="newpriority" 
-                 cam-variable-type="String" 
-                 name="newpriority">
+              <select name="priority">
                  <option value="1">1 - High</option>
                  <option value="2">2 - Medium</option>
                  <option value="3">3 - Low</option>
