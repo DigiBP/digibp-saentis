@@ -26,8 +26,10 @@
      });
      camForm.on('submit', function(evt) {
        // set value in variable manager so that it can be sent to backend
-	   console.log("IncidentSupport: set priority with value: " + $scope.priority);
-       camForm.variableManager.variableValue('priority', $scope.priority);
+	   var e = document.getElementById("priority");
+	   var strPriority = e.options[e.selectedIndex].value;
+	   console.log("IncidentSupport: set priority with value: " + strPriority);
+       camForm.variableManager.variableValue('priority', strPriority);
      });
 
    </script>
@@ -50,7 +52,7 @@
         <!-- Priority -->
            <label for="priority">Priority</label>
            <div class="controls">
-              <select name="priority">
+              <select name="priority" id="priority">
                  <option value="1">1 - High</option>
                  <option value="2">2 - Medium</option>
                  <option value="3">3 - Low</option>
