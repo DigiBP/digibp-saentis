@@ -24,17 +24,11 @@
            $scope.stepByStep = camForm.variableManager.variableValue('stepByStep');
            console.log("setting variables to scope");
          });
-         camForm.on('submit', function(evt) {
-           // set value in variable manager so that it can be sent to backend
-    	   var e = document.getElementById("impact");
-    	   var strImpact = e.options[e.selectedIndex].value;
-    	   console.log("IncidentSupport: set impact with value: " + strImpact);
-           camForm.variableManager.variableValue('impact', strImpact);
-         });
+
    </script>
    <div class="row">
       <div class="col-xs-6">
-         <h2>Please provide some information about your Incident.</h2>
+         <h2>IncidentView.</h2>
 	   	<table class="table" stlye="width:100%;">
 		   <tr><th scope="col">Field</th><th scope="col">Value</th></tr>
 		   <tr><td>Impact</td><td>{{impact}}</td></tr>
@@ -47,18 +41,7 @@
 		   <tr><td>Step by Step</td><td>{{stepByStep}}</td></tr>
 		   
 		</table>  
-      <div class="form-group">Change Incident Impact?
-        <label for="impact">Impact</label>
-        <div class="controls">
-           <select id="impact" 
-              name="impact">
-              <option value="1">1 - Critical</option>
-              <option value="2">2 - High</option>
-              <option value="3">3 - Medium</option>
-              <option value="4">4 - Low</option>
-           </select>
-        </div>
-      </div>	
+      
    </div>
       <!-- close col div -->
    </div>

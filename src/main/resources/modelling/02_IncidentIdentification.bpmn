@@ -38,10 +38,12 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[#{priority=="1"}]]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_0gghv4h" sourceRef="IncidentImpact" targetRef="ExclusiveGateway_0dyvk9a" />
-    <bpmn:sequenceFlow id="DecisionImpactSmall" name="Few People Impactes" sourceRef="ExclusiveGateway_0dyvk9a" targetRef="EndEvent_1n27h4c" />
+    <bpmn:sequenceFlow id="DecisionImpactSmall" name="Few People Impactes" sourceRef="ExclusiveGateway_0dyvk9a" targetRef="EndEvent_1n27h4c">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[#{impact>1}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_0t6ay6s" sourceRef="TweetIncidentStatus" targetRef="EndEvent_1n27h4c" />
     <bpmn:sequenceFlow id="DecisionImpactTrue" name="Big Impact" sourceRef="ExclusiveGateway_0dyvk9a" targetRef="TweetIncidentStatus">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[#{impact< 5}]]></bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{impact==1}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:exclusiveGateway id="ExclusiveGateway_0i1mbe7" name="Is critical incident?">
       <bpmn:incoming>SequenceFlow_01ipzy6</bpmn:incoming>
@@ -135,7 +137,7 @@
       <bpmn:incoming>DecisionPriority1</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0vcef8d</bpmn:outgoing>
     </bpmn:sendTask>
-    <bpmn:exclusiveGateway id="ExclusiveGateway_0dyvk9a" default="DecisionImpactSmall">
+    <bpmn:exclusiveGateway id="ExclusiveGateway_0dyvk9a">
       <bpmn:incoming>SequenceFlow_0gghv4h</bpmn:incoming>
       <bpmn:outgoing>DecisionImpactSmall</bpmn:outgoing>
       <bpmn:outgoing>DecisionImpactTrue</bpmn:outgoing>
@@ -149,7 +151,7 @@
         <camunda:connector>
           <camunda:inputOutput>
             <camunda:inputParameter name="url">https://hooks.zapier.com/hooks/catch/3017214/kyf0iq/</camunda:inputParameter>
-            <camunda:inputParameter name="method" />
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
             <camunda:inputParameter name="headers">
               <camunda:map>
                 <camunda:entry key="Content-Type">application/json</camunda:entry>
@@ -174,7 +176,7 @@ JSON.stringify(out);]]></camunda:script>
       <bpmn:incoming>DecisionHelpdesk</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0i3hv5o</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="ShowIncident" name="Show Pr" camunda:formKey="embedded:app:forms/incidentSupported.html" camunda:assignee="demo">
+    <bpmn:userTask id="ShowIncident" name="Show Pr" camunda:formKey="embedded:app:forms/showIncident.html" camunda:assignee="demo">
       <bpmn:incoming>SequenceFlow_0i3hv5o</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_01ipzy6</bpmn:outgoing>
     </bpmn:userTask>
