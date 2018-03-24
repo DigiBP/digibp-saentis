@@ -31,6 +31,19 @@
             $scope.customerPhone = camForm.variableManager.variableValue('customerPhone');
         console.log("setting variables to scope");
       });
+      camForm.on('submit', function(evt) {
+            // set value in variable manager so that it can be sent to backend
+            var e = document.getElementById("affectedApplication");
+            var strApplication = e.options[e.selectedIndex].value;
+            camForm.variableManager.variableValue('affectedApplication', strApplication);
+            console.log("IncidentSupport: set application with value: " + strApplication);
+	  
+            var e = document.getElementById("systemID");
+            var strSystemID = e.options[e.selectedIndex].value;
+            camForm.variableManager.variableValue('systemID', strSystemID);
+            console.log("IncidentSupport: set SystemID with value: " + strSystemID);
+	    
+      });
    </script>
    <div class="row">
       <div class="col-xs-6">
@@ -100,9 +113,26 @@
          </table>
       </div>
       <div class="col-xs-12">
-         <div class="form-group">Is this incident supported?
-              <input type="checkbox" cam-variable-name="incidentSupported" cam-variable-type="Boolean" />
-         </div>
+            <div class="form-group">
+               <label for="affectedApplication">Affected Application</label>
+               <div class="controls">
+                  <select  name="affectedApplication">
+                     <option>none</option>
+                     <option>Excel</option>
+                     <option>Word</option>
+                     <option>Lotus Notes</option>
+                     <option>Outlook</option>
+                     <option>Website</option>
+                     <option>SAP</option>
+                  </select>
+               </div>
+            </div>
+		 <div class="form-group">
+			  <label for="systemID">SystemID</label>
+            <div class="controls">
+               <input type="text" name="systemID" id="systemID">
+            </div>
+	</div>
       </div>
       <!-- close col div -->
    </div>

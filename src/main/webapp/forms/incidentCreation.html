@@ -4,7 +4,7 @@
    <div class="row">
       <div class="col-xs-6">
          <h2>Please provide some information about your Incident.</h2>
-           <!-- Priority -->
+         <!-- Priority -->
          <div class="form-group">
             <label for="priority">Priority</label>
             <div class="controls">
@@ -21,18 +21,25 @@
          <div class="form-group">
             <label for="affectedApplication">Affected Application</label>
             <div class="controls">
-               <select cam-variable-name="affectedApplication" 				cam-variable-type="String" name="affectedApplication">
+               <select cam-variable-name="affectedApplication" cam-variable-type="String" name="affectedApplication">
                   <option>none</option>
                   <option>Excel</option>
                   <option>Word</option>
                   <option>Lotus Notes</option>
-			     <option>Outlook</option>
-			     <option>Website</option>
-			     <option>SAP</option>
+                  <option>Outlook</option>
+                  <option>Website</option>
+                  <option>SAP</option>
                </select>
             </div>
          </div>
-       
+         <div class="controls">
+            <select name="impact" id="impact" cam-variable-name="impact" cam-variable-type="String">
+               <option value="1">1_CRITICAL</option>
+               <option value="2">2_HIGH</option>
+               <option value="3">3_MEDIUM</option>
+               <option value="4">4_LOW</option>
+            </select>
+         </div>
          <!-- Summary -->
          <div class="form-group">
             <label for="summary">Summary</label>
@@ -47,24 +54,17 @@
                <textarea class="form-control mytext" cam-variable-type="String" required cam-variable-name="description" name="description" placeholder="Please describe your issue here"></textarea>
             </div>
          </div>
-                  
-
-    
       </div>
       <!-- close col div -->
       <div class="col-xs-6">
          <h2>Please provide some information about you.</h2>
-   
-          
-            <!-- Customer Name  -->
+         <!-- Customer Name  -->
          <div class="form-group">
             <label for="customerMail">Customer Name</label>
             <div class="controls">
                <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerName" name="customerName" placeholder="Please enter yuor name here" />
             </div>
          </div>
-          
-          
          <!-- E-Mail -->
          <div class="form-group">
             <label for="customerMail">E-Mail</label>
@@ -72,16 +72,15 @@
                <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerMail" name="customerName" placeholder="email@domain.com" />
             </div>
          </div>
-          
-                    
-          <!-- Customer Phone -->
+         <!-- Customer Phone -->
          <div class="form-group">
             <label for="customerMail">Customer Phone</label>
             <div class="controls">
                <input type="text" class="form-control mytext" cam-variable-type="String" required cam-variable-name="customerPhone" name="Customer Phone Adress" placeholder="Please enter your phone number" />
             </div>
          </div>
-      </div><!-- col-xs-6 -->
+      </div>
+      <!-- col-xs-6 -->
    </div>
    <!-- row -->
 </form>
