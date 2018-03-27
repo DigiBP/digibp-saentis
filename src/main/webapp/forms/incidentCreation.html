@@ -1,6 +1,46 @@
 <h3>Incident Creation </h3>
 <form role="form"
    name="variablesForm">
+   <script cam-script type="text/form-script">
+   
+		function submitSelects(varName)
+		{
+			 
+			  // set value in variable manager so that it can be sent to backend
+			  var e = document.getElementById(varName);
+			  var strVal = e.options[e.selectedIndex].value;
+			  console.log("IncidentCreation_submit: set '" + varName + "' with value: " + strVal);
+			  //camForm.variableManager.variableValue(varName, strVal);		
+			   camForm.variableManager.destroyVariable(varName);
+			   camForm.variableManager.createVariable({name: varName ,type:'String',value:strVal});
+		
+		}
+		
+		function chooseSelect(varName)
+		{
+			  var val = camForm.variableManager.variableValue(varName);
+			  var e = document.getElementById(varName);
+			  e.options[e.selectedIndex].value = val;
+			  console.log("IncidentCreation_choose: set '" + varName + "' with value: " + val);
+		}
+      camForm.on('form-loaded', function() {
+            camForm.variableManager.fetchVariable('impact');
+            camForm.variableManager.fetchVariable('priority');
+            camForm.variableManager.fetchVariable('affectedApplication');
+      });
+      camForm.on('variables-restored', function() {
+            
+			/*chooseSelect("impact");
+			chooseSelect("priority");
+			chooseSelect("affectedApplication");*/
+      });
+      camForm.on('submit', function(evt) {
+		submitSelects("priority");
+		submitSelects("impact");
+		submitSelects("affectedApplication");
+      });
+      
+   </script>   
    <div class="row">
       <div class="col-xs-6">
          <h2>Please provide some information about your Incident.</h2>
@@ -8,9 +48,7 @@
          <div class="form-group">
             <label for="priority">Priority</label>
             <div class="controls">
-               <select cam-variable-name="priority" 
-                  cam-variable-type="String" 
-                  name="priority">
+               <select id="priority"  name="priority">
                   <option value="1">1 - High</option>
                   <option value="2">2 - Medium</option>
                   <option value="3">3 - Low</option>
@@ -21,7 +59,7 @@
          <div class="form-group">
             <label for="affectedApplication">Affected Application</label>
             <div class="controls">
-               <select cam-variable-name="affectedApplication" cam-variable-type="String" name="affectedApplication">
+               <select id="affectedApplication" name="affectedApplication">
                   <option>none</option>
                   <option>Excel</option>
                   <option>Word</option>
@@ -33,11 +71,11 @@
             </div>
          </div>
          <div class="controls">
-            <select name="impact" id="impact" cam-variable-name="impact" cam-variable-type="String">
-               <option value="1">1_CRITICAL</option>
-               <option value="2">2_HIGH</option>
-               <option value="3">3_MEDIUM</option>
-               <option value="4">4_LOW</option>
+            <select name="impact" id="impact">
+               <option value="1">1 - Critical</option>
+               <option value="2">2 - High</option>
+               <option value="3">3 - Medium</option>
+               <option value="4">4 - Low</option>
             </select>
          </div>
          <!-- Summary -->

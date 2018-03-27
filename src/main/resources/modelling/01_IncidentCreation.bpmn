@@ -1,99 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
   <bpmn:message id="Message_1v12bib" name="Message_06oeion" />
-  <bpmn:collaboration id="Collaboration_00eofab">
-    <bpmn:participant id="Customer" name="Customer" processRef="CreationProcess" />
-    <bpmn:participant id="Helpdesk" name="Helpdesk" processRef="Process_0lvlgnd" />
-    <bpmn:messageFlow id="MessageFlow_11p4nqa" sourceRef="Task_0x8aupd" targetRef="Customer" />
-    <bpmn:messageFlow id="MessageFlow_1d61efy" sourceRef="TaskCreateTicketinCamunda" targetRef="IncidentLogging" />
-    <bpmn:messageFlow id="MessageFlow_1ly8v8l" sourceRef="TaskValidation" targetRef="IncidentLogging" />
+  <bpmn:collaboration id="IncidentPlane">
+    <bpmn:participant id="Helpdesk" name="Helpdesk" processRef="CreationProcess" />
   </bpmn:collaboration>
-  <bpmn:process id="CreationProcess" name="01_Incident Creation Process" isExecutable="true" camunda:versionTag="0.1">
-    <bpmn:task id="TaskValidation" name="Validation">
-      <bpmn:incoming>SequenceFlow_034r351</bpmn:incoming>
-    </bpmn:task>
-    <bpmn:sequenceFlow id="SequenceFlow_034r351" sourceRef="CheckIfPrefilled" targetRef="TaskValidation">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${ticketOrigin == "WEBFORM" || ticketOrigin == "EMAIL" }]]></bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="SequenceFlow_1qh8gtq" sourceRef="CheckIfPrefilled" targetRef="TaskCreateTicketinCamunda" />
-    <bpmn:exclusiveGateway id="CheckIfPrefilled" name="CheckIfPrefilled" default="SequenceFlow_1qh8gtq">
-      <bpmn:incoming>SequenceFlow_1q5dche</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_1qh8gtq</bpmn:outgoing>
-      <bpmn:outgoing>SequenceFlow_034r351</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:userTask id="TaskCreateTicketinCamunda" name="Create Ticket in Camunda" camunda:formKey="embedded:app:forms/incidentCreation.html">
-      <bpmn:incoming>SequenceFlow_1qh8gtq</bpmn:incoming>
-    </bpmn:userTask>
-    <bpmn:startEvent id="StartEvent_1" name="CamundaIncidentStart">
-      <bpmn:extensionElements>
-        <camunda:formData />
-      </bpmn:extensionElements>
-      <bpmn:outgoing>SequenceFlow_1q5dche</bpmn:outgoing>
-    </bpmn:startEvent>
-    <bpmn:sequenceFlow id="SequenceFlow_1q5dche" sourceRef="StartEvent_1" targetRef="CheckIfPrefilled" />
-  </bpmn:process>
-  <bpmn:process id="Process_0lvlgnd" isExecutable="false">
+  <bpmn:process id="CreationProcess" name="CreationProcess" isExecutable="true">
     <bpmn:serviceTask id="IncidentLogging" name="Incident Logging" camunda:class="ch.fhnw.digibp.MyServiceTaskLogging">
+      <bpmn:incoming>SequenceFlow_046jeu4</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_18ooq80</bpmn:outgoing>
       <bpmn:dataOutputAssociation id="DataOutputAssociation_14jdzlm">
         <bpmn:targetRef>IncidentDataStore</bpmn:targetRef>
       </bpmn:dataOutputAssociation>
     </bpmn:serviceTask>
     <bpmn:dataStoreReference id="IncidentDataStore" name="IncidentDataStore" />
-    <bpmn:sendTask id="Task_0x8aupd" name="Send confirmation" camunda:class="ch.fhnw.digibp.MySendTaskCreated">
+    <bpmn:sequenceFlow id="SequenceFlow_18ooq80" sourceRef="IncidentLogging" targetRef="SendMailIncidentReceived" />
+    <bpmn:sequenceFlow id="SequenceFlow_0hi3501" sourceRef="SendMailIncidentReceived" targetRef="EndEvent_01c45o1" />
+    <bpmn:endEvent id="EndEvent_01c45o1">
+      <bpmn:incoming>SequenceFlow_0hi3501</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="SendMailIncidentReceived" name="Send confirmation" camunda:class="ch.fhnw.digibp.SendConfirmationEmail">
       <bpmn:extensionElements>
-        <camunda:connector>
-          <camunda:inputOutput>
-            <camunda:inputParameter name="url">https://hooks.zapier.com/hooks/catch/3025599/k32qw2/</camunda:inputParameter>
-            <camunda:inputParameter name="method">POST</camunda:inputParameter>
-            <camunda:inputParameter name="headers">
-              <camunda:map>
-                <camunda:entry key="Content-Type">application/json</camunda:entry>
-              </camunda:map>
-            </camunda:inputParameter>
-            <camunda:inputParameter name="payload">
-              <camunda:script scriptFormat="JavaScript"><![CDATA[var email = execution.getVariable("emailAddress");
-var out = {"email":email,"msg":"Status about Incident concerning your application","title":"Incident Notification"};
-JSON.stringify(out);]]></camunda:script>
-            </camunda:inputParameter>
-          </camunda:inputOutput>
-          <camunda:connectorId>http-connector</camunda:connectorId>
-        </camunda:connector>
         <camunda:properties>
           <camunda:property name="KPI-Ratio" value="E-Mail sent" />
         </camunda:properties>
       </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_18ooq80</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0hi3501</bpmn:outgoing>
-    </bpmn:sendTask>
-    <bpmn:sequenceFlow id="SequenceFlow_18ooq80" sourceRef="IncidentLogging" targetRef="Task_0x8aupd" />
-    <bpmn:sequenceFlow id="SequenceFlow_0hi3501" sourceRef="Task_0x8aupd" targetRef="EndEvent_01c45o1" />
-    <bpmn:endEvent id="EndEvent_01c45o1">
-      <bpmn:incoming>SequenceFlow_0hi3501</bpmn:incoming>
-    </bpmn:endEvent>
+    </bpmn:serviceTask>
+    <bpmn:task id="TaskValidation" name="Validation">
+      <bpmn:incoming>SequenceFlow_1n69gap</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_046jeu4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="SequenceFlow_1n69gap" sourceRef="StartEvent_1" targetRef="TaskValidation" />
+    <bpmn:sequenceFlow id="SequenceFlow_046jeu4" sourceRef="TaskValidation" targetRef="IncidentLogging" />
+    <bpmn:startEvent id="StartEvent_1" name="CamundaIncidentStart">
+      <bpmn:extensionElements>
+        <camunda:formData />
+      </bpmn:extensionElements>
+      <bpmn:outgoing>SequenceFlow_1n69gap</bpmn:outgoing>
+    </bpmn:startEvent>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_00eofab">
-      <bpmndi:BPMNShape id="Participant_14tr6oh_di" bpmnElement="Customer">
-        <dc:Bounds x="123" y="47" width="1142" height="270" />
-      </bpmndi:BPMNShape>
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="IncidentPlane">
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
-        <dc:Bounds x="190" y="164" width="36" height="36" />
+        <dc:Bounds x="28" y="401" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="166" y="200" width="87" height="25" />
+          <dc:Bounds x="7" y="437" width="82" height="24" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="SendTask_0saksyz_di" bpmnElement="Task_0x8aupd">
-        <dc:Bounds x="925" y="379" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="EndEvent_01c45o1_di" bpmnElement="EndEvent_01c45o1">
         <dc:Bounds x="1130" y="401" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1103" y="441" width="90" height="12" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="UserTask_0fmd83d_di" bpmnElement="TaskCreateTicketinCamunda">
-        <dc:Bounds x="541" y="68" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ServiceTask_0bo4g31_di" bpmnElement="IncidentLogging">
         <dc:Bounds x="643" y="379" width="100" height="80" />
@@ -109,7 +68,7 @@ JSON.stringify(out);]]></camunda:script>
         <di:waypoint xsi:type="dc:Point" x="691" y="501" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Participant_0bjz0s0_di" bpmnElement="Helpdesk">
-        <dc:Bounds x="123" y="360" width="1144" height="246" />
+        <dc:Bounds x="-92" y="360" width="1359" height="367" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_18ooq80_di" bpmnElement="SequenceFlow_18ooq80">
         <di:waypoint xsi:type="dc:Point" x="743" y="419" />
@@ -117,14 +76,7 @@ JSON.stringify(out);]]></camunda:script>
         <di:waypoint xsi:type="dc:Point" x="836" y="419" />
         <di:waypoint xsi:type="dc:Point" x="925" y="419" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="851" y="413" width="0" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="MessageFlow_11p4nqa_di" bpmnElement="MessageFlow_11p4nqa">
-        <di:waypoint xsi:type="dc:Point" x="975" y="379" />
-        <di:waypoint xsi:type="dc:Point" x="975" y="317" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="945" y="342" width="90" height="12" />
+          <dc:Bounds x="806" y="413" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_0hi3501_di" bpmnElement="SequenceFlow_0hi3501">
@@ -133,56 +85,29 @@ JSON.stringify(out);]]></camunda:script>
         <di:waypoint xsi:type="dc:Point" x="1068" y="419" />
         <di:waypoint xsi:type="dc:Point" x="1130" y="419" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1083" y="413" width="0" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="MessageFlow_1d61efy_di" bpmnElement="MessageFlow_1d61efy">
-        <di:waypoint xsi:type="dc:Point" x="641" y="108" />
-        <di:waypoint xsi:type="dc:Point" x="689" y="108" />
-        <di:waypoint xsi:type="dc:Point" x="689" y="379" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="620" y="87" width="90" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="ExclusiveGateway_0ixh4n9_di" bpmnElement="CheckIfPrefilled" isMarkerVisible="true">
-        <dc:Bounds x="414" y="157" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="400" y="211" width="78" height="13" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SequenceFlow_1qh8gtq_di" bpmnElement="SequenceFlow_1qh8gtq">
-        <di:waypoint xsi:type="dc:Point" x="439" y="157" />
-        <di:waypoint xsi:type="dc:Point" x="439" y="108" />
-        <di:waypoint xsi:type="dc:Point" x="541" y="108" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="409" y="126.5" width="90" height="12" />
+          <dc:Bounds x="1038" y="413" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Task_0k0iquc_di" bpmnElement="TaskValidation">
-        <dc:Bounds x="541" y="211" width="100" height="80" />
+        <dc:Bounds x="391" y="379" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SequenceFlow_034r351_di" bpmnElement="SequenceFlow_034r351">
-        <di:waypoint xsi:type="dc:Point" x="439" y="207" />
-        <di:waypoint xsi:type="dc:Point" x="439" y="251" />
-        <di:waypoint xsi:type="dc:Point" x="541" y="251" />
+      <bpmndi:BPMNShape id="ServiceTask_1e83i3l_di" bpmnElement="SendMailIncidentReceived">
+        <dc:Bounds x="925" y="379" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1n69gap_di" bpmnElement="SequenceFlow_1n69gap">
+        <di:waypoint xsi:type="dc:Point" x="64" y="419" />
+        <di:waypoint xsi:type="dc:Point" x="216" y="419" />
+        <di:waypoint xsi:type="dc:Point" x="216" y="419" />
+        <di:waypoint xsi:type="dc:Point" x="391" y="419" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="409" y="307" width="90" height="12" />
+          <dc:Bounds x="231" y="413" width="0" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="MessageFlow_1ly8v8l_di" bpmnElement="MessageFlow_1ly8v8l">
-        <di:waypoint xsi:type="dc:Point" x="591" y="291" />
-        <di:waypoint xsi:type="dc:Point" x="591" y="342" />
-        <di:waypoint xsi:type="dc:Point" x="671" y="342" />
-        <di:waypoint xsi:type="dc:Point" x="671" y="379" />
+      <bpmndi:BPMNEdge id="SequenceFlow_046jeu4_di" bpmnElement="SequenceFlow_046jeu4">
+        <di:waypoint xsi:type="dc:Point" x="491" y="419" />
+        <di:waypoint xsi:type="dc:Point" x="643" y="419" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="586" y="321" width="90" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SequenceFlow_1q5dche_di" bpmnElement="SequenceFlow_1q5dche">
-        <di:waypoint xsi:type="dc:Point" x="226" y="182" />
-        <di:waypoint xsi:type="dc:Point" x="414" y="182" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="275" y="160.5" width="90" height="13" />
+          <dc:Bounds x="567" y="398" width="0" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>

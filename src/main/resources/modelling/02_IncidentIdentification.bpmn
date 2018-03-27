@@ -69,52 +69,12 @@
     <bpmn:startEvent id="StartEvent_1" camunda:formKey="embedded:app:forms/incidentCreation.html">
       <bpmn:outgoing>SequenceFlow_1etbd41</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:sendTask id="TaskSendEmail" name="Send e-Mail to customer no support">
-      <bpmn:extensionElements>
-        <camunda:connector>
-          <camunda:inputOutput>
-            <camunda:inputParameter name="url">https://hooks.zapier.com/hooks/catch/3025599/k32qw2/</camunda:inputParameter>
-            <camunda:inputParameter name="method">POST</camunda:inputParameter>
-            <camunda:inputParameter name="headers">
-              <camunda:map>
-                <camunda:entry key="Content-Type">application/json</camunda:entry>
-              </camunda:map>
-            </camunda:inputParameter>
-            <camunda:inputParameter name="payload">
-              <camunda:script scriptFormat="JavaScript"><![CDATA[var email = execution.getVariable("emailAddress");
-]]></camunda:script>
-            </camunda:inputParameter>
-          </camunda:inputOutput>
-          <camunda:connectorId>http-connector</camunda:connectorId>
-        </camunda:connector>
-      </bpmn:extensionElements>
-      <bpmn:incoming>SequenceFlow_1x00iuf</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_1mr4uk6</bpmn:outgoing>
-    </bpmn:sendTask>
     <bpmn:exclusiveGateway id="ExclusiveGateway_18q8gzp" default="DecisionHelpdesk">
       <bpmn:incoming>SequenceFlow_02t7je2</bpmn:incoming>
       <bpmn:outgoing>DecisionHelpdesk</bpmn:outgoing>
       <bpmn:outgoing>DecisionSAP</bpmn:outgoing>
       <bpmn:outgoing>DecisionMicrosoft</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sendTask id="RedirectIncidentSAP" name="Redirect Incident to SAP Support (external)">
-      <bpmn:extensionElements>
-        <camunda:connector>
-          <camunda:connectorId>http-connector</camunda:connectorId>
-        </camunda:connector>
-      </bpmn:extensionElements>
-      <bpmn:incoming>DecisionSAP</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_1j99iwe</bpmn:outgoing>
-    </bpmn:sendTask>
-    <bpmn:sendTask id="RedirectIncidentMicrosoft" name="Redirect Incident to Microsoft Support (external)">
-      <bpmn:extensionElements>
-        <camunda:connector>
-          <camunda:connectorId>http-connector</camunda:connectorId>
-        </camunda:connector>
-      </bpmn:extensionElements>
-      <bpmn:incoming>DecisionMicrosoft</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_1dqrefm</bpmn:outgoing>
-    </bpmn:sendTask>
     <bpmn:endEvent id="EndEvent_19wiqby">
       <bpmn:incoming>SequenceFlow_1dqrefm</bpmn:incoming>
       <bpmn:incoming>SequenceFlow_1j99iwe</bpmn:incoming>
@@ -176,6 +136,18 @@ JSON.stringify(out);]]></camunda:script>
       <bpmn:incoming>SequenceFlow_1yuux8x</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0iyvz8z</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:serviceTask id="TaskSendEmail" name="Send e-Mail to customer no support" camunda:class="ch.fhnw.digibp.SendConfirmationEmail">
+      <bpmn:incoming>SequenceFlow_1x00iuf</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1mr4uk6</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="RedirectIncidentSAP" name="Redirect Incident to SAP Support (external)" camunda:class="ch.fhnw.digibp.SendConfirmationEmail">
+      <bpmn:incoming>DecisionSAP</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1j99iwe</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="RedirectIncidentMicrosoft" name="Redirect Incident to Microsoft Support (external)" camunda:class="ch.fhnw.digibp.SendConfirmationEmail">
+      <bpmn:incoming>DecisionMicrosoft</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1dqrefm</bpmn:outgoing>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmn:process id="Process_0s8cjsm" isExecutable="false" />
   <bpmn:process id="Process_06ow5ur" isExecutable="false" />
@@ -245,7 +217,7 @@ JSON.stringify(out);]]></camunda:script>
         <di:waypoint xsi:type="dc:Point" x="412" y="452" />
         <di:waypoint xsi:type="dc:Point" x="573" y="452" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="342.5231270241777" y="349.8277527926882" width="13" height="13" />
+          <dc:Bounds x="343" y="350" width="12" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_10ziamp_di" bpmnElement="SequenceFlow_10ziamp">
@@ -299,7 +271,7 @@ JSON.stringify(out);]]></camunda:script>
         <di:waypoint xsi:type="dc:Point" x="673" y="452" />
         <di:waypoint xsi:type="dc:Point" x="828" y="452" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="706" y="431" width="90" height="12" />
+          <dc:Bounds x="705.5" y="431" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1etbd41_di" bpmnElement="SequenceFlow_1etbd41">
@@ -319,9 +291,6 @@ JSON.stringify(out);]]></camunda:script>
           <dc:Bounds x="593" y="187" width="90" height="13" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="SendTask_0i06chg_di" bpmnElement="TaskSendEmail">
-        <dc:Bounds x="573" y="412" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_02t7je2_di" bpmnElement="SequenceFlow_02t7je2">
         <di:waypoint xsi:type="dc:Point" x="699" y="221" />
         <di:waypoint xsi:type="dc:Point" x="737" y="221" />
@@ -357,36 +326,30 @@ JSON.stringify(out);]]></camunda:script>
         <di:waypoint xsi:type="dc:Point" x="762" y="115" />
         <di:waypoint xsi:type="dc:Point" x="863" y="115" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="833" y="117" width="22" height="13" />
+          <dc:Bounds x="833" y="117" width="22" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_13j5we5_di" bpmnElement="DecisionMicrosoft">
         <di:waypoint xsi:type="dc:Point" x="787" y="221" />
         <di:waypoint xsi:type="dc:Point" x="864" y="221" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="803" y="200" width="45" height="13" />
+          <dc:Bounds x="803" y="200" width="46" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="SendTask_0bcrtlb_di" bpmnElement="RedirectIncidentSAP">
-        <dc:Bounds x="863" y="75" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="SendTask_0z80shv_di" bpmnElement="RedirectIncidentMicrosoft">
-        <dc:Bounds x="864" y="181" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1dqrefm_di" bpmnElement="SequenceFlow_1dqrefm">
         <di:waypoint xsi:type="dc:Point" x="964" y="221" />
         <di:waypoint xsi:type="dc:Point" x="999" y="221" />
         <di:waypoint xsi:type="dc:Point" x="999" y="115" />
         <di:waypoint xsi:type="dc:Point" x="1034" y="115" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="969" y="161" width="90" height="13" />
+          <dc:Bounds x="969" y="161.5" width="90" height="13" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1j99iwe_di" bpmnElement="SequenceFlow_1j99iwe">
         <di:waypoint xsi:type="dc:Point" x="963" y="115" />
         <di:waypoint xsi:type="dc:Point" x="1034" y="115" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="954" y="93" width="90" height="13" />
+          <dc:Bounds x="953.5" y="93.5" width="90" height="13" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="UserTask_16r6xgo_di" bpmnElement="IncidentImpact">
@@ -447,6 +410,15 @@ JSON.stringify(out);]]></camunda:script>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="UserTask_023eole_di" bpmnElement="AddIncidentDetails">
         <dc:Bounds x="451" y="181" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0imta4u_di" bpmnElement="TaskSendEmail">
+        <dc:Bounds x="573" y="412" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1tr8ory_di" bpmnElement="RedirectIncidentSAP">
+        <dc:Bounds x="863" y="75" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0k7qj67_di" bpmnElement="RedirectIncidentMicrosoft">
+        <dc:Bounds x="864" y="181" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
