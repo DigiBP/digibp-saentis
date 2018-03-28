@@ -11,7 +11,7 @@
     <bpmn:sequenceFlow id="DecisionPriority2" name="no" sourceRef="ExclusiveGateway_0i1mbe7" targetRef="IncidentImpact" />
     <bpmn:sequenceFlow id="SequenceFlow_10ziamp" sourceRef="TaskCloseIncident" targetRef="EndEvent_1l6wg2f" />
     <bpmn:sequenceFlow id="SequenceFlow_0t9950f" sourceRef="CheckIncident" targetRef="ReallyIncident" />
-    <bpmn:sequenceFlow id="SequenceFlow_1etbd41" sourceRef="StartEvent_1" targetRef="CheckIncident" />
+    <bpmn:sequenceFlow id="SequenceFlow_1etbd41" sourceRef="StartEvent_1" targetRef="TaskUpdateStatus" />
     <bpmn:sequenceFlow id="SequenceFlow_1mr4uk6" sourceRef="TaskSendEmail" targetRef="TaskCloseIncident" />
     <bpmn:sequenceFlow id="SequenceFlow_1x00iuf" name="no" sourceRef="ReallyIncident" targetRef="TaskSendEmail">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${!incidentSupported}</bpmn:conditionExpression>
@@ -61,10 +61,6 @@
     <bpmn:userTask id="TaskCloseIncident" name="Close Incident" camunda:formKey="embedded:app:forms/showIncident.html" camunda:assignee="demo">
       <bpmn:incoming>SequenceFlow_1mr4uk6</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_10ziamp</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="CheckIncident" name="Supported?" camunda:formKey="embedded:app:forms/incidentSupported.html" camunda:assignee="demo">
-      <bpmn:incoming>SequenceFlow_1etbd41</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_0t9950f</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:startEvent id="StartEvent_1" camunda:formKey="embedded:app:forms/incidentCreation.html">
       <bpmn:outgoing>SequenceFlow_1etbd41</bpmn:outgoing>
@@ -148,6 +144,16 @@ JSON.stringify(out);]]></camunda:script>
       <bpmn:incoming>DecisionMicrosoft</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1dqrefm</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0x7m73d" sourceRef="TaskUpdateStatus" targetRef="CheckIncident" />
+    <bpmn:userTask id="CheckIncident" name="Supported?" camunda:formKey="embedded:app:forms/incidentSupported.html" camunda:assignee="demo">
+      <bpmn:incoming>SequenceFlow_0x7m73d</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0t9950f</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:scriptTask id="TaskUpdateStatus" name="Update Ticket Status" scriptFormat="groovy">
+      <bpmn:incoming>SequenceFlow_1etbd41</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0x7m73d</bpmn:outgoing>
+      <bpmn:script><![CDATA[execution.setVariable("ticketStatus", "OPEN")]]></bpmn:script>
+    </bpmn:scriptTask>
   </bpmn:process>
   <bpmn:process id="Process_0s8cjsm" isExecutable="false" />
   <bpmn:process id="Process_06ow5ur" isExecutable="false" />
@@ -184,7 +190,7 @@ JSON.stringify(out);]]></camunda:script>
         <dc:Bounds x="828" y="412" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="UserTask_01yku9f_di" bpmnElement="CheckIncident">
-        <dc:Bounds x="194" y="259" width="100" height="80" />
+        <dc:Bounds x="254" y="241" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="UserTask_1bcxygg_di" bpmnElement="PriorizeIncident">
         <dc:Bounds x="863" y="299" width="100" height="80" />
@@ -196,12 +202,12 @@ JSON.stringify(out);]]></camunda:script>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0t9950f_di" bpmnElement="SequenceFlow_0t9950f">
-        <di:waypoint xsi:type="dc:Point" x="294" y="299" />
-        <di:waypoint xsi:type="dc:Point" x="347" y="299" />
-        <di:waypoint xsi:type="dc:Point" x="347" y="299" />
+        <di:waypoint xsi:type="dc:Point" x="354" y="281" />
+        <di:waypoint xsi:type="dc:Point" x="371" y="281" />
+        <di:waypoint xsi:type="dc:Point" x="371" y="299" />
         <di:waypoint xsi:type="dc:Point" x="387" y="299" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="317" y="293" width="90" height="12" />
+          <dc:Bounds x="341" y="284" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1yuux8x_di" bpmnElement="SequenceFlow_1yuux8x">
@@ -275,10 +281,10 @@ JSON.stringify(out);]]></camunda:script>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1etbd41_di" bpmnElement="SequenceFlow_1etbd41">
-        <di:waypoint xsi:type="dc:Point" x="124" y="299" />
-        <di:waypoint xsi:type="dc:Point" x="194" y="299" />
+        <di:waypoint xsi:type="dc:Point" x="117" y="286" />
+        <di:waypoint xsi:type="dc:Point" x="130" y="271" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="114" y="278" width="90" height="12" />
+          <dc:Bounds x="78.5" y="257.5" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Participant_1wjteui_di" bpmnElement="Customer">
@@ -420,6 +426,16 @@ JSON.stringify(out);]]></camunda:script>
       <bpmndi:BPMNShape id="ServiceTask_0k7qj67_di" bpmnElement="RedirectIncidentMicrosoft">
         <dc:Bounds x="864" y="181" width="100" height="80" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_0j3m96g_di" bpmnElement="TaskUpdateStatus">
+        <dc:Bounds x="135" y="231" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0x7m73d_di" bpmnElement="SequenceFlow_0x7m73d">
+        <di:waypoint xsi:type="dc:Point" x="235" y="275" />
+        <di:waypoint xsi:type="dc:Point" x="254" y="277" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="199.5" y="255" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

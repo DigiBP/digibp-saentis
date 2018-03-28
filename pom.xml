@@ -114,6 +114,13 @@
           <artifactId>camunda-engine-cdi</artifactId>
           <version>7.2.0</version>
         </dependency>
+        
+        <dependency>
+    <groupId>org.codehaus.groovy</groupId>
+    <artifactId>groovy-all</artifactId>
+    <version>2.4.5</version>
+    <scope>compile</scope>
+</dependency> 
  
 
     </dependencies>
