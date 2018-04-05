@@ -94,7 +94,7 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Documentation (Installation, Guidelines, ...)
 - [x] Test Post Twitter Status
 - [ ] Speaker Deck Presentation
-- [ ] How to quickly empty the H2 database (Moritz)
+- [ ] How to quickly empty the H2 database (Joël)
 
 
 ## Nice to Have
