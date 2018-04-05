@@ -72,14 +72,15 @@ Following steps provide instructions on how to test the Incident Management proc
 
 ## ToDo
 - [x] Zapier Migration (Moritz)
-- [ ] Set Ticket Orign and DateCreated in Init Vars (Moritz)
+- [x] Set Ticket Orign and DateCreated in Init Vars (Moritz)
 - [x] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
-- [ ] Cleanup forms (Moritz)
+- [x] Cleanup forms (Moritz)
 - [ ] Dokumentieren Prozesse (Jaime)
-- [ ] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
-- [ ] Creation Process (Check variables, finalize, ) (Moritz)
+- [x] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
+  - [ ] Incorporate into whole process
+- [x] Creation Process (Check variables, finalize, ) (Moritz)
 - [x] Specify Validation Task (Creation1.bpmn) (Moritz)
-- [ ] The start event can contain a webform! (Moritz)
+- [x] The start event can contain a webform! (Moritz)
 - [ ] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
   - [x] Hosting auf Heroku (PHP) -> App freigeben für Team
   - [x] GitHub Repo erstellen (Joël) 
@@ -99,7 +100,7 @@ Following steps provide instructions on how to test the Incident Management proc
 ## Nice to Have
 - [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
 
-- [ ] Ticket opening via google voice
+- [ ] Ticket opening via google assistant
 - [ ] Monitoring of open tickets
 - [ ] Reporting and Statistics on Tableau
 - [ ] Switch to postgres sql (?)
