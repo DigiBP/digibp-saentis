@@ -21,7 +21,7 @@ This chapter describes the implemented process in more detail.
 
 | **Overall Process** |
 | ------------------ |
-|![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) | Ein bisschen hier |
+|![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
 
 
