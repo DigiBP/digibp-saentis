@@ -23,10 +23,11 @@ This chapter describes the implemented process in more detail.
 
 | **Linke Überschrift** | Rechte Überschrift |
 | ------------------ | ------------------ |
-| Etwas Text hier | Ein bisschen hier |
+| Test BILD ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) | Ein bisschen hier |
 
 
-Test BILD ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png)
+
+
 
 
 ### Issue Creation
