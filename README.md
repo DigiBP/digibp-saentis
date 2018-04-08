@@ -26,9 +26,13 @@ The following image shows a simple visualization of our Overall process. This Pr
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
 ### Issue Creation
+The following image shows a simple visualization of our Overall process.
+
 | **Creation Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/01_IncidentCreation.png) |
+
+
 
 ### Issue Identification
 | **Identification Process** |
