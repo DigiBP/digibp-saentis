@@ -19,15 +19,19 @@ This repository contains an incident management workflow running on [Camunda BPM
 This chapter describes the implemented process in more detail.
 ### Overall Process
 
-### Issue Creation
 
 
-| Linke Überschrift | Rechte Überschrift |
+| **Linke Überschrift** | Rechte Überschrift |
 | ------------------ | ------------------ |
 | Etwas Text hier | Ein bisschen hier |
 
 
 Test BILD ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png)
+
+
+### Issue Creation
+
+
 
 ### Issue Identification
 
