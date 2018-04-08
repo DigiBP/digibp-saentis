@@ -19,23 +19,33 @@ This repository contains an incident management workflow running on [Camunda BPM
 This chapter describes the implemented process in more detail.
 ### Overall Process
 
+The following image shows a simple visualization of our Overall process. This Process is divided in four sub processes.
+
 | **Overall Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
-
-
-
-
 ### Issue Creation
-
-
+| **Creation Process** |
+| ------------------ |
+|![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/01_IncidentCreation.png) |
 
 ### Issue Identification
+| **Identification Process** |
+| ------------------ |
+|![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/02_IncidentIdentification.png) |
 
 ### Issue Diagnosis
+| **Diagnosis Process** |
+| ------------------ |
+|![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/03_IncidentDiagnosis.png) |
 
 ### Issue Resolution
+| **Resolution Process** |
+| ------------------ |
+|![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
+
+
 ## Installation
 The repository can be deployed to Heroku using the following button. The repository is based on the [digibp-camunda-template](https://github.com/DigiBP/digibp-camunda-template) (Version 2.0.39
 
