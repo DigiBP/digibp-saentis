@@ -61,6 +61,7 @@ public class InitVariables implements JavaDelegate {
 
 		setIfNull("isReallyIncident", "");
 		setIfNull("incidentSupported", "");
+		setIfNull("isCritical", "false");
 
 	}
 

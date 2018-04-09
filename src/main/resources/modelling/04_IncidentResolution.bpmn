@@ -5,10 +5,6 @@
       <bpmn:outgoing>SequenceFlow_09x7u1c</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="SequenceFlow_09x7u1c" sourceRef="StartEvent_1" targetRef="Task_0f5iy3m" />
-    <bpmn:sendTask id="Task_0f5iy3m" name="Notify customer" camunda:class="ch.fhnw.digibp.MySendTaskEmailToCustomeResolved">
-      <bpmn:incoming>SequenceFlow_09x7u1c</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_00eiuq6</bpmn:outgoing>
-    </bpmn:sendTask>
     <bpmn:exclusiveGateway id="IsCritical" name="Is Critical Incident?" default="SequenceFlow_1x22wu4">
       <bpmn:incoming>SequenceFlow_00eiuq6</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1w5sm0y</bpmn:outgoing>
@@ -33,6 +29,10 @@
       <bpmn:incoming>SequenceFlow_1q1df47</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_1q1df47" sourceRef="CloseIssue" targetRef="EndEvent_08e58vr" />
+    <bpmn:serviceTask id="Task_0f5iy3m" name="Notify customer" camunda:class="ch.fhnw.digibp.SendConfirmationEmail">
+      <bpmn:incoming>SequenceFlow_09x7u1c</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_00eiuq6</bpmn:outgoing>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Resolution">
@@ -43,12 +43,9 @@
         <di:waypoint xsi:type="dc:Point" x="209" y="120" />
         <di:waypoint xsi:type="dc:Point" x="315" y="120" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="262" y="99" width="0" height="12" />
+          <dc:Bounds x="217" y="99" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="SendTask_1gd9lkb_di" bpmnElement="Task_0f5iy3m">
-        <dc:Bounds x="315" y="80" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ExclusiveGateway_0iqopoq_di" bpmnElement="IsCritical" isMarkerVisible="true">
         <dc:Bounds x="533" y="95" width="50" height="50" />
         <bpmndi:BPMNLabel>
@@ -59,7 +56,7 @@
         <di:waypoint xsi:type="dc:Point" x="415" y="120" />
         <di:waypoint xsi:type="dc:Point" x="533" y="120" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="474" y="99" width="0" height="12" />
+          <dc:Bounds x="429" y="99" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Task_0k6nsct_di" bpmnElement="SendTweet">
@@ -104,6 +101,9 @@
           <dc:Bounds x="888.5" y="191" width="0" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0q457w4_di" bpmnElement="Task_0f5iy3m">
+        <dc:Bounds x="315" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

@@ -33,13 +33,13 @@
       });
       camForm.on('submit', function(evt) {
             // set value in variable manager so that it can be sent to backend
-            var e = document.getElementById("affectedApplication");
-            var strApplication = e.options[e.selectedIndex].value;
+            var elementApp = document.getElementById("affectedApplication");
+            var strApplication = elementApp.options[elementApp.selectedIndex].value;
             camForm.variableManager.variableValue('affectedApplication', strApplication);
             console.log("IncidentSupport: set application with value: " + strApplication);
 	  
-            var e = document.getElementById("systemID");
-            var strSystemID = e.options[e.selectedIndex].value;
+            var elementSys = document.getElementById("systemID");
+            var strSystemID = elementSys.value;
             camForm.variableManager.variableValue('systemID', strSystemID);
             console.log("IncidentSupport: set SystemID with value: " + strSystemID);
 	    
@@ -116,7 +116,7 @@
             <div class="form-group">
                <label for="affectedApplication">Affected Application</label>
                <div class="controls">
-                  <select  name="affectedApplication">
+                  <select  name="affectedApplication" id="affectedApplication">
                      <option>none</option>
                      <option>Excel</option>
                      <option>Word</option>
