@@ -4,7 +4,7 @@
   <bpmn:collaboration id="IncidentPlane">
     <bpmn:participant id="Helpdesk" name="Helpdesk" processRef="CreationProcess" />
   </bpmn:collaboration>
-  <bpmn:process id="CreationProcess" name="CreationProcess" isExecutable="true">
+  <bpmn:process id="CreationProcess" name="01_CreationProcess" isExecutable="true">
     <bpmn:serviceTask id="IncidentLogging" name="Incident Logging" camunda:class="ch.fhnw.digibp.MyServiceTaskLogging">
       <bpmn:incoming>SequenceFlow_046jeu4</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_18ooq80</bpmn:outgoing>
