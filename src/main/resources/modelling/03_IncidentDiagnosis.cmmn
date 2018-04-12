@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cmmn:definitions xmlns:dc="http://www.omg.org/spec/CMMN/20151109/DC" xmlns:di="http://www.omg.org/spec/CMMN/20151109/DI" xmlns:cmmndi="http://www.omg.org/spec/CMMN/20151109/CMMNDI" xmlns:cmmn="http://www.omg.org/spec/CMMN/20151109/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Test" targetNamespace="http://bpmn.io/schema/cmmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
-  <cmmn:case id="CaseDiagnosis" name="03_Diagnosis" isExecutable="true">
+  <cmmn:case id="CaseDiagnosis" name="03_Diagnosis">
     <cmmn:casePlanModel id="Diagnosis" name="Diagnosis">
       <cmmn:planItem id="PlanItem_1y6mdly" definitionRef="EventListener_1pb02mv" />
       <cmmn:planItem id="PlanItem_0s5l2ss" definitionRef="EventListener_1ya3toe" />
