@@ -134,6 +134,7 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Complete First/Lastname from Mailchimp API
 - [ ] Welcome the logged in user: https://docs.camunda.org/manual/7.6/reference/embedded-forms/javascript/examples/
 - [ ] Ticket assignment (Routing? How to do it? Skill based routing)
+- [ ] E-Mail FreeMarker e-Mail template https://freemarker.apache.org/
 
 ```
   ___                                 _         ____  ____  __  __
