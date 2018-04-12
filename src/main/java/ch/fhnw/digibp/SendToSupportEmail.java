@@ -27,7 +27,7 @@ public class SendToSupportEmail implements JavaDelegate {
 
 		String email = "saentisgroupincident@gmail.com"; // Add Support E-Mail here!
 
-		String msg = "Dear Support"
+		String msg = "Dear Support\n\n"
 				+ "This is an automated message with a support request for you.\n\n" + "\nSummary: "
 				+ execution.getVariable("summary") + "\nDescription: " + execution.getVariable("description")
 				+ "\nTicket Open Date: " + execution.getVariable("ticketOpenDate") + "\nTicket Status: "
@@ -44,7 +44,7 @@ public class SendToSupportEmail implements JavaDelegate {
 				"\nReal Incident: " + execution.getVariable("isReallyIncident") + "\nSupported: "
 				+ execution.getVariable("incidentSupported") +
 
-				"\n Please contact the customer directly with the information we provided.\n\nBest Regards, Säntis Group";
+				"\n\n Please contact the customer directly with the information we provided.\n\nBest Regards, \nSäntis Group";
 
 		LOGGER.info("Message: " + msg);
 

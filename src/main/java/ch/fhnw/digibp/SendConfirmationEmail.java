@@ -27,7 +27,7 @@ public class SendConfirmationEmail implements JavaDelegate {
 
 		String email = (String) execution.getVariable("customerMail");
 
-		String msg = "Dear " + execution.getVariable("customerName") + "\n."
+		String msg = "Dear " + execution.getVariable("customerName") + "\n\n"
 				+ "This is an automated message to notify you on the change of your issue.\n\n" + "\nSummary: "
 				+ execution.getVariable("summary") + "\nDescription: " + execution.getVariable("description")
 				+ "\nTicket Open Date: " + execution.getVariable("ticketOpenDate") + "\nTicket Status: "
@@ -44,7 +44,7 @@ public class SendConfirmationEmail implements JavaDelegate {
 				"\nReal Incident: " + execution.getVariable("isReallyIncident") + "\nSupported: "
 				+ execution.getVariable("incidentSupported") +
 
-				"\n We will try to get back to you shorty.\n\nBest Regards, Säntis Group";
+				"\n\n We will try to get back to you shorty.\n\nBest Regards, \nSäntis Group";
 
 		LOGGER.info("Message: " + msg);
 
