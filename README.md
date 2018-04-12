@@ -102,6 +102,7 @@ Following steps provide instructions on how to test the Incident Management proc
 - [x] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
 - [x] Cleanup forms (Moritz)
 - [ ] Dokumentieren Prozesse (Jaime)
+- [ ] Documentation (Architekturbild) (Moritz)
 - [x] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
   - [ ] Incorporate into whole process
 - [x] Creation Process (Check variables, finalize, ) (Moritz)
@@ -110,31 +111,30 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
   - [x] Hosting auf Heroku (PHP) -> App freigeben für Team
   - [x] GitHub Repo erstellen (Joël) 
-- [ ] Use of a DMN Decision Model (Assign to specific application depending on content keywords) (Joël) Analog Beispiel AutoCreateTweet (ServiceTasks)
-- [ ] Identification Task (Tweet, Priorisitation) (Joël)
+- [x] Use of a DMN Decision Model (Assign to specific application depending on content keywords) (Joël) Analog Beispiel AutoCreateTweet (ServiceTasks)
+- [x] Identification Task (Tweet, Priorisitation) (Joël)
 - [x] Create Zapier Student Account (Joël) -> not needed, 100 request per month are for free
-- [ ] Diagnosis mit CMMN erstellen (Moritz)
-- [ ] What are properties used for?
-- [ ] Ticket assignment (Routing? How to do it? Skill based routing)
-- [ ] Reporting overview: Page with dashboard of all tickets... for Case Manager
-- [ ] Documentation (Installation, Guidelines, ...)
+- [x] Diagnosis mit CMMN erstellen (Moritz)
+- [ ] What are properties used for? (Joël)
+- [ ] Reporting overview: Page with dashboard of all tickets... for Case Manager (Jaime)
 - [x] Test Post Twitter Status
 - [ ] Speaker Deck Presentation
-- [ ] How to quickly empty the H2 database (Joël)
-
+- [x] How to quickly empty the H2 database (Joël)
+- [ ] Create Testcases and Issues (Moritz)
 
 ## Nice to Have
 - [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
-
 - [ ] Ticket opening via google assistant
-- [ ] Monitoring of open tickets
-- [ ] Reporting and Statistics on Tableau
-- [ ] Switch to postgres sql (?)
+- [x] Monitoring of open tickets
+- [x] Reporting and Statistics on Tableau
+- [x] Switch to postgres sql (?)
 - [ ] Open ticked depending on social media actions [more](https://developer.twitter.com/en/docs/tweets/search/overview) 
 - [ ] Text recogniztion to assign to specific application (DMN)
 - [ ] Complete customer data with CRM?
 - [ ] Complete First/Lastname from Mailchimp API
 - [ ] Welcome the logged in user: https://docs.camunda.org/manual/7.6/reference/embedded-forms/javascript/examples/
+- [ ] Ticket assignment (Routing? How to do it? Skill based routing)
+
 ```
   ___                                 _         ____  ____  __  __
 / ___| __ _ _ __ ___  _   _ _ __   __| | __ _  | __ )|  _ \|  \/  |
