@@ -121,8 +121,11 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Speaker Deck Presentation
 - [x] How to quickly empty the H2 database (Joël)
 - [ ] Create Testcases and Issues (Moritz)
+- [ ] Status Changes (Request Ticket Status PHP) (Joël)
+- [ ] E-Mail Parser als AI (Zapier hat gewisse funktionen) (Moritz)
 
 ## Nice to Have
+- [ ] Freemaker for Mails (can use Camunda Variables)
 - [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
 - [ ] Ticket opening via google assistant
 - [x] Monitoring of open tickets
