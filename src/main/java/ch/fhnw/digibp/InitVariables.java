@@ -43,9 +43,9 @@ public class InitVariables implements JavaDelegate {
 
 		this.execution = execution;
 
-		setIfNull("impact", "3");
-		setIfNull("urgency", "3");
-		setIfNull("priority", "3");
+		setIfNull("impact", "3_MEDIUM");
+		setIfNull("urgency", "3_MEDIUM");
+		setIfNull("priority", "3_MEDIUM");
 		setIfNull("affectedApplication", "undefined");
 		setIfNull("summary", "");
 		setIfNull("description", "");
