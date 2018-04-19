@@ -102,9 +102,9 @@ Following steps provide instructions on how to test the Incident Management proc
 - [x] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
 - [x] Cleanup forms (Moritz)
 - [ ] Dokumentieren Prozesse (Jaime)
-- [ ] Documentation (Architekturbild) (Moritz)
+- [x] Documentation (Architekturbild) (Moritz)
 - [x] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
-  - [ ] Incorporate into whole process
+  - [x] Incorporate into whole process
 - [x] Creation Process (Check variables, finalize, ) (Moritz)
 - [x] Specify Validation Task (Creation1.bpmn) (Moritz)
 - [x] The start event can contain a webform! (Moritz)
