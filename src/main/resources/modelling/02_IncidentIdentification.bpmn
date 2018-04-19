@@ -16,7 +16,7 @@
     <bpmn:sequenceFlow id="SequenceFlow_0iyvz8z" sourceRef="AddIncidentDetails" targetRef="AssignIncidentToTeam" />
     <bpmn:sequenceFlow id="SequenceFlow_0t6ay6s" sourceRef="TweetIncidentStatus" targetRef="EndEvent_1n27h4c" />
     <bpmn:sequenceFlow id="DecisionImpactTrue" name="Big Impact" sourceRef="ExclusiveGateway_0dyvk9a" targetRef="TweetIncidentStatus">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{impact==1}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[#{impact=='1_CRITICAL'}]]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="DecisionImpactSmall" name="Few People Impacted" sourceRef="ExclusiveGateway_0dyvk9a" targetRef="EndEvent_1n27h4c" />
     <bpmn:sequenceFlow id="DecisionMicrosoft" name="Microsoft" sourceRef="ExclusiveGateway_18q8gzp" targetRef="RedirectIncidentMicrosoft">
@@ -39,7 +39,7 @@
     <bpmn:sequenceFlow id="SequenceFlow_0gghv4h" sourceRef="IncidentImpact" targetRef="ExclusiveGateway_0dyvk9a" />
     <bpmn:sequenceFlow id="SequenceFlow_0vcef8d" sourceRef="TaskEscalation" targetRef="IncidentImpact" />
     <bpmn:sequenceFlow id="DecisionPriority1" name="yes" sourceRef="ExclusiveGateway_0i1mbe7" targetRef="TaskEscalation">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[#{priority=="1"}]]></bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[#{priority=='1_CRITICAL'}]]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="DecisionPriority2" name="no" sourceRef="ExclusiveGateway_0i1mbe7" targetRef="IncidentImpact" />
     <bpmn:sequenceFlow id="SequenceFlow_0i3hv5o" sourceRef="PriorizeIncident" targetRef="ExclusiveGateway_0i1mbe7" />

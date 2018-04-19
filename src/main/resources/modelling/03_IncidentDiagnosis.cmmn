@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cmmn:definitions xmlns:dc="http://www.omg.org/spec/CMMN/20151109/DC" xmlns:di="http://www.omg.org/spec/CMMN/20151109/DI" xmlns:cmmndi="http://www.omg.org/spec/CMMN/20151109/CMMNDI" xmlns:cmmn="http://www.omg.org/spec/CMMN/20151109/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Test" targetNamespace="http://bpmn.io/schema/cmmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
+<cmmn:definitions xmlns:dc="http://www.omg.org/spec/CMMN/20151109/DC" xmlns:di="http://www.omg.org/spec/CMMN/20151109/DI" xmlns:cmmndi="http://www.omg.org/spec/CMMN/20151109/CMMNDI" xmlns:cmmn="http://www.omg.org/spec/CMMN/20151109/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/cmmn" id="Test" targetNamespace="http://bpmn.io/schema/cmmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
   <cmmn:case id="CaseDiagnosis" name="03_Diagnosis">
     <cmmn:casePlanModel id="Diagnosis" name="Diagnosis">
       <cmmn:planItem id="PlanItem_1y6mdly" definitionRef="EventListener_1pb02mv" />
@@ -10,11 +10,11 @@
       <cmmn:planItem id="PlanItem_0nx7h2v" definitionRef="Stage_0lwjgkw">
         <cmmn:entryCriterion id="EntryCriterion_01yc5yf" sentryRef="Sentry_0h5f2qd" />
       </cmmn:planItem>
-      <cmmn:planItem id="PlanItem_1" definitionRef="HumanTask_1wv3c9p" />
-      <cmmn:planItem id="PlanItem_1xq3ro3" definitionRef="HumanTask_1k2iu4f">
+      <cmmn:planItem id="PlanItem_1" name="Claim Ticket" definitionRef="HumanTask_1wv3c9p" />
+      <cmmn:planItem id="PlanItem_1xq3ro3" name="Status update" definitionRef="HumanTask_1k2iu4f">
         <cmmn:entryCriterion id="EntryCriterion_0yhtpkj" sentryRef="Sentry_1nwoytw" />
       </cmmn:planItem>
-      <cmmn:planItem id="PlanItem_0mpf4rj" definitionRef="HumanTask_1xk62iz">
+      <cmmn:planItem id="PlanItem_0mpf4rj" name="Diagnose Issue" definitionRef="HumanTask_1xk62iz">
         <cmmn:entryCriterion id="EntryCriterion_097kbjr" sentryRef="Sentry_12sn2fl" />
       </cmmn:planItem>
       <cmmn:sentry id="Sentry_1h7l4ys">
@@ -29,7 +29,10 @@
         <cmmn:planItemOnPart id="PlanItemOnPart_17qraz0" sourceRef="PlanItem_1">        <cmmn:standardEvent>complete</cmmn:standardEvent>
 </cmmn:planItemOnPart>
       </cmmn:sentry>
-      <cmmn:sentry id="Sentry_1ff7wai" />
+      <cmmn:sentry id="Sentry_1ff7wai">
+        <cmmn:planItemOnPart id="PlanItemOnPart_1j342dj" sourceRef="PlanItem_0mpf4rj">        <cmmn:standardEvent>complete</cmmn:standardEvent>
+</cmmn:planItemOnPart>
+      </cmmn:sentry>
       <cmmn:sentry id="Sentry_1nwoytw">
         <cmmn:planItemOnPart id="PlanItemOnPart_0fifok9" sourceRef="PlanItem_19yab3c">        <cmmn:standardEvent>occur</cmmn:standardEvent>
 </cmmn:planItemOnPart>
@@ -39,26 +42,26 @@
 </cmmn:planItemOnPart>
       </cmmn:sentry>
       <cmmn:planningTable id="PlanningTable_0c7h8q2">
-        <cmmn:discretionaryItem id="PlanItem_0rur3up" definitionRef="HumanTask_0jae0hw" />
-        <cmmn:discretionaryItem id="PlanItem_002fuxs" definitionRef="HumanTask_0n3n0ad" />
+        <cmmn:discretionaryItem id="PlanItem_0rur3up" definitionRef="HumanTask_0jae0hw" name="Change Assignment" />
+        <cmmn:discretionaryItem id="PlanItem_002fuxs" definitionRef="HumanTask_0n3n0ad" name="Consult Expert" />
       </cmmn:planningTable>
       <cmmn:eventListener id="EventListener_1pb02mv" name="Resolve Issue" />
       <cmmn:eventListener id="EventListener_1ya3toe" name="Close Issue" />
       <cmmn:milestone id="Milestone_0f7l20s" name="Issue diagnosed" />
       <cmmn:stage id="Stage_0lwjgkw">
-        <cmmn:planItem id="PlanItem_0b40ncp" definitionRef="HumanTask_0zv61kq" />
         <cmmn:sentry id="Sentry_1o2r7t4" />
         <cmmn:planningTable id="PlanningTable_1lfu5sz">
-          <cmmn:discretionaryItem id="PlanItem_1lr8v9k" definitionRef="HumanTask_11cyvy2">
+          <cmmn:discretionaryItem id="PlanItem_1lr8v9k" definitionRef="HumanTask_11cyvy2" name="consult Knowledge Database">
             <cmmn:entryCriterion id="EntryCriterion_0rxhj7x" sentryRef="Sentry_1o2r7t4" />
           </cmmn:discretionaryItem>
+          <cmmn:discretionaryItem id="PlanItem_0b40ncp" definitionRef="HumanTask_0zv61kq" name="Resolve Issue" />
         </cmmn:planningTable>
         <cmmn:humanTask id="HumanTask_0zv61kq" name="Resolve Issue" />
         <cmmn:humanTask id="HumanTask_11cyvy2" name="consult Knowledge Database" />
       </cmmn:stage>
-      <cmmn:humanTask id="HumanTask_1wv3c9p" name="Claim Ticket" />
-      <cmmn:humanTask id="HumanTask_1xk62iz" name="Diagnose Issue" />
-      <cmmn:humanTask id="HumanTask_1k2iu4f" name="Status update" />
+      <cmmn:humanTask id="HumanTask_1wv3c9p" name="Claim Ticket" camunda:assignee="demo" />
+      <cmmn:humanTask id="HumanTask_1xk62iz" name="Diagnose Issue" camunda:assignee="demo" />
+      <cmmn:humanTask id="HumanTask_1k2iu4f" name="Status update" camunda:assignee="demo" />
       <cmmn:humanTask id="HumanTask_0jae0hw" name="Change Assignment" />
       <cmmn:humanTask id="HumanTask_0n3n0ad" name="Consult Expert" />
       <cmmn:exitCriterion id="ExitCriterion_17guwi2" sentryRef="Sentry_1h7l4ys" />
@@ -165,10 +168,6 @@
         <dc:Bounds x="378" y="295" width="100" height="80" />
         <cmmndi:CMMNLabel />
       </cmmndi:CMMNShape>
-      <cmmndi:CMMNShape id="PlanItem_0ci6zo7_di" cmmnElementRef="PlanItem_0b40ncp">
-        <dc:Bounds x="190" y="295" width="100" height="80" />
-        <cmmndi:CMMNLabel />
-      </cmmndi:CMMNShape>
       <cmmndi:CMMNShape id="DiscretionaryItem_1pfcqec_di" cmmnElementRef="PlanItem_0rur3up">
         <dc:Bounds x="194" y="634" width="100" height="80" />
         <cmmndi:CMMNLabel />
@@ -183,6 +182,19 @@
       </cmmndi:CMMNShape>
       <cmmndi:CMMNShape id="PlanItem_1ya3f78_di" cmmnElementRef="PlanItem_0mpf4rj">
         <dc:Bounds x="424" y="127" width="100" height="80" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNEdge id="PlanItemOnPart_1j342dj_di" cmmnElementRef="PlanItemOnPart_1j342dj" targetCMMNElementRef="EntryCriterion_0t9i79a" isStandardEventVisible="true">
+        <di:waypoint xsi:type="dc:Point" x="524" y="167" />
+        <di:waypoint xsi:type="dc:Point" x="586" y="167" />
+        <di:waypoint xsi:type="dc:Point" x="586" y="170" />
+        <di:waypoint xsi:type="dc:Point" x="647" y="170" />
+        <cmmndi:CMMNLabel>
+          <dc:Bounds x="559" y="158.5" width="53" height="12" />
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNEdge>
+      <cmmndi:CMMNShape id="DiscretionaryItem_1rpaion_di" cmmnElementRef="PlanItem_0b40ncp">
+        <dc:Bounds x="190" y="295" width="100" height="80" />
         <cmmndi:CMMNLabel />
       </cmmndi:CMMNShape>
     </cmmndi:CMMNDiagram>

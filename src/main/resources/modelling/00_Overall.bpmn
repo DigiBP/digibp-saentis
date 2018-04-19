@@ -36,6 +36,7 @@
         <camunda:out variables="all" />
       </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_0wqfvbp</bpmn:incoming>
+      <bpmn:incoming>IssueIsRejected</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0juaxyo</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:endEvent id="EndEvent_001pyil">
@@ -60,7 +61,7 @@
     </bpmn:scriptTask>
     <bpmn:sequenceFlow id="SequenceFlow_0zs61jm" sourceRef="TaskStatusOpen" targetRef="Task_0kp5gpt" />
     <bpmn:scriptTask id="TicketStatusInvestigation" name="Update Status UNDER_INVESTIGATION" scriptFormat="groovy">
-      <bpmn:incoming>SequenceFlow_0mhof93</bpmn:incoming>
+      <bpmn:incoming>IsNotRejected</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1hf6qsu</bpmn:outgoing>
       <bpmn:script><![CDATA[execution.setVariable("ticketStatus", "UNDER_INVESTIGATION")]]></bpmn:script>
     </bpmn:scriptTask>
@@ -69,10 +70,21 @@
       <bpmn:outgoing>SequenceFlow_0wqfvbp</bpmn:outgoing>
       <bpmn:script><![CDATA[execution.setVariable("ticketStatus", "SOLVED")]]></bpmn:script>
     </bpmn:scriptTask>
-    <bpmn:sequenceFlow id="SequenceFlow_0mhof93" sourceRef="Task_0kp5gpt" targetRef="TicketStatusInvestigation" />
+    <bpmn:sequenceFlow id="SequenceFlow_0mhof93" sourceRef="Task_0kp5gpt" targetRef="IsRejected" />
     <bpmn:sequenceFlow id="SequenceFlow_1hf6qsu" sourceRef="TicketStatusInvestigation" targetRef="Task_10ecttp" />
     <bpmn:sequenceFlow id="SequenceFlow_0igbxad" sourceRef="Task_10ecttp" targetRef="TicketStatusDiagnosis" />
     <bpmn:sequenceFlow id="SequenceFlow_0wqfvbp" sourceRef="TicketStatusDiagnosis" targetRef="Task_0or3bif" />
+    <bpmn:exclusiveGateway id="IsRejected" name="Is Rejected?">
+      <bpmn:incoming>SequenceFlow_0mhof93</bpmn:incoming>
+      <bpmn:outgoing>IsNotRejected</bpmn:outgoing>
+      <bpmn:outgoing>IssueIsRejected</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="IsNotRejected" sourceRef="IsRejected" targetRef="TicketStatusInvestigation">
+              <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[#{ticketStatus!='REJECTED'}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="IssueIsRejected" sourceRef="IsRejected" targetRef="Task_0or3bif">
+          <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[#{ticketStatus=='REJECTED'}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="OverallIncident">
@@ -105,24 +117,24 @@
         <dc:Bounds x="604" y="402" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="CallActivity_1ltt1b0_di" bpmnElement="Task_10ecttp">
-        <dc:Bounds x="762" y="554" width="100" height="80" />
+        <dc:Bounds x="1072" y="554" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="CallActivity_0sgzxjm_di" bpmnElement="Task_0or3bif">
-        <dc:Bounds x="984" y="689" width="100" height="80" />
+        <dc:Bounds x="1294" y="689" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="EndEvent_001pyil_di" bpmnElement="EndEvent_001pyil">
-        <dc:Bounds x="1220" y="711" width="36" height="36" />
+        <dc:Bounds x="1530" y="711" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1193" y="751" width="90" height="12" />
+          <dc:Bounds x="1503" y="751" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0juaxyo_di" bpmnElement="SequenceFlow_0juaxyo">
-        <di:waypoint xsi:type="dc:Point" x="1084" y="729" />
-        <di:waypoint xsi:type="dc:Point" x="1145" y="729" />
-        <di:waypoint xsi:type="dc:Point" x="1145" y="729" />
-        <di:waypoint xsi:type="dc:Point" x="1220" y="729" />
+        <di:waypoint xsi:type="dc:Point" x="1394" y="729" />
+        <di:waypoint xsi:type="dc:Point" x="1455" y="729" />
+        <di:waypoint xsi:type="dc:Point" x="1455" y="729" />
+        <di:waypoint xsi:type="dc:Point" x="1530" y="729" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1115" y="723" width="90" height="12" />
+          <dc:Bounds x="1425" y="723" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="ServiceTask_1grxvgh_di" bpmnElement="InitVars">
@@ -156,37 +168,58 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="ScriptTask_05nkd05_di" bpmnElement="TicketStatusInvestigation">
-        <dc:Bounds x="762" y="402" width="100" height="80" />
+        <dc:Bounds x="1072" y="402" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ScriptTask_1xyzkh3_di" bpmnElement="TicketStatusDiagnosis">
-        <dc:Bounds x="984" y="554" width="100" height="80" />
+        <dc:Bounds x="1294" y="554" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0mhof93_di" bpmnElement="SequenceFlow_0mhof93">
         <di:waypoint xsi:type="dc:Point" x="704" y="442" />
-        <di:waypoint xsi:type="dc:Point" x="762" y="442" />
+        <di:waypoint xsi:type="dc:Point" x="861" y="442" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="733" y="421" width="0" height="12" />
+          <dc:Bounds x="737.5" y="421" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1hf6qsu_di" bpmnElement="SequenceFlow_1hf6qsu">
-        <di:waypoint xsi:type="dc:Point" x="812" y="482" />
-        <di:waypoint xsi:type="dc:Point" x="812" y="554" />
+        <di:waypoint xsi:type="dc:Point" x="1122" y="482" />
+        <di:waypoint xsi:type="dc:Point" x="1122" y="554" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="827" y="512" width="0" height="12" />
+          <dc:Bounds x="1092" y="512" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_0igbxad_di" bpmnElement="SequenceFlow_0igbxad">
-        <di:waypoint xsi:type="dc:Point" x="862" y="594" />
-        <di:waypoint xsi:type="dc:Point" x="984" y="594" />
+        <di:waypoint xsi:type="dc:Point" x="1172" y="594" />
+        <di:waypoint xsi:type="dc:Point" x="1294" y="594" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="923" y="573" width="0" height="12" />
+          <dc:Bounds x="1188" y="573" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_0wqfvbp_di" bpmnElement="SequenceFlow_0wqfvbp">
-        <di:waypoint xsi:type="dc:Point" x="1034" y="634" />
-        <di:waypoint xsi:type="dc:Point" x="1034" y="689" />
+        <di:waypoint xsi:type="dc:Point" x="1344" y="634" />
+        <di:waypoint xsi:type="dc:Point" x="1344" y="689" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1049" y="655.5" width="0" height="12" />
+          <dc:Bounds x="1314" y="656" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0lu7m2q_di" bpmnElement="IsRejected" isMarkerVisible="true">
+        <dc:Bounds x="861" y="417" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="857" y="471" width="61" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0yxiixh_di" bpmnElement="IsNotRejected">
+        <di:waypoint xsi:type="dc:Point" x="911" y="442" />
+        <di:waypoint xsi:type="dc:Point" x="1068" y="442" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="989.5" y="421" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0zwkc1k_di" bpmnElement="IssueIsRejected">
+        <di:waypoint xsi:type="dc:Point" x="886" y="467" />
+        <di:waypoint xsi:type="dc:Point" x="886" y="729" />
+        <di:waypoint xsi:type="dc:Point" x="1294" y="729" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="901" y="592" width="0" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
