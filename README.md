@@ -120,7 +120,11 @@ Following steps provide instructions on how to test the Incident Management proc
 - [x] Test Post Twitter Status
 - [ ] Speaker Deck Presentation
 - [x] How to quickly empty the H2 database (Joël)
-- [ ] Create Testcases and Issues (Moritz)
+- [x] Create Testcases and Issues - Process (Moritz)
+- [ ] Create Testcases and Issues - Integration: E-Mail (Moritz)
+- [ ] Create Testcases and Issues - Integration: PHP (Moritz)
+- [ ] Create Testcases and Issues - Integration: Twitter (Moritz)
+- [ ] Create Testcases and Issues - Integration: Reporting(Tableau) (Moritz)
 - [ ] Status Changes (Request Ticket Status PHP) (Joël)
 - [ ] E-Mail Parser als AI (Zapier hat gewisse funktionen) (Moritz)
 
