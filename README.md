@@ -28,7 +28,7 @@ For this project we have adhered to the ITIL Incident Management Standard. We ha
 -3 Incident Resolution Process
 
 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident Management ITIL.jpg)
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL.jpg)
 
 ### Overall Process
 
