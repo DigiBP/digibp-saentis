@@ -23,12 +23,12 @@ This Chapter describes the basic idea behind the incident process we have select
 
 For this project we have adhered to the ITIL Incident Management Standard. We have focused on the following four sub-processes. 
 
--1 Indicent Creation Process
--2 Incident Identification Process (Incident Categorization and Incident Priorization) 
--3 Incident Resolution Process
-
+- 1 Indicent Creation Process
+- 2 Incident Identification Process (Incident Categorization and Incident Priorization) 
+- 3 Incident Resolution Process
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL.jpg)
+This screenshot shows the ITIL Incident Management Process. You can see the sub-processes (outlined in red) that we needed for our project. 
 
 ### Overall Process
 
