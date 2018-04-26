@@ -17,6 +17,16 @@ This repository contains an incident management workflow running on [Camunda BPM
 
 ## Process Description (Incident Management Workflow)
 This chapter describes the implemented process in more detail.
+
+## Incident Process Idea
+This Chapter describes the basic idea behind the incident process we have selected. 
+
+For this project we have adhered to the ITIL Incident Management Standard. We have focused on the following four sub-processes. 
+
+1st Indicent Creation Process
+2nd Incident Identification Process (Incident Categorization and Incident Priorization) 
+3rd Incident Resolution Process
+
 ### Overall Process
 
 TESTTEST
