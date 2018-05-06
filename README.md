@@ -15,6 +15,9 @@ This repository contains an incident management workflow running on [Camunda BPM
 * Moritz Armingeon, [moritz.armingeon@students.fhnw.ch](mailto:moritz.armingeon@students.fhnw.ch)
 * Joël Schmid, [joel.schmid@students.fhnw.ch](mailto:joel.schmid@students.fhnw.ch)
 
+## Dislaimer
+We assume that the reader is familiar with BPMN 2.0. The processes and their flows are not described or explained in this project. 
+
 ## Process Description (Incident Management Workflow)
 This chapter describes the implemented process in more detail.
 
