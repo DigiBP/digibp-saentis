@@ -74,7 +74,10 @@ The following image shows a simple visualization of our Resolution Process.
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
 
-## Step by Step
+## Step by Step Guide
+This chapter shows how to start the processes with the individual options. 
+
+###Overview 
 
 
 ## Installation
