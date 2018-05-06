@@ -37,36 +37,42 @@ This screenshot shows the ITIL Incident Management Process. You can see the sub-
 
 ### Overall Process
 The following image shows a simple visualization of our Overall process. This Process is divided in four sub processes.
--Create Issue
--Issue Identification
--Issue Diagnosis
--Issue Resolution
+- Create Issue
+- Issue Identification
+- Issue Diagnosis
+- Issue Resolution
 
 | **Overall Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
-### Issue Creation
-The following image shows a simple visualization of our Overall process.
+### Issue Creation Process
+The following image shows a simple visualization of our Issue Creation Process.
 
-| **Creation Process** |
+| **Issue Creation Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/01_IncidentCreation.png) |
 
 ### Issue Identification
+The following image shows a simple visualization of our Identification Process.
+
 | **Identification Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/02_IncidentIdentification.png) |
 
-### Issue Diagnosis
+### Issue Diagnosis Process
+The following image shows a simple visualization of our Diagnosis Process.
 | **Diagnosis Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/03_IncidentDiagnosis.png) |
 
-### Issue Resolution
+### Issue Resolution Process
+The following image shows a simple visualization of our Resolution Process.
 | **Resolution Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
+
+## Step by Step
 
 
 ## Installation
