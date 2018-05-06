@@ -77,7 +77,10 @@ The following image shows a simple visualization of our Resolution Process.
 ## Step by Step Guide
 This chapter shows how to start the processes with the individual options. 
 
-###Overview 
+BIGPICTURE
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
+
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
 
 
 ## Installation
