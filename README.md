@@ -62,12 +62,14 @@ The following image shows a simple visualization of our Identification Process.
 
 ### Issue Diagnosis Process
 The following image shows a simple visualization of our Diagnosis Process.
+
 | **Diagnosis Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/03_IncidentDiagnosis.png) |
 
 ### Issue Resolution Process
 The following image shows a simple visualization of our Resolution Process.
+
 | **Resolution Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
