@@ -29,7 +29,7 @@ For this project we have adhered to the ITIL Incident Management Standard. We ha
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL.jpg)
 
-This screenshot shows the ITIL Incident Management Process. You can see the sub-processes (outlined in red) that we needed for our project. 
+This screenshot shows the ITIL Incident Management Process. You can see the sub-processes (outlined in red) that we used for our project. 
 
 ### Overall Process
 
