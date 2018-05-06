@@ -37,6 +37,10 @@ This screenshot shows the ITIL Incident Management Process. You can see the sub-
 
 ### Overall Process
 The following image shows a simple visualization of our Overall process. This Process is divided in four sub processes.
+-Create Issue
+-Issue Identification
+-Issue Diagnosis
+-Issue Resolution
 
 | **Overall Process** |
 | ------------------ |
