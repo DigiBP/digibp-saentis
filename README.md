@@ -18,10 +18,11 @@ This repository contains an incident management workflow running on [Camunda BPM
 ## Dislaimer
 We assume that the reader is familiar with BPMN 2.0. The processes and their flows are not described or explained in this project. 
 
-## Process Description (Incident Management Workflow)
-This chapter describes the implemented process in more detail.
+## Methodology and approach
 
-## Incident Process Idea
+The present project was approached according to the KISS (keep it simple, stupid) principle. With the KISS principle, a simple solution can be sought to solve a required problem. In addition to the KISS principle, the project team has chosen the agile approach to ensure the development and finalization of the project. 
+
+## Incident Process Idea - Process Decription (Incident Management Workflow)
 This Chapter describes the basic idea behind the incident process we have selected. 
 
 For this project we have adhered to the ITIL Incident Management Standard. We have focused on the following four sub-processes. 
