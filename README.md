@@ -36,9 +36,6 @@ For this project we have adhered to the ITIL Incident Management Standard. We ha
 This screenshot shows the ITIL Incident Management Process. You can see the sub-processes (outlined in red) that we used for our project. 
 
 ### Overall Process
-
-TESTTEST
-
 The following image shows a simple visualization of our Overall process. This Process is divided in four sub processes.
 
 | **Overall Process** |
@@ -51,8 +48,6 @@ The following image shows a simple visualization of our Overall process.
 | **Creation Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/01_IncidentCreation.png) |
-
-
 
 ### Issue Identification
 | **Identification Process** |
