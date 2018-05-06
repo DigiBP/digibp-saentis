@@ -27,7 +27,7 @@ For this project we have adhered to the ITIL Incident Management Standard. We ha
 - 2 Incident Identification Process (Incident Categorization and Incident Priorization) 
 - 3 Incident Resolution Process
 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL_2.jpg)
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL.jpg)
 
 This screenshot shows the ITIL Incident Management Process. You can see the sub-processes (outlined in red) that we used for our project. 
 
