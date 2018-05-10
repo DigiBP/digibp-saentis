@@ -85,6 +85,11 @@ Picture description: Big Picture
 | ------------------ | ------------------ |------------------|
 | 1 | - Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ - Login with demo for the Username and demo for the Password - Cklick on tasklist - After that cklick on start Process    | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png)|
 
+
+| **1 Step** |
+| ------------------ |
+|- Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ - Login with demo for the Username and demo for the Password - Cklick on tasklist - After that cklick on start Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png)|
+
 | Etwas Text hier | Ein bisschen hier | Etwas Hier|
 | Etwas Text hier | Ein bisschen hier | Etwas Hier|
 | Etwas Text hier | Ein bisschen hier | Etwas Hier|
