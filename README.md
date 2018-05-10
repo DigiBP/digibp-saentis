@@ -79,6 +79,9 @@ The Incident can be started in several ways (see picture Big Picture). In this c
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
 Picture description: Big Picture
 
+| Linke Überschrift | Mittlere Überschrift |Rechte Überschrift |
+| ------------------ | ------------------ |
+| Etwas Text hier | Ein bisschen hier | Etwas Hier|
 
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
