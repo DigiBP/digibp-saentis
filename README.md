@@ -79,25 +79,15 @@ The Incident can be started in several ways (see picture Big Picture). In this c
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
 Picture description: Big Picture
 
+### Start the Overall Process with Camunda
 
 | **1 Step** |
 | ------------------ |
-|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 
-2. login with demo for the Username and demo for the Password 
-3. Click on tasklist 
-4. After that cklick on start process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
+|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on tasklist 4. After that cklick on start Overall Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
+| **2 Step** |
 | ------------------ |
+|Test |
 
-### Start the process with Camunda
-
-| Step | Context |Screenshot |
-| ------------------ | ------------------ |------------------|
-| Etwas Text hier | Ein bisschen hier | Etwas Hier|
-| Etwas Text hier | Ein bisschen hier | Etwas Hier|
-| Etwas Text hier | Ein bisschen hier | Etwas Hier|
-| Etwas Text hier | Ein bisschen hier | Etwas Hier|
-| Etwas Text hier | Ein bisschen hier | Etwas Hier|
-| Etwas Text hier | Ein bisschen hier | Etwas Hier|
 
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
