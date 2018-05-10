@@ -83,7 +83,7 @@ Picture description: Big Picture
 
 | Step | Context |Screenshot |
 | ------------------ | ------------------ |------------------|
-| 1 | - Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ - Then go   | Etwas Hier|
+| 1 | - Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ - Login with demo for the Username and demo for the Password - Cklick on tasklist - After that cklick on start Process    | Etwas Hier|
 | Etwas Text hier | Ein bisschen hier | Etwas Hier|
 | Etwas Text hier | Ein bisschen hier | Etwas Hier|
 | Etwas Text hier | Ein bisschen hier | Etwas Hier|
