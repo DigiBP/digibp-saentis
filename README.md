@@ -87,7 +87,7 @@ Picture description: Big Picture
 
 | **2 Step** |
 | ------------------ |
-|1. Fill out all fields (As in the example) and click on Start ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
+|1. Fill out all fields (As in the example) and click on Start to start the Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
 
 
 
