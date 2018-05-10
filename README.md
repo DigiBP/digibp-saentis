@@ -80,10 +80,9 @@ The Incident can be started in several ways (see picture Big Picture). In this c
 Picture description: Big Picture
 
 
-
 | **1 Step** |
 | ------------------ |
-|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. ogin with demo for the Username and demo for the Password 3. Click on tasklist 4. After that cklick on start process | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
+|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. ogin with demo for the Username and demo for the Password 3. Click on tasklist 4. After that cklick on start process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
 
 ### Start the process with Camunda
 
