@@ -75,10 +75,11 @@ The following image shows a simple visualization of our Resolution Process.
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
 
 ## Step by Step Guide
-This chapter shows how to start the processes with the individual options. 
-
-BIGPICTURE
+The Incident can be started in several ways (see picture Big Picture). In this chapter all possibilities are explained step by step. 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
+Picture description: Big Picture
+
+
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
 
