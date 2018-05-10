@@ -83,7 +83,7 @@ Picture description: Big Picture
 
 | Step | Context |Screenshot |
 | ------------------ | ------------------ |------------------|
-| 1 | Click the following URL to go to our Heroku website:  | Etwas Hier|
+| 1 | - Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ - Then go   | Etwas Hier|
 | Etwas Text hier | Ein bisschen hier | Etwas Hier|
 | Etwas Text hier | Ein bisschen hier | Etwas Hier|
 | Etwas Text hier | Ein bisschen hier | Etwas Hier|
