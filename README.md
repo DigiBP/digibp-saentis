@@ -79,8 +79,16 @@ The Incident can be started in several ways (see picture Big Picture). In this c
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
 Picture description: Big Picture
 
+** Start the process with Camunda ** 
+
 | Step | Context |Screenshot |
 | ------------------ | ------------------ |------------------|
+| 1 | Click the following URL to go to our Heroku website:  | Etwas Hier|
+| Etwas Text hier | Ein bisschen hier | Etwas Hier|
+| Etwas Text hier | Ein bisschen hier | Etwas Hier|
+| Etwas Text hier | Ein bisschen hier | Etwas Hier|
+| Etwas Text hier | Ein bisschen hier | Etwas Hier|
+| Etwas Text hier | Ein bisschen hier | Etwas Hier|
 | Etwas Text hier | Ein bisschen hier | Etwas Hier|
 
 
