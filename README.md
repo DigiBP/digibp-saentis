@@ -85,11 +85,13 @@ Picture description: Big Picture
 | ------------------ |
 |1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on tasklist 4. After that cklick on start Overall Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
 
-| **2 Step** |
+| **2 Step - Incident Creation** |
 | ------------------ |
 |1. Fill out all fields (As in the example) and click on Start to start the Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
 
-
+| **3 Step - Oncident Identification** |
+| ------------------ |
+|After the second step follows the incident identification process. The Incident Manager confirms whether the Incident is supported. In our case yes - So the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png)  |
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
 
