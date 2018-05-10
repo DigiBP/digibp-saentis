@@ -93,9 +93,9 @@ Picture description: Big Picture
 | ------------------ |
 |1. After the second step follows the incident identification process. The Incident Manager confirms whether the Incident is supported. In our case yes - So the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
 
-| **3 Step - Add Incident Details** |
+| **4 Step - Add Incident Details** |
 | ------------------ |
-|1. At this point, the Incident Manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
+|1. At this point, the Incident Manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
 
