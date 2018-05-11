@@ -115,7 +115,7 @@ Picture description: Big Picture
 
 | **4 Step - Add Incident Details (with Critical Impact)** |
 | ------------------ |
-|1. At this point, the Incident Manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetailsCritical.png) |
+|1. At this point, the Incident Manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetailsCritical.png)|
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -127,8 +127,7 @@ Picture description: Big Picture
 
 | **2 Step - Create an Incident with the Webformular** |
 | ------------------ |
-|1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an cklick "create ticket" |
-
+|1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an cklick "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png)|
 
 ## Installation
 The repository can be deployed to Heroku using the following button. The repository is based on the [digibp-camunda-template](https://github.com/DigiBP/digibp-camunda-template) (Version 2.0.39
