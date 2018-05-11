@@ -79,7 +79,7 @@ The Incident can be started in several ways (see picture Big Picture). In this c
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
 Picture description: Big Picture
 
-### cc
+### Create an Incident with Camunda
 
 | **1 Step** |
 | ------------------ |
@@ -97,6 +97,7 @@ Picture description: Big Picture
 | ------------------ |
 |1. At this point, the Incident Manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
 ### Generate a tweet if the Incident is Critical (Impact) with Camunda
 
@@ -118,14 +119,15 @@ Picture description: Big Picture
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-### Generate a Incident with the Webformular
+### Ceate a Incident with the Webformular
+
 | **1 Step - Go to the Webpage** |
 | ------------------ |
 |Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 1. Create a new Incident 2. Retrieve Incident Status 3. Dashboard (Overview) which shows the current incidents 4. Landingpage 5. You can also access the individual actions through the yellow-bordered area. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png)|
 
-| **2 Step - Create an Incident with the Webformular  ** |
+| **2 Step - Create an Incident with the Webformular** |
 | ------------------ |
-||
+|1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an cklick "create ticket" |
 
 
 ## Installation
