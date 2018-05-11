@@ -121,13 +121,11 @@ Picture description: Big Picture
 ### Generate a Incident with the Webformular
 | **1 Step - Go to the Webpage** |
 | ------------------ |
-|Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 1. Create a new Incident 2. Retrieve Incident Status 3. Dashboard (Overview) which shows the current incidents 4. Landingpage 5. You can also access the individual actions through the yellow-bordered area. 
-|
+|Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 1. Create a new Incident 2. Retrieve Incident Status 3. Dashboard (Overview) which shows the current incidents 4. Landingpage 5. You can also access the individual actions through the yellow-bordered area. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png)|
 
-| **1 Step - ** |
+| **2 Step - Create an Incident with the Webformular  ** |
 | ------------------ |
-|1. Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/  |
-
+||
 
 
 ## Installation
