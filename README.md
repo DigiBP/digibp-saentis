@@ -114,7 +114,7 @@ Picture description: Big Picture
 
 | **4 Step - Add Incident Details (with Critical Impact)** |
 | ------------------ |
-|1. At this point, the Incident Manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/.png) |
+|1. At this point, the Incident Manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetailsCritical.png) |
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
 
