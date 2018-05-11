@@ -97,6 +97,24 @@ Picture description: Big Picture
 | ------------------ |
 |1. At this point, the Incident Manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
 
+
+### Generate a tweet if the Incident is Critical (Impact) with Camunda
+
+| **1 Step** |
+| ------------------ |
+|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on tasklist 4. After that cklick on start Overall Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
+
+| **2 Step - Incident Creation** |
+| ------------------ |
+|1. Fill out all fields (As in the example) and click on Start to start the Process 2. The tweet is only triggered if the Impact Status is on CRITICAL. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/.png) |
+
+
+
+
+
+
+
+
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
 
 
