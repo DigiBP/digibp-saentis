@@ -175,14 +175,14 @@ Following steps provide instructions on how to test the Incident Management proc
 - [x] Creation Process (Check variables, finalize, ) (Moritz)
 - [x] Specify Validation Task (Creation1.bpmn) (Moritz)
 - [x] The start event can contain a webform! (Moritz)
-- [ ] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
+- [x] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
   - [x] Hosting auf Heroku (PHP) -> App freigeben für Team
   - [x] GitHub Repo erstellen (Joël) 
 - [x] Use of a DMN Decision Model (Assign to specific application depending on content keywords) (Joël) Analog Beispiel AutoCreateTweet (ServiceTasks)
 - [x] Identification Task (Tweet, Priorisitation) (Joël)
 - [x] Create Zapier Student Account (Joël) -> not needed, 100 request per month are for free
 - [x] Diagnosis mit CMMN erstellen (Moritz)
-- [ ] What are properties used for? (Joël)
+- [x] What are properties used for? (Joël)
 - [ ] Reporting overview: Page with dashboard of all tickets... for Case Manager (Jaime)
 - [x] Test Post Twitter Status
 - [ ] Speaker Deck Presentation
@@ -192,11 +192,11 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Create Testcases and Issues - Integration: PHP (Moritz)
 - [ ] Create Testcases and Issues - Integration: Twitter (Moritz)
 - [ ] Create Testcases and Issues - Integration: Reporting(Tableau) (Moritz)
-- [ ] Status Changes (Request Ticket Status PHP) (Joël)
+- [x] Status Changes (Request Ticket Status PHP) (Joël)
 - [ ] E-Mail Parser als AI (Zapier hat gewisse funktionen) (Moritz)
+- [ ] Add another status once the ticket is processing (after decision ticket is supported)
 
 ## Nice to Have
-- [ ] Freemaker for Mails (can use Camunda Variables)
 - [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
 - [ ] Ticket opening via google assistant
 - [x] Monitoring of open tickets
@@ -207,7 +207,7 @@ Following steps provide instructions on how to test the Incident Management proc
 - [ ] Complete customer data with CRM?
 - [ ] Complete First/Lastname from Mailchimp API
 - [ ] Welcome the logged in user: https://docs.camunda.org/manual/7.6/reference/embedded-forms/javascript/examples/
-- [ ] Ticket assignment (Routing? How to do it? Skill based routing)
+- [x] Ticket assignment (Routing? How to do it? Skill based routing)
 - [ ] E-Mail FreeMarker e-Mail template https://freemarker.apache.org/
 
 ```
