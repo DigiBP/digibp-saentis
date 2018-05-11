@@ -89,7 +89,7 @@ Picture description: Big Picture
 | ------------------ |
 |1. Fill out all fields (As in the example) and click on Start to start the Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
 
-| **3 Step - Oncident Identification** |
+| **3 Step - Incident Identification** |
 | ------------------ |
 |1. After the second step follows the incident identification process. The Incident Manager confirms whether the Incident is supported. In our case yes - So the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
 
@@ -100,20 +100,17 @@ Picture description: Big Picture
 
 ### Generate a tweet if the Incident is Critical (Impact) with Camunda
 
-| **1 Step** |
+| **1 Step - Login in to Camunda** |
 | ------------------ |
 |1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on tasklist 4. After that cklick on start Overall Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
 
-| **2 Step - Incident Creation** |
+| **2 Step - Incident Creation (with Crititcal Impact)** |
 | ------------------ |
 |1. Fill out all fields (As in the example) and click on Start to start the Process 2. The tweet is only triggered if the Impact Status is on CRITICAL. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMaskCritical.png) |
 
-
-
-
-
-
-
+| **3 Step - Incident Identification (with Crititcal Impact)** |
+| ------------------ |
+|1. After the second step follows the incident identification process. The Incident Manager confirms whether the Incident is supported. In our case yes - So the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentificationCritical.png) |
 
 
 
