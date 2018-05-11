@@ -5,7 +5,7 @@
     <bpmn:participant id="Customer" name="Customer" processRef="Process_0s8cjsm" />
     <bpmn:participant id="Participant_1ungj1x" name="CaseManager" processRef="Process_06ow5ur" />
     <bpmn:messageFlow id="MessageFlow_1wli6a8" sourceRef="TaskSendEmail" targetRef="Customer" />
-    <bpmn:messageFlow id="MessageFlow_1dfaano" sourceRef="TaskEscalation" targetRef="Participant_1ungj1x" />
+    <bpmn:messageFlow id="MessageFlow_0lu3kvc" sourceRef="TaskEscalation" targetRef="Participant_1ungj1x" />
   </bpmn:collaboration>
   <bpmn:process id="Identification" name="02_Incident Identification" isExecutable="true">
     <bpmn:sequenceFlow id="SequenceFlow_12k7p07" sourceRef="UpdateStatusRejected2" targetRef="EndEvent_1l6wg2f" />
@@ -117,15 +117,6 @@ JSON.stringify(out);]]></camunda:script>
       <bpmn:incoming>DecisionImpactTrue</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0t6ay6s</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:sendTask id="TaskEscalation" name="Inform case manager ">
-      <bpmn:extensionElements>
-        <camunda:connector>
-          <camunda:connectorId>http-connector</camunda:connectorId>
-        </camunda:connector>
-      </bpmn:extensionElements>
-      <bpmn:incoming>DecisionPriority1</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_0vcef8d</bpmn:outgoing>
-    </bpmn:sendTask>
     <bpmn:endEvent id="EndEvent_1n27h4c">
       <bpmn:incoming>DecisionImpactSmall</bpmn:incoming>
       <bpmn:incoming>SequenceFlow_0t6ay6s</bpmn:incoming>
@@ -160,6 +151,10 @@ JSON.stringify(out);]]></camunda:script>
       <bpmn:outgoing>DecisionPriority1</bpmn:outgoing>
       <bpmn:outgoing>DecisionPriority2</bpmn:outgoing>
     </bpmn:exclusiveGateway>
+    <bpmn:sendTask id="TaskEscalation" name="Inform case manager ">
+      <bpmn:incoming>DecisionPriority1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0vcef8d</bpmn:outgoing>
+    </bpmn:sendTask>
   </bpmn:process>
   <bpmn:process id="Process_0s8cjsm" isExecutable="false" />
   <bpmn:process id="Process_06ow5ur" isExecutable="false" />
@@ -347,16 +342,6 @@ JSON.stringify(out);]]></camunda:script>
       <bpmndi:BPMNShape id="Participant_1ungj1x_di" bpmnElement="Participant_1ungj1x">
         <dc:Bounds x="38" y="-506" width="1597" height="242" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="SendTask_027azew_di" bpmnElement="TaskEscalation">
-        <dc:Bounds x="1212" y="146" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="MessageFlow_1dfaano_di" bpmnElement="MessageFlow_1dfaano">
-        <di:waypoint xsi:type="dc:Point" x="1262" y="146" />
-        <di:waypoint xsi:type="dc:Point" x="1262" y="-264" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1232" y="-65" width="90" height="13" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="ExclusiveGateway_0dyvk9a_di" bpmnElement="ExclusiveGateway_0dyvk9a" isMarkerVisible="true">
         <dc:Bounds x="1315" y="314" width="50" height="50" />
         <bpmndi:BPMNLabel>
@@ -452,6 +437,16 @@ JSON.stringify(out);]]></camunda:script>
           <dc:Bounds x="1029" y="431" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_0lu3kvc_di" bpmnElement="MessageFlow_0lu3kvc">
+        <di:waypoint xsi:type="dc:Point" x="1262" y="146" />
+        <di:waypoint xsi:type="dc:Point" x="1262" y="-264" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1277" y="-65.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="SendTask_10vfqqg_di" bpmnElement="TaskEscalation">
+        <dc:Bounds x="1212" y="146" width="100" height="80" />
+      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
