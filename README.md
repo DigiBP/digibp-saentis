@@ -106,7 +106,9 @@ Picture description: Big Picture
 
 | **2 Step - Incident Creation** |
 | ------------------ |
-|1. Fill out all fields (As in the example) and click on Start to start the Process 2. The tweet is only triggered if the Impact Status is on CRITICAL. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/.png) |
+|1. Fill out all fields (As in the example) and click on Start to start the Process 2. The tweet is only triggered if the Impact Status is on CRITICAL. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMaskCritical.png) |
+
+
 
 
 
