@@ -5,7 +5,7 @@
     <bpmn:participant id="Customer" name="Customer" processRef="Process_0s8cjsm" />
     <bpmn:participant id="Participant_1ungj1x" name="CaseManager" processRef="Process_06ow5ur" />
     <bpmn:messageFlow id="MessageFlow_1wli6a8" sourceRef="TaskSendEmail" targetRef="Customer" />
-    <bpmn:messageFlow id="MessageFlow_0lu3kvc" sourceRef="TaskEscalation" targetRef="Participant_1ungj1x" />
+    <bpmn:messageFlow id="MessageFlow_0lu3kvc" sourceRef="TaskEscalationNotification" targetRef="Participant_1ungj1x" />
   </bpmn:collaboration>
   <bpmn:process id="Identification" name="02_Incident Identification" isExecutable="true">
     <bpmn:sequenceFlow id="SequenceFlow_12k7p07" sourceRef="UpdateStatusRejected2" targetRef="EndEvent_1l6wg2f" />
@@ -37,8 +37,8 @@
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_0t9950f" sourceRef="CheckIncident" targetRef="ReallyIncident" />
     <bpmn:sequenceFlow id="SequenceFlow_0gghv4h" sourceRef="IncidentImpact" targetRef="ExclusiveGateway_0dyvk9a" />
-    <bpmn:sequenceFlow id="SequenceFlow_0vcef8d" sourceRef="TaskEscalation" targetRef="IncidentImpact" />
-    <bpmn:sequenceFlow id="DecisionPriority1" name="yes" sourceRef="ExclusiveGateway_0i1mbe7" targetRef="TaskEscalation">
+    <bpmn:sequenceFlow id="SequenceFlow_0vcef8d" sourceRef="TaskEscalationNotification" targetRef="IncidentImpact" />
+    <bpmn:sequenceFlow id="DecisionPriority1" name="yes" sourceRef="ExclusiveGateway_0i1mbe7" targetRef="TaskEscalationNotification">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[#{priority=='1_CRITICAL'}]]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="DecisionPriority2" name="no" sourceRef="ExclusiveGateway_0i1mbe7" targetRef="IncidentImpact" />
@@ -151,10 +151,10 @@ JSON.stringify(out);]]></camunda:script>
       <bpmn:outgoing>DecisionPriority1</bpmn:outgoing>
       <bpmn:outgoing>DecisionPriority2</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sendTask id="TaskEscalation" name="Inform case manager ">
+    <bpmn:manualTask id="TaskEscalationNotification" name="Inform case manager ">
       <bpmn:incoming>DecisionPriority1</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0vcef8d</bpmn:outgoing>
-    </bpmn:sendTask>
+    </bpmn:manualTask>
   </bpmn:process>
   <bpmn:process id="Process_0s8cjsm" isExecutable="false" />
   <bpmn:process id="Process_06ow5ur" isExecutable="false" />
@@ -444,7 +444,7 @@ JSON.stringify(out);]]></camunda:script>
           <dc:Bounds x="1277" y="-65.5" width="0" height="13" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="SendTask_10vfqqg_di" bpmnElement="TaskEscalation">
+      <bpmndi:BPMNShape id="ManualTask_1d21s0q_di" bpmnElement="TaskEscalationNotification">
         <dc:Bounds x="1212" y="146" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
