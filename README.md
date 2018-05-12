@@ -207,6 +207,7 @@ Following steps provide instructions on how to test the Incident Management proc
 - [x] Status Changes (Request Ticket Status PHP) (Joël)
 - [ ] E-Mail Parser als AI (Zapier hat gewisse funktionen) (Moritz)
 - [ ] Add another status once the ticket is processing (after decision ticket is supported)
+- [ ] Create a script with the demo steps (and test!!!)
 
 ## Nice to Have
 - [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
