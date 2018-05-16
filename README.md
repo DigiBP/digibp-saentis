@@ -223,6 +223,15 @@ Following steps provide instructions on how to test the Incident Management proc
 - [x] Ticket assignment (Routing? How to do it? Skill based routing)
 - [ ] E-Mail FreeMarker e-Mail template https://freemarker.apache.org/
 
+
+Tasks offe:
+- Witeri Status Change implementiere nach "Ticket Supported" -> in Progress (Chentisch du das mache @Moritz ?)
+- Uberarbeitig Doku (Alle)
+- No en geile Graph bim Tableau hinzüefiege (@Jaime )
+- AI ver E-Mail üswärtig (@Moritz isch das üfwendig?)
+- Es Ablauf-Skript ver di Präsentation schribe (siehe https://github.com/DigiBP/digibp-saentis/blob/master/doc/demoscript.md) damit wer kei Fähler hei bi der Demo am schluss, sprich jede Schritt und wenn welle schrit, etc.
+
+
 ```
   ___                                 _         ____  ____  __  __
 / ___| __ _ _ __ ___  _   _ _ __   __| | __ _  | __ )|  _ \|  \/  |
