@@ -77,6 +77,16 @@ The following image shows a simple visualization of our Resolution Process.
 # Camunda Processes in Detail
 This Chapter will explain in detail the Camunda Processes.
 
+The following applications can be recorded in Incident:
+- None
+- Excel
+- Word
+- Lotus Notes
+- Outlook
+- Website
+- SAP
+
+Depending on which application is affected, different processes or flows are started. Not all possibilities will be shown in the upcoming documentation. If it is an **SAP** or **Microsoft** Incident, it is forwarded to the "external" support.  All other incidents are reprioritized and the impact is redefined. 
 
 
 ## Incident Identification - Is the Incident Supported or not?
