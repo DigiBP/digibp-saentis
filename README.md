@@ -262,7 +262,7 @@ Following steps provide instructions on how to test the Incident Management proc
 
 - Disclaimer: **The data was last loaded/extracted on 07.06.2018.**
 
-- OLOLOLOL
+- The dashboard of Tableau is displayed on[https://saentisincident-php.herokuapp.com/views/ticketDashboard.php] via an embedded view script. The script is stored[https://github.com/DigiBP/digibp-saentis-2/tree/master/web/views] in the ticketStatus.php file. 
 
 ## ToDo
 - [x] Zapier Migration (Moritz)
