@@ -86,7 +86,7 @@ The following applications can be recorded in Incident:
 - Website
 - SAP
 
-Depending on which application is affected, different processes or flows are started. Not all possibilities will be shown in the upcoming documentation. If it is an **SAP** or **Microsoft** Incident, it is forwarded to the "external" support.  All other incidents are reprioritized and the impact is redefined. 
+Depending on which application is affected, different processes or flows are started. Not all possibilities will be shown in the upcoming documentation. If it is an **SAP** or **Microsoft (Outlook)** Incident, it is forwarded to the "external" support.  All other incidents are reprioritized and the impact is redefined. 
 
 
 ## Incident Identification - Is the Incident Supported or not?
@@ -182,7 +182,23 @@ Note: **If the Incident is "Critical", a Twitter message is generated directly. 
 COMING SOON --> Sobald es wieder geht
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+## Twitter Message
 
+If the incident has been reprioritized and the impact and priority are critical, a tweet is sent.
+This is only triggered if the following applications are involved. 
+
+- None
+- Excel
+- Word
+- Lotus Notes
+- Website
+
+The Twitter status can be viewed at: [https://twitter.com/search?src=typd&q=saentisgroupinc]
+
+The following picture shows an example of a triggered tweet.
+
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Twitter.png)
+----------------------------------------------------------------------------------------------------------------------------------------
 ## Installation
 The repository can be deployed to Heroku using the following button. The repository is based on the [digibp-camunda-template](https://github.com/DigiBP/digibp-camunda-template) (Version 2.0.39
 
