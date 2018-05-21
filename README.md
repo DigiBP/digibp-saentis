@@ -199,7 +199,7 @@ Following steps provide instructions on how to test the Incident Management proc
 
 - Tableau Public does not support live connection of the data nor does it support scattered schedules for the extracts. Therefore, the data is loaded manually from Tableau Desktop to the Tableau Public Server through extracts by the Tableau ETL process. 
 
-- Disclaimer: **The data was last loaded manually on 06/07/2018 using the extracts**
+- Disclaimer: **The data was last loaded/extracted on 07.06.2018.**
 
 ## ToDo
 - [x] Zapier Migration (Moritz)
