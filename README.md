@@ -136,7 +136,9 @@ Picture description: Big Picture
 | ------------------ |
 |1. Write an eMail to this eMailadress: [saentisgroupincident@gmail.com]|
 
+COMING SOON --> Sobald es wieder geht
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
 ## Installation
 The repository can be deployed to Heroku using the following button. The repository is based on the [digibp-camunda-template](https://github.com/DigiBP/digibp-camunda-template) (Version 2.0.39
@@ -181,6 +183,21 @@ Following steps provide instructions on how to test the Incident Management proc
 
 ### E-Mail Inbound
 - Hook: t700agmb@robot.zapier.com
+
+## Tableau
+- The Ticket Dashboard was realized with Tableau Desktop Pro Version 10.5 [https://www.tableau.com/support/releases/desktop/10.5].
+- The Dashboard is published on the Tableau Public Server [https://public.tableau.com].
+- Through the pro-license the postgresql database of Heroku could be connected directly.  
+| Host     | ec2-54-228-181-43.eu-west-1.compute.amazonaws.com | 
+| --------|---------|
+| Database  | deq41smnj4pdgs|
+| --------|---------|
+| User  | ueezhehakpognd |
+| --------|---------|
+| Port  | 5432 |
+| --------|---------|
+| Password  | c7f336dc7eb599ede8be272f0e65778ea3daa4cf74f6129dfb73c275e9447330| 
+
 
 ## ToDo
 - [x] Zapier Migration (Moritz)
