@@ -74,6 +74,37 @@ The following image shows a simple visualization of our Resolution Process.
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
 
+# Camunda Processes in Detail
+This Chapter will explain in detail the Camunda Processes.
+
+
+
+## Incident Identification - Is the Incident Supported or not?
+As soon as the incident process has started (all necessary information has been entered) the first question comes up as to whether the incident is supported or not.
+
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentSupportedYesOrNo.png)
+
+**Is the Incident Supported**
+If the Incident Supported is the user in Camunda is asked to enter further information about the Incident.
+
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsSupported.png)
+
+**Is the Incident Supported and Critical**
+If the system ID and the affected application have been entered, it must be decided whether the incident is critical or not.
+
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical.png)
+
+**Is the Incident Supported, Critical and the Impact ist Critical**
+It must be muted again whether the impact is critical or not. If critically rated, a Twitter message will be sent.
+
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical2.png)
+
+**The Incident is not Supported**
+if the Incident is not supported, the Incident is rejected. 
+
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png)
+----------------------------------------------------------------------------------------------------------------------------------------
+
 ## Step by Step Guide
 The Incident can be started in several ways (see picture Big Picture). In this chapter all possibilities are explained step by step. 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
