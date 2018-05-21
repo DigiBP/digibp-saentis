@@ -191,7 +191,10 @@ Following steps provide instructions on how to test the Incident Management proc
 - The following picture shows which data from Heroku is relevant for the integration on Tableau. 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/HerokuDatabase.png)
 - The following picture shows how the relevant data of Heroku was integrated into Tableau. It is important to activate SSL during the connection. 
+
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/TableauHerokuConnection.png) 
+- The following two tables were linked with an inner join to display the relevant data from the Heroku database on a tableau. 
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Innerjoin.png)
 
 
 
