@@ -218,7 +218,7 @@ The following tools and software has been used for implementing the incident man
 | Camunda Modeler  | The Camunda Modeler is used to create BPMN, CMMN and DMN models. The modeler is based on [bpmn.io](http://bpmn.io/).  |
 | GitHub| Github is used for collaboration and versioning of the programming code as well as the models. |
 |Heroku|Heroku is a PaaS (Platform as a Services) which is used to quickly build, run, and operate the Camunda in the cloud. |
-|Zapier|Zapier is a web-based service that allows end users to integrate the web applications. A REST API is used to push Tweets on Twitter.|
+|Zapier|Zapier is a web-based service that allows end users to integrate the web applications. A REST API is used to push Tweets on Twitter.|| Tableau  | Tableau is a powerful business intelligence and data visualization tool that has a very intuitive user interface. You don’t need any coding knowledge to work with Tableau. It is very useful in drilling-down data, creating insightful reports and garner actionable business insights.|| Tableau Public "Server" |It is the free version of Tableau Server but hosted on the cloud by Tableau Software. As it is free, it requires that all workbook and data are freely accessible to everybody. In terms of data source, all should be extracts and there is a limit of 1 millions rows. |
 
 
 ## Instructions for Testing
