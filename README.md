@@ -189,9 +189,9 @@ Following steps provide instructions on how to test the Incident Management proc
 - The Dashboard is published on the Tableau Public Server [https://public.tableau.com].
 - Through the pro-license the PostgreSQL database of Heroku could be connected directly [https://data.heroku.com/datastores/de020a0e-4eba-4e7d-b4c1-7ce92a1ad729#administration]. 
 - The following picture shows which data from Heroku is relevant for the integration on Tableau. 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/HerokuDatabase.png)|
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/HerokuDatabase.png)
 - The following picture shows how the relevant data of Heroku was integrated into Tableau. It is important to activate SSL during the connection. 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/TableauHerokuConnection.png)| 
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/TableauHerokuConnection.png) 
 
 
 
