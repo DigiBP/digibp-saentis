@@ -187,10 +187,8 @@ Following steps provide instructions on how to test the Incident Management proc
 ## Tableau
 - The Ticket Dashboard was realized with Tableau Desktop Pro Version 10.5 [https://www.tableau.com/support/releases/desktop/10.5].
 - The Dashboard is published on the Tableau Public Server [https://public.tableau.com].
-- Through the pro-license the postgresql database of Heroku could be connected directly.  
-| Host| Database|User|Port|Password|
-| --------|---------|-------|-------|-------|-------|
-| ec2-54-228-181-43.eu-west-1.compute.amazonaws.com|deq41smnj4pdgs|ueezhehakpognd|5432|c7f336dc7eb599ede8be272f0e65778ea3daa4cf74f6129dfb73c275e9447330|
+- Through the pro-license the PostgreSQL database of Heroku could be connected directly [https://data.heroku.com/datastores/de020a0e-4eba-4e7d-b4c1-7ce92a1ad729#administration].    
+
 
 
 ## ToDo
