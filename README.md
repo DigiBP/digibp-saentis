@@ -130,6 +130,13 @@ Picture description: Big Picture
 |1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an cklick "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+### Create an Incident via eMail
+
+| **1 Step** |
+| ------------------ |
+|1. Write an eMail to this eMailadress: [saentisgroupincident@gmail.com]|
+
+
 
 ## Installation
 The repository can be deployed to Heroku using the following button. The repository is based on the [digibp-camunda-template](https://github.com/DigiBP/digibp-camunda-template) (Version 2.0.39
