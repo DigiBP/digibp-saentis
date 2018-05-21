@@ -129,6 +129,8 @@ Picture description: Big Picture
 | ------------------ |
 |1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an cklick "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
+Note: **If the Incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an Incident in Camunda that is classified as "Critical".** 
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Create an Incident via eMail
 
