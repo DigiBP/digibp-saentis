@@ -8,35 +8,35 @@ ________  .__       .______________________    _________  _ _  __  .__
         \/  /_____/            \/                    \/     \/             \/ 
 ```                                                                       
                                                                           
-This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalisation of the Business Processes (SS18) Module at the FHNW.
+This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalization of the Business Processes (SS18) Module at the FHNW.
 
 *Authors*
 * Jaime Ramirez, [jaime.ramirez@students.fhnw.ch](mailto:jaime.ramirez@students.fhnw.ch)
 * Moritz Armingeon, [moritz.armingeon@students.fhnw.ch](mailto:moritz.armingeon@students.fhnw.ch)
 * Joël Schmid, [joel.schmid@students.fhnw.ch](mailto:joel.schmid@students.fhnw.ch)
 
-## Dislaimer
+## Disclaimer
 We assume that the reader is familiar with BPMN 2.0. The processes and their flows are not described or explained in this project. 
 
 ## Methodology and approach
 
 The present project was approached according to the KISS (keep it simple, stupid) principle. With the KISS principle, a simple solution can be sought to solve a required problem. In addition to the KISS principle, the project team has chosen the agile approach to ensure the development and finalization of the project. 
 
-## Incident Process Idea - Process Decription (Incident Management Workflow)
-This Chapter describes the basic idea behind the incident process we have selected. 
+## Incident Process Idea - Process Description (Incident Management Workflow)
+This chapter describes the basic idea behind the incident process we have selected. 
 
-For this project we have adhered to the ITIL Incident Management Standard. We have focused on the following four sub-processes. 
+For this project we have adhered to the ITIL incident management standard. We have focused on the following four sub-processes. 
 
-- 1 Indicent Creation Process
-- 2 Incident Identification Process (Incident Categorization and Incident Priorization) 
+- 1 Incident Creation Process
+- 2 Incident Identification Process (Incident Categorization and Incident prioritization) 
 - 3 Incident Resolution Process
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL_2.jpg)
 
-This screenshot shows the ITIL Incident Management Process. You can see the sub-processes (outlined in red) that we used for our project. 
+This screenshot shows the ITIL incident management process. You can see the sub-processes (outlined in red) that we used for our project. 
 
 ### Overall Process
-The following image shows a simple visualization of our Overall process. This Process is divided in four sub processes.
+The following image shows a simple visualization of our overall process. This process is divided in four sub processes.
 - Create Issue
 - Issue Identification
 - Issue Diagnosis
@@ -47,38 +47,38 @@ The following image shows a simple visualization of our Overall process. This Pr
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
 ### Issue Creation Process
-The following image shows a simple visualization of our Issue Creation Process.
+The following image shows a simple visualization of our issue creation process.
 
 | **Issue Creation Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/01_IncidentCreation.png) |
 
 ### Issue Identification
-The following image shows a simple visualization of our Identification Process.
+The following image shows a simple visualization of our identification process.
 
 | **Identification Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/02_IncidentIdentification.png) |
 
 ### Issue Diagnosis Process
-The following image shows a simple visualization of our Diagnosis Process.
+The following image shows a simple visualization of our diagnosis process.
 
 | **Diagnosis Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/03_IncidentDiagnosis.png) |
 
 ### Issue Resolution Process
-The following image shows a simple visualization of our Resolution Process.
+The following image shows a simple visualization of our resolution process.
 
 | **Resolution Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
 
 # Camunda Processes in Detail
-This Chapter will explain in detail the Camunda Processes.
+This chapter will explain in detail the Camunda processes.
 
-The following applications can be recorded in Incident:
-- None
+For the following applications, an incident can be filed:
+ - None
 - Excel
 - Word
 - Lotus Notes
@@ -86,7 +86,7 @@ The following applications can be recorded in Incident:
 - Website
 - SAP
 
-Depending on which application is affected, different processes or flows are started. Not all possibilities will be shown in the upcoming documentation. If it is an **SAP** or **Microsoft (Outlook)** Incident, it is forwarded to the "external" support.  All other incidents are reprioritized and the impact is redefined. 
+Depending on which application is affected, different processes or flows are started. Not all possibilities will be shown in the upcoming documentation. If it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support.  All other incidents are reprioritized and the impact is redefined. 
 
 
 ## Incident Identification - Is the Incident Supported or not?
@@ -95,7 +95,7 @@ As soon as the incident process has started (all necessary information has been 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentSupportedYesOrNo.png)
 
 **Is the Incident Supported**
-If the Incident Supported is the user in Camunda is asked to enter further information about the Incident.
+If the incident is supported, the user in Camunda is asked to enter further information about the incident.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsSupported.png)
 
@@ -105,18 +105,18 @@ If the system ID and the affected application have been entered, it must be deci
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical.png)
 
 **Is the Incident Supported, Critical and the Impact ist Critical**
-It must be muted again whether the impact is critical or not. If critically rated, a Twitter message will be sent.
+It must be selected again whether the impact is critical or not. If critically rated, a Twitter message will be sent.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical2.png)
 
 **The Incident is not Supported**
-if the Incident is not supported, the Incident is rejected. 
+If the Incident is not supported, the incident is rejected. 
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png)
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 ## Step by Step Guide
-The Incident can be started in several ways (see picture Big Picture). In this chapter all possibilities are explained step by step. 
+The incident can be started in several ways (see picture Big Picture). In this chapter all possibilities are explained step by step. 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
 Picture description: Big Picture
 
@@ -132,11 +132,11 @@ Picture description: Big Picture
 
 | **3 Step - Incident Identification** |
 | ------------------ |
-|1. After the second step follows the incident identification process. The Incident Manager confirms whether the Incident is supported. In our case yes - So the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
+|1. After the second step follows the incident identification process. The incident manager confirms whether the incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
 
 | **4 Step - Add Incident Details** |
 | ------------------ |
-|1. At this point, the Incident Manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
+|1. At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -144,33 +144,33 @@ Picture description: Big Picture
 
 | **1 Step - Login in to Camunda** |
 | ------------------ |
-|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on tasklist 4. After that cklick on start Overall Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
+|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the username and demo for the password 3. Click on task list 4. After that click on start overall process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
 
 | **2 Step - Incident Creation (with Crititcal Impact)** |
 | ------------------ |
-|1. Fill out all fields (As in the example) and click on Start to start the Process 2. The tweet is only triggered if the Impact Status is on CRITICAL. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMaskCritical.png) |
+|1. Fill out all fields (As in the example) and click on start to start the process 2. The tweet is only triggered if the impact status is on CRITICAL. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMaskCritical.png) |
 
 | **3 Step - Incident Identification (with Crititcal Impact)** |
 | ------------------ |
-|1. After the second step follows the incident identification process. The Incident Manager confirms whether the Incident is supported. In our case yes - So the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentificationCritical.png) |
+|1. After the second step follows the incident identification process. The incident manager confirms whether the Incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentificationCritical.png) |
 
 | **4 Step - Add Incident Details (with Critical Impact)** |
 | ------------------ |
-|1. At this point, the Incident Manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetailsCritical.png)|
+|1. At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetailsCritical.png)|
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-### Ceate a Incident with the Webformular
+### Ceate an Incident with the web form
 
 | **1 Step - Go to the Webpage** |
 | ------------------ |
-|Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 1. Create a new Incident 2. Retrieve Incident Status 3. Dashboard (Overview) which shows the current incidents 4. Landingpage 5. You can also access the individual actions through the yellow-bordered area. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png)|
+|Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 1. Create a new incident 2. Retrieve incident status 3. Dashboard (Overview) which shows the current incidents 4. Landing page 5. You can also access the individual actions through the yellow-bordered area. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png)|
 
-| **2 Step - Create an Incident with the Webformular** |
+| **2 Step - Create an Incident with the web form** |
 | ------------------ |
-|1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an cklick "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
+|1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
-Note: **If the Incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an Incident in Camunda that is classified as "Critical".** 
+Note: **If the Incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Create an Incident via eMail
@@ -204,7 +204,7 @@ The repository can be deployed to Heroku using the following button. The reposit
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-The following packages and libraries are used (see pom.xml file fore more information):
+The following packages and libraries are used (see pom.xml file for more information):
 - Camunda Version: 7.8.0
 - Java Version: 1.8
 - Sprint Version: 1.5.8
@@ -268,17 +268,17 @@ Following steps provide instructions on how to test the Incident Management proc
 - [x] Zapier Migration (Moritz)
 - [x] Set Ticket Orign and DateCreated in Init Vars (Moritz)
 - [x] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
-- [x] Cleanup forms (Moritz)
-- [ ] Dokumentieren Prozesse (Jaime)
+- [x] Cleanup forms (Moritz)
+- [ ] Dokumentieren Prozesse (Jaime)
 - [x] Documentation (Architekturbild) (Moritz)
 - [x] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
-  - [x] Incorporate into whole process
+  - [x] Incorporate into whole process
 - [x] Creation Process (Check variables, finalize, ) (Moritz)
 - [x] Specify Validation Task (Creation1.bpmn) (Moritz)
 - [x] The start event can contain a webform! (Moritz)
 - [x] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
   - [x] Hosting auf Heroku (PHP) -> App freigeben für Team
-  - [x] GitHub Repo erstellen (Joël) 
+  - [x] GitHub Repo erstellen (Joël) 
 - [x] Use of a DMN Decision Model (Assign to specific application depending on content keywords) (Joël) Analog Beispiel AutoCreateTweet (ServiceTasks)
 - [x] Identification Task (Tweet, Priorisitation) (Joël)
 - [x] Create Zapier Student Account (Joël) -> not needed, 100 request per month are for free
