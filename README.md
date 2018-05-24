@@ -20,10 +20,31 @@ We assume that the reader is familiar with BPMN 2.0. The processes and their flo
 
 ## Methodology and approach
 
-The present project was approached according to the KISS (keep it simple, stupid) principle. With the KISS principle, a simple solution can be sought to solve a required problem. In addition to the KISS principle, the project team has chosen the agile approach to ensure the development and finalization of the project. 
+The present project was approached according to the KISS (keep it simple, stupid) principle. With the KISS principle, a simple solution can be sought to solve a required problem. In addition to the KISS principle, the project team has chosen the agile approach to ensure the development and finalization of the project.
+
+### Design approach
+Already after the first lesson, we could execute the first workflow. Although it was not very rich in functionality, it was a valuable experience and thought the group the new technologies. First documentation and design plans were drawn, and first tests were executed. Every lecture followed this principle: Every lesson in class was one complete iteration or development sprint.
+
+### Collaboration
+Git version control system was used in order to work collaborative on the project. The GitHub platform enabled storage of the development artefacts, documentation and test management.
+### Testing
+In order to minimalize defects, many functional tests were carried out. We created test-cases from an external view (black box) as well as testing every decision path.
+Detected issues were tracked with the Github issue management system.
 
 ## Incident Process Idea - Process Description (Incident Management Workflow)
 This chapter describes the basic idea behind the incident process we have selected. 
+### Process Summary
+We have implemented an incident management process. The incident management system is run by a fictional company “Säntis Corporation” and incidents are filed by customer of Säntis – both, external and internal. Incident managers working for Säntis work on resolving these issues.
+We have three main strategies to open a ticket:
+* e-Mail: Send an e-Mail to the support address and automatically a process is triggered
+* Web form: Fill out the web-form describing the ticket
+* Camunda: Create the issue directly in Camunda. For example, issues received by phone can then directly entered
+Note that these medias are all bound to the process engine by a REST interface and therefore could be easily extended by further channels.
+
+The communication with the user is then always by e-Mail. In case the incident identified is critical, which concerns a larger user base, a tweet is sent out, in order to quickly inform customers, that Säntis is working on resolving the issue. This should reduce the amount of similar issues received.
+
+Status report on the ticket is provided by a reporting suite. Two general views are provided: The internal view, for ticket managers and their supervisors, giving an overview for all tickets and a personal view for the customer, where he may consult his ticket status.
+### Process Description
 
 For this project we have adhered to the ITIL incident management standard. We have focused on the following four sub-processes. 
 
@@ -104,7 +125,7 @@ If the system ID and the affected application have been entered, it must be deci
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical.png)
 
-**Is the Incident Supported, Critical and the Impact ist Critical**
+**Is the Incident Supported, Critical and the Impact is Critical**
 It must be selected again whether the impact is critical or not. If critically rated, a Twitter message will be sent.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical2.png)
@@ -120,11 +141,11 @@ The incident can be started in several ways (see picture Big Picture). In this c
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
 Picture description: Big Picture
 
-### Create an Incident with Camunda
+### Create an incident with Camunda
 
 | **1 Step** |
 | ------------------ |
-|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on tasklist 4. After that cklick on start Overall Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
+|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on task list 4. After that click on start Overall Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
 
 | **2 Step - Incident Creation** |
 | ------------------ |
@@ -140,7 +161,7 @@ Picture description: Big Picture
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-### Generate a tweet if the Incident is Critical (Impact) with Camunda
+### Generate a tweet if the incident is Critical (Impact) with Camunda
 
 | **1 Step - Login in to Camunda** |
 | ------------------ |
@@ -170,10 +191,10 @@ Picture description: Big Picture
 | ------------------ |
 |1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
-Note: **If the Incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
+Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-### Create an Incident via eMail
+### Create an incident via eMail
 
 | **1 Step** |
 | ------------------ |
@@ -220,7 +241,7 @@ The following tools and software has been used for implementing the incident man
 |Heroku|Heroku is a PaaS (Platform as a Services) which is used to quickly build, run, and operate the Camunda in the cloud. |
 |Zapier|Zapier is a web-based service that allows end users to integrate the web applications. A REST API is used to push Tweets on Twitter.|
 |Tableau  | Tableau is a powerful business intelligence and data visualization tool that has a very intuitive user interface. You don’t need any coding knowledge to work with Tableau. It is very useful in drilling-down data, creating insightful reports and garner actionable business insights.|
-|Tableau Public "Server" |It is the free version of Tableau Server but hosted on the cloud by Tableau Software. As it is free, it requires that all workbook and data are freely accessible to everybody. In terms of data source, all should be extracts and there is a limit of 1 millions rows. |
+|Tableau Public "Server" |It is the free version of Tableau Server but hosted on the cloud by Tableau Software. As it is free, it requires that all workbook and data are freely accessible to everybody. In terms of data source, all should be extracts and there is a limit of 1 million rows. |
 
 
 ## Instructions for Testing
@@ -246,8 +267,8 @@ Following steps provide instructions on how to test the Incident Management proc
 - Hook: t700agmb@robot.zapier.com
 
 ## Tableau
-- The Ticket Dashboard was realized with Tableau Desktop Pro Version 10.5 [https://www.tableau.com/support/releases/desktop/10.5].
-- The Dashboard is published on the Tableau Public Server [https://public.tableau.com].
+- The ticket dashboard was realized with Tableau Desktop Pro Version 10.5 [https://www.tableau.com/support/releases/desktop/10.5].
+- The dashboard is published on the Tableau Public Server [https://public.tableau.com].
 - Through the pro-license the PostgreSQL database of Heroku could be connected directly [https://data.heroku.com/datastores/de020a0e-4eba-4e7d-b4c1-7ce92a1ad729#administration]. 
 - The following picture shows which data from Heroku is relevant for the integration on Tableau. 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/HerokuDatabase.png)
