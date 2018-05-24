@@ -36,6 +36,9 @@ We work with two Heroku instances and two GitHub Repositories. Both GitHub and H
 In order to minimalize defects, many functional tests were carried out. We created test-cases from an external view (black box) as well as testing every decision path.
 Detected issues were tracked with the Github issue management system.
 
+### Project Management
+Tasks were tracked within this documentation. A flat hierarchy without designated project leader was chosen.
+
 ## Incident Process Idea - Process Description (Incident Management Workflow)
 This chapter describes the basic idea behind the incident process we have selected. 
 ### Process Summary
