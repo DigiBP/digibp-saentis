@@ -27,6 +27,11 @@ Already after the first lesson, we could execute the first workflow. Although it
 
 ### Collaboration
 Git version control system was used in order to work collaborative on the project. The GitHub platform enabled storage of the development artefacts, documentation and test management.
+
+We work with two Heroku instances and two GitHub Repositories. Both GitHub and Heroku pair up between each other.
+- 1 Camunda / Tomcat: This instance holds the Camunda codebase. Camunda be tested locally on the developer's machine and then, after committing, is automatically deployed to Heroku
+- 2 Web Form / PHP: This instance contains the web-based components of our solution: The web-form, status page and tableau dashboards. After committing, it is also automatically deployed to Heroku
+
 ### Testing
 In order to minimalize defects, many functional tests were carried out. We created test-cases from an external view (black box) as well as testing every decision path.
 Detected issues were tracked with the Github issue management system.
@@ -34,16 +39,17 @@ Detected issues were tracked with the Github issue management system.
 ## Incident Process Idea - Process Description (Incident Management Workflow)
 This chapter describes the basic idea behind the incident process we have selected. 
 ### Process Summary
+![Media Flows](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
 We have implemented an incident management process. The incident management system is run by a fictional company “Säntis Corporation” and incidents are filed by customer of Säntis – both, external and internal. Incident managers working for Säntis work on resolving these issues.
 We have three main strategies to open a ticket:
-* e-Mail: Send an e-Mail to the support address and automatically a process is triggered
-* Web form: Fill out the web-form describing the ticket
-* Camunda: Create the issue directly in Camunda. For example, issues received by phone can then directly entered
+* **e-Mail:** Send an e-Mail to the support address and automatically a process is triggered
+* **Web form:** Fill out the web-form describing the ticket
+* **Camunda:** Create the issue directly in Camunda. For example, issues received by phone can then directly entered
 Note that these medias are all bound to the process engine by a REST interface and therefore could be easily extended by further channels.
 
-The communication with the user is then always by e-Mail. In case the incident identified is critical, which concerns a larger user base, a tweet is sent out, in order to quickly inform customers, that Säntis is working on resolving the issue. This should reduce the amount of similar issues received.
+The **communication** with the user is then always by e-Mail. In case the incident identified is critical, which concerns a larger user base, a tweet is sent out, in order to quickly inform customers, that Säntis is working on resolving the issue. This should reduce the amount of similar issues received.
 
-Status report on the ticket is provided by a reporting suite. Two general views are provided: The internal view, for ticket managers and their supervisors, giving an overview for all tickets and a personal view for the customer, where he may consult his ticket status.
+Status **report** on the ticket is provided by a reporting suite. Two general views are provided: The internal view, for ticket managers and their supervisors, giving an overview for all tickets and a personal view for the customer, where he may consult his ticket status.
 ### Process Description
 
 For this project we have adhered to the ITIL incident management standard. We have focused on the following four sub-processes. 
@@ -220,6 +226,28 @@ The following picture shows an example of a triggered tweet.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Twitter.png)
 ----------------------------------------------------------------------------------------------------------------------------------------
+#Technical Details
+## Variables
+The following set of variables was introduced in our process. We choose to define all variables in a structured matter and describe, for whom it's visible. In this manner, it was easier to work together and define interfaces, if all variables and their options were set.
+These variables were all initialized automatically, so one could count on the evaluation of the variables.
+
+![Variables](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Variables.png)
+
+## Automation
+Different automation techniques and languages were used.
+* **Groovy**: Quick changes to variables were realised in groovy. Mostly changes of the status-variable (State Machine)
+* **JavaScript**: Slightly more complex requests were programmed in JavaScript. For example the Twitter integration.
+* **Java**: More complex cases were programmed in Java. For example, the variable initialisation and the e-Mail interface was realized in Java.
+
+## Integration
+Our solution is integrated with multiple third party solution:
+* e-Mail: REST API to Zapier (Gmail, inbound and outbound)
+* Twitter: REST API to Zapier
+* Web-Form: REST API to a PHP web server
+* Tableau Reporting: Direct database connection
+
+
+
 ## Installation
 The repository can be deployed to Heroku using the following button. The repository is based on the [digibp-camunda-template](https://github.com/DigiBP/digibp-camunda-template) (Version 2.0.39
 
