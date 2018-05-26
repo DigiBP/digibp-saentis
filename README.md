@@ -194,11 +194,11 @@ Picture description: Big Picture
 
 | **1 Step - Go to the Webpage** |
 | ------------------ |
-|Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 1. Create a new incident 2. Retrieve incident status 3. Dashboard (Overview) which shows the current incidents 4. Landing page 5. You can also access the individual actions through the yellow-bordered area. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png)|
+|1. Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 2. Create a new incident 3. Retrieve incident status 4. Dashboard (Overview) which shows the current incidents 5. Landing page 6. You can also access the individual actions through the yellow-bordered area. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png)|
 
 | **2 Step - Create an Incident with the web form** |
 | ------------------ |
-|Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
+|1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
 Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
 
