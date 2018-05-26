@@ -22,7 +22,7 @@
 ## Show Tickets in Camunda as well as confirmation E-Mail
 - Show Confirmation E-Mails
 
-# Issue Identifcation
+# 2. Issue Identifcation
 - Use Ticket from E-Mail
 - Ticket Supported: TRUE
 - Set Affected Application to: Lotus Notes
@@ -31,7 +31,7 @@
 - Set Impact to: CRITICAL
 - Show Tweet: https://twitter.com/saentisgroupinc
 
-# Ticket Resolution
+# 3. Ticket Resolution
 - Claim Ticket
 - Diagnose Issue (explain what can be done using discretionary tasks and mention that they are not supported yet by camunda)
 - Say that the customer would now be informed depending on the Origin of the Ticket (Telefone, E-Mail, ...)
