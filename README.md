@@ -209,6 +209,12 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 | ------------------ |
 |1. Write an eMail to this eMailadress: [t700agmb@robot.zapier.com]. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png)|
 
+
+| **3 Step - Incident Identification (with Crititcal Impact)** |
+| ------------------ |
+|1.Write an eMail to this eMailadress: [t700agmb@robot.zapier.com]. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Check for Incident Status via eMail (Webformular)
 
