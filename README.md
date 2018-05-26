@@ -158,15 +158,15 @@ Picture description: Big Picture
 
 | **2 Step - Incident Creation** |
 | ------------------ |
-|1. Fill out all fields (As in the example) and click on Start to start the Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
+|Fill out all fields (As in the example) and click on Start to start the Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
 
 | **3 Step - Incident Identification** |
 | ------------------ |
-|1. After the second step follows the incident identification process. The incident manager confirms whether the incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
+|After the second step follows the incident identification process. The incident manager confirms whether the incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
 
 | **4 Step - Add Incident Details** |
 | ------------------ |
-|1. At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
+|At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -182,11 +182,11 @@ Picture description: Big Picture
 
 | **3 Step - Incident Identification (with Crititcal Impact)** |
 | ------------------ |
-|1. After the second step follows the incident identification process. The incident manager confirms whether the Incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentificationCritical.png) |
+|After the second step follows the incident identification process. The incident manager confirms whether the Incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentificationCritical.png) |
 
 | **4 Step - Add Incident Details (with Critical Impact)** |
 | ------------------ |
-|1. At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetailsCritical.png)|
+|At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetailsCritical.png)|
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -198,7 +198,7 @@ Picture description: Big Picture
 
 | **2 Step - Create an Incident with the web form** |
 | ------------------ |
-|1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
+|Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
 Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
 
@@ -207,7 +207,7 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 
 | **1 Step** |
 | ------------------ |
-|1. Write an eMail to this eMailadress: [t700agmb@robot.zapier.com]
+|Write an eMail to this eMailadress: [t700agmb@robot.zapier.com]
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
 
 
@@ -216,11 +216,11 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 
 | **1 Step** |
 | ------------------ |
-|1. Go to the following URL https://saentisincident-php.herokuapp.com/ and klick on "Check Incident Status". ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
+|Go to the following URL https://saentisincident-php.herokuapp.com/ and klick on "Check Incident Status". ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
 
 | **2 Step** |
 | ------------------ |
-|1. Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is.
+|Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is.
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
 
 ----------------------------------------------------------------------------------------------------------------------------------------
