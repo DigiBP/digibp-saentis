@@ -209,11 +209,9 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 | ------------------ |
 |1. Write an eMail to this eMailadress: [t700agmb@robot.zapier.com]. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png)|
 
-
-| **3 Step - Incident Identification (with Crititcal Impact)** |
+| **1 Step - Login in to Camunda** |
 | ------------------ |
-|1.Write an eMail to this eMailadress: [t700agmb@robot.zapier.com]. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
-
+|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the username and demo for the password 3. Click on task list 4. After that click on start overall process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Check for Incident Status via eMail (Webformular)
