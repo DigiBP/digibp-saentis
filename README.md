@@ -203,13 +203,24 @@ Picture description: Big Picture
 Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-### Create an incident via eMail
+### Create an incident via eMai
 
 | **1 Step** |
 | ------------------ |
-|1. Write an eMail to this eMailadress: [saentisgroupincident@gmail.com]|
+|1. Write an eMail to this eMailadress: [t700agmb@robot.zapier.com]![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png)|
 
-COMING SOON --> Sobald es wieder geht
+
+----------------------------------------------------------------------------------------------------------------------------------------
+### Check for Incident Status via eMail (Webformular)
+
+| **1 Step** |
+| ------------------ |
+|1. Go to the following URL [https://saentisincident-php.herokuapp.com/] and klick on "Check Incident Status" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
+
+| **2 Step** |
+| ------------------ |
+|1. Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] and cklick "Check Ticket Status" to see what the status is. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusButton.png)|
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ## Twitter Message
