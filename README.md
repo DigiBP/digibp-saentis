@@ -207,7 +207,7 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 
 | **1 Step** |
 | ------------------ |
-|1. Write an eMail to this eMailadress: [t700agmb@robot.zapier.com]. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
+|1. Write an eMail to this eMailadress. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
 
 | **1 Step - Login in to Camunda** |
 | ------------------ |
