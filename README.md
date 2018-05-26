@@ -207,18 +207,21 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 
 | **1 Step** |
 | ------------------ |
-|1. Write an eMail to this eMailadress. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
+|1. Write an eMail to this eMailadress: [t700agmb@robot.zapier.com]
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
 
-| **1 Step - Login in to Camunda** |
-| ------------------ |
-|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the username and demo for the password 3. Click on task list 4. After that click on start overall process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Check for Incident Status via eMail (Webformular)
 
 | **1 Step** |
 | ------------------ |
-|1. Go to the following URL https://saentisincident-php.herokuapp.com/ and klick on "Check Incident Status". ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
+|1. Go to the following URL https://saentisincident-php.herokuapp.com/ and klick on "Check Incident Status". ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
+
+| **2 Step** |
+| ------------------ |
+|1. Enter your EMail Adress.
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ## Twitter Message
