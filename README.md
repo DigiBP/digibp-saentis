@@ -220,7 +220,7 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 
 | **2 Step** |
 | ------------------ |
-|1. Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] to see what the status is.
+|1. Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is.
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
 
 ----------------------------------------------------------------------------------------------------------------------------------------
