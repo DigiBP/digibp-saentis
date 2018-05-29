@@ -241,7 +241,7 @@ The following picture shows an example of a triggered tweet.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Twitter.png)
 ----------------------------------------------------------------------------------------------------------------------------------------
-#Technical Details
+# Technical Details
 ## Variables
 The following set of variables was introduced in our process. We choose to define all variables in a structured matter and describe, for whom it's visible. In this manner, it was easier to work together and define interfaces, if all variables and their options were set.
 These variables were all initialized automatically, so one could count on the evaluation of the variables.
