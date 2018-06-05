@@ -102,10 +102,12 @@ The following image shows a comprehensive visualization of our resolution proces
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
 
 ## Camunda Processes Step by Step Guide
-**JOEL: Ist hier wohl am falschen Ort??
+
+**JOEL: Ist hier wohl am falschen Ort?? und vermutlich auch nicht notwendig, ggf. beim Prozess-Schritt erwähnen**
 
 This chapter will explain in more detail the Camunda processes. Depending on which application is affected, different tasks are generated. Not all possibilities will be shown in the upcoming documentation. As for example if it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support. All other incidents will be prioritized and the impact will be redefined if the incident is supported. 
 
+**JOEL: Ist hier wohl am falschen Ort?? und vermutlich auch nicht notwendig, ggf. beim Prozess-Schritt erwähnen**
 For the following applications are used within the company:
 - None
 - Excel
@@ -255,12 +257,15 @@ The following tools and software has been used for implementing the incident man
 |Tableau  | Tableau is a powerful business intelligence and data visualization tool that has a very intuitive user interface. You don’t need any coding knowledge to work with Tableau. It is very useful in drilling-down data, creating insightful reports and garner actionable business insights.|
 |Tableau Public "Server" |It is the free version of Tableau Server but hosted on the cloud by Tableau Software. As it is free, it requires that all workbook and data are freely accessible to everybody. In terms of data source, all should be extracts and there is a limit of 1 million rows. |
 
+
+**JOEL: Häääh? Können wir dies ggf. in die tabelle aufnehmen oder irgendwo zusammenführen? falls wir dies brauchen
 ## Automation
 Different automation techniques and languages were used.
 * **Groovy**: Quick changes to variables were realised in groovy. Mostly changes of the status-variable (State Machine)
 * **JavaScript**: Slightly more complex requests were programmed in JavaScript. For example the Twitter integration.
 * **Java**: More complex cases were programmed in Java. For example, the variable initialisation and the e-Mail interface was realized in Java.
 
+**JOEL: Irrelevant**
 ## E-Mails
 **E-Mail Outbound**
 - Hook: https://hooks.zapier.com/hooks/catch/3017214/katznf/
@@ -269,6 +274,7 @@ Different automation techniques and languages were used.
 **E-Mail Inbound**
 - Hook: t700agmb@robot.zapier.com
 
+**JOEL: Konsolidieren**
 ## Tableau
 - The ticket dashboard was realized with [Tableau Desktop Pro Version 10.5](https://www.tableau.com/support/releases/desktop/10.5).
 - The dashboard is published on the [Tableau Public Server](https://public.tableau.com).
@@ -282,8 +288,8 @@ Different automation techniques and languages were used.
 - Tableau Public does not support live connection of the data nor does it support scattered schedules for the extracts. Therefore, the data is loaded manually from Tableau Desktop to the Tableau Public Server through extracts by the Tableau ETL process. 
 - The dashboard of Tableau is displayed on the [Säntis PHP Website](https://saentisincident-php.herokuapp.com/views/ticketDashboard.php) via an embedded view script. The script is stored in the [GitHub Repo](https://github.com/DigiBP/digibp-saentis-2/tree/master/web/views) in the ticketStatus.php file. 
 
-**JOEL: Hier müssten wir wohl noch sämtliche Logins hinterlegen, ZAPIER; TWITTER; GOOGLE ACCOUNT, TABLEAU am besten das PW Andreas per E-Mail zusenden?**
 
+**JOEL: Hier müssten wir wohl noch sämtliche Logins hinterlegen, ZAPIER; TWITTER; GOOGLE ACCOUNT, TABLEAU am besten das PW Andreas per E-Mail zusenden?**
 ## Instructions for Testing
 Following steps provide instructions on how to test the Incident Management process as described in the Process chapter.
 - Open the [Säntis Heroku App](https://saentisincident.herokuapp.com/) (this might take a while zZZzzZZZ)
