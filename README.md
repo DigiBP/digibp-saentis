@@ -141,12 +141,7 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 |  If not, the customer gets notified that his incident will not be supported. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png) |
 | **Add Ticket Details**| - |
 | The system ID and the affected application have been entered by the incident manager. Depending which applications is affected, the incident might be redirected to an external support such as Microsoft or SAP products.
-Depending on which application is affected, different tasks are generated. Not all possibilities will be shown in the upcoming documentation. As for example if it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support. All other incidents will be prioritized and the impact will be redefined if the incident is supported. 
-For the following applications are used within the company:
-- None
-- Excel
-- Word
-- Lotus Notes
+Depending on which application is affected, different tasks are generated. Not all possibilities will be shown in the upcoming documentation. As for example if it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support. All other incidents will be prioritized and the impact will be redefined if the incident is supported. For the following applications are used within the company: None, Excel, Word, Lotus Notes
 - Outlook
 - Website
 - SAP | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsSupported.png) |
