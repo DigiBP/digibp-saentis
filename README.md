@@ -8,7 +8,7 @@ ________  .__       .______________________    _________  _ _  __  .__
         \/  /_____/            \/                    \/     \/             \/ 
 ```                                                                       
                                                                           
-This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalization of the Business Processes (SS18) Module at the FHNW.
+This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalization of the Business Processes (SS18) Module at the FHNW. Check out our [Presentation Slides](https://speakerdeck.com/joelschmid91/santis-group-digitalisation-of-business-processes) to get an overview of the process as well as the tools and technologies used.
 
 *Authors*
 * Jaime Ramirez, [jaime.ramirez@students.fhnw.ch](mailto:jaime.ramirez@students.fhnw.ch)
@@ -327,62 +327,6 @@ Following steps provide instructions on how to test the Incident Management proc
 - Disclaimer: **The data was last loaded/extracted on 07.06.2018.**
 
 - The dashboard of Tableau is displayed on[https://saentisincident-php.herokuapp.com/views/ticketDashboard.php] via an embedded view script. The script is stored[https://github.com/DigiBP/digibp-saentis-2/tree/master/web/views] in the ticketStatus.php file. 
-
-## ToDo
-- [x] Zapier Migration (Moritz)
-- [x] Set Ticket Orign and DateCreated in Init Vars (Moritz)
-- [x] Ticket opening via e-mail (c9u3218e@robot.zapier.com) auf zapier Account übertragen saentisgroupincident@gmail.com (FHNW2018!) (Moritz)
-- [x] Cleanup forms (Moritz)
-- [ ] Dokumentieren Prozesse (Jaime)
-- [x] Documentation (Architekturbild) (Moritz)
-- [x] Add Ticket Status Field (Open, Assigned, Resolved, Closed, Reopened,...)
-  - [x] Incorporate into whole process
-- [x] Creation Process (Check variables, finalize, ) (Moritz)
-- [x] Specify Validation Task (Creation1.bpmn) (Moritz)
-- [x] The start event can contain a webform! (Moritz)
-- [x] PHP Formular für Ticket creation (REST POST to Process Start) (Jaime)
-  - [x] Hosting auf Heroku (PHP) -> App freigeben für Team
-  - [x] GitHub Repo erstellen (Joël) 
-- [x] Use of a DMN Decision Model (Assign to specific application depending on content keywords) (Joël) Analog Beispiel AutoCreateTweet (ServiceTasks)
-- [x] Identification Task (Tweet, Priorisitation) (Joël)
-- [x] Create Zapier Student Account (Joël) -> not needed, 100 request per month are for free
-- [x] Diagnosis mit CMMN erstellen (Moritz)
-- [x] What are properties used for? (Joël)
-- [ ] Reporting overview: Page with dashboard of all tickets... for Case Manager (Jaime)
-- [x] Test Post Twitter Status
-- [ ] Speaker Deck Presentation
-- [x] How to quickly empty the H2 database (Joël)
-- [x] Create Testcases and Issues - Process (Moritz)
-- [ ] Create Testcases and Issues - Integration: E-Mail (Moritz)
-- [ ] Create Testcases and Issues - Integration: PHP (Moritz)
-- [ ] Create Testcases and Issues - Integration: Twitter (Moritz)
-- [ ] Create Testcases and Issues - Integration: Reporting(Tableau) (Moritz)
-- [x] Status Changes (Request Ticket Status PHP) (Joël)
-- [ ] E-Mail Parser als AI (Zapier hat gewisse funktionen) (Moritz)
-- [ ] Add another status once the ticket is processing (after decision ticket is supported)
-- [ ] Create a script with the demo steps (and test!!!)
-
-## Nice to Have
-- [ ] Reporting specific Ticket: Status page for open tickets status (PHP page, ggf. Properties?, Security?, 
-- [ ] Ticket opening via google assistant
-- [x] Monitoring of open tickets
-- [x] Reporting and Statistics on Tableau
-- [x] Switch to postgres sql (?)
-- [ ] Open ticked depending on social media actions [more](https://developer.twitter.com/en/docs/tweets/search/overview) 
-- [ ] Text recogniztion to assign to specific application (DMN)
-- [ ] Complete customer data with CRM?
-- [ ] Complete First/Lastname from Mailchimp API
-- [ ] Welcome the logged in user: https://docs.camunda.org/manual/7.6/reference/embedded-forms/javascript/examples/
-- [x] Ticket assignment (Routing? How to do it? Skill based routing)
-- [ ] E-Mail FreeMarker e-Mail template https://freemarker.apache.org/
-
-
-Tasks offe:
-- Witeri Status Change implementiere nach "Ticket Supported" -> in Progress (Chentisch du das mache @Moritz ?)
-- Uberarbeitig Doku (Alle)
-- No en geile Graph bim Tableau hinzüefiege (@Jaime )
-- AI ver E-Mail üswärtig (@Moritz isch das üfwendig?)
-- Es Ablauf-Skript ver di Präsentation schribe (siehe https://github.com/DigiBP/digibp-saentis/blob/master/doc/demoscript.md) damit wer kei Fähler hei bi der Demo am schluss, sprich jede Schritt und wenn welle schrit, etc.
 
 
 ```
