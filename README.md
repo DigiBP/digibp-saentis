@@ -264,14 +264,25 @@ The following tools and software has been used for implementing the incident man
 | Camunda Modeler  | The Camunda Modeler is used to create BPMN, CMMN and DMN models. The modeler is based on [bpmn.io](http://bpmn.io/).  |
 | GitHub| Github is used for collaboration and versioning of the programming code as well as the models. |
 |Heroku|Heroku is a PaaS (Platform as a Services) which is used to quickly build, run, and operate the Camunda in the cloud. |
-|Zapier|Zapier is a web-based service that allows end users to integrate the web applications. A REST API is used to push Tweets on Twitter. 
+|Zapier|Zapier is a web-based service that allows end users to integrate the web applications. A REST API is used to push Tweets on Twitter.|
+|Tableau  | Tableau is a powerful business intelligence and data visualization tool that has a very intuitive user interface. You don’t need any coding knowledge to work with Tableau. It is very useful in drilling-down data, creating insightful reports and garner actionable business insights.|
+|Tableau Public "Server" |It is the free version of Tableau Server but hosted on the cloud by Tableau Software. As it is free, it requires that all workbook and data are freely accessible to everybody. In terms of data source, all should be extracts and there is a limit of 1 million rows. |
+
+## Automation
+Different automation techniques and languages were used.
+* **Groovy**: Quick changes to variables were realised in groovy. Mostly changes of the status-variable (State Machine)
+* **JavaScript**: Slightly more complex requests were programmed in JavaScript. For example the Twitter integration.
+* **Java**: More complex cases were programmed in Java. For example, the variable initialisation and the e-Mail interface was realized in Java.
+
+##
 **E-Mail Outbound**
 - Hook: https://hooks.zapier.com/hooks/catch/3017214/katznf/
 - Test with:  curl -v -H "Accept: application/json"         -H "Content-Type: application/json"         -X POST         -d '{"email":"moritz.armingeon@gmail.com","msg":"This is a Test","title":"Incident Notification123"}'    https://hooks.zapier.com/hooks/catch/3017214/katznf/
 
 **E-Mail Inbound**
-- Hook: t700agmb@robot.zapier.com|
-|Tableau  | Tableau is a powerful business intelligence and data visualization tool that has a very intuitive user interface. You don’t need any coding knowledge to work with Tableau. It is very useful in drilling-down data, creating insightful reports and garner actionable business insights.
+- Hook: t700agmb@robot.zapier.com
+
+## Tableau
 - The ticket dashboard was realized with Tableau Desktop Pro Version 10.5 [https://www.tableau.com/support/releases/desktop/10.5].
 - The dashboard is published on the Tableau Public Server [https://public.tableau.com].
 - Through the pro-license the PostgreSQL database of Heroku could be connected directly [https://data.heroku.com/datastores/de020a0e-4eba-4e7d-b4c1-7ce92a1ad729#administration]. 
@@ -288,14 +299,6 @@ The following tools and software has been used for implementing the incident man
 
 
 - The dashboard of Tableau is displayed on[https://saentisincident-php.herokuapp.com/views/ticketDashboard.php] via an embedded view script. The script is stored[https://github.com/DigiBP/digibp-saentis-2/tree/master/web/views] in the ticketStatus.php file. 
-|
-|Tableau Public "Server" |It is the free version of Tableau Server but hosted on the cloud by Tableau Software. As it is free, it requires that all workbook and data are freely accessible to everybody. In terms of data source, all should be extracts and there is a limit of 1 million rows. |
-
-## Automation
-Different automation techniques and languages were used.
-* **Groovy**: Quick changes to variables were realised in groovy. Mostly changes of the status-variable (State Machine)
-* **JavaScript**: Slightly more complex requests were programmed in JavaScript. For example the Twitter integration.
-* **Java**: More complex cases were programmed in Java. For example, the variable initialisation and the e-Mail interface was realized in Java.
 
 ## Instructions for Testing
 Following steps provide instructions on how to test the Incident Management process as described in the Process chapter.
@@ -306,10 +309,6 @@ Following steps provide instructions on how to test the Incident Management proc
 
 ## License
 - [Apache License, Version 2.0](https://github.com/DigiBP/digibp-archetype-camunda-boot/blob/master/LICENSE)
-
-
-
-## Tableau
 
 
 ```
