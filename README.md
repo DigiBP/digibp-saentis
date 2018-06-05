@@ -200,8 +200,13 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 
 ### Create an incident via e-Mail
 
-| **1 Step** ||
-| ------------------ ||
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://...Ocean.png)  |  ![](https://...Dark.png)
+
+
+| **1 Step** |--|
+| ------------------ |--|
 |Write an eMail to this eMailadress: [t700agmb@robot.zapier.com] | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
 
 
