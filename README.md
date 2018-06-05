@@ -55,9 +55,9 @@ The **communication** with the incident creator is done by e-Mail. In case the i
 A **status report** of the ticket is provided by a reporting suite. Two general views were created: An [internal view](https://saentisincident-php.herokuapp.com/views/ticketDashboard.php), for incident managers and their supervisors, giving an overview of all tickets as well as a [external, personal view](https://saentisincident-php.herokuapp.com/views/ticketStatus.php) for the customer, where he may consult his ticket status.
 
 ### Process Description
-**JOEL: Würde ich entfernen...**
-| ** We tried to align this process to the ITIL incident management standard. We have focused on the following four sub-processes.** This screenshot shows the overall process workflow. You can see the sub-processes (outlined in red) that we used for our project. 
-| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL_2.jpg) |
+| ITIL | - |
+| ------------------ | - |
+| ** We tried to align this process to the ITIL incident management standard. We have focused on the following four sub-processes.** This screenshot shows the overall process workflow. You can see the sub-processes (outlined in red) that we used for our project. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL_2.jpg) |
 
 
 ## Overall Process
@@ -73,11 +73,13 @@ The following figure shows a simple visualization of our overall process. This p
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
 ### Issue Creation Process
+
 | **Issue Creation Process** | - |
 | ------------------ | - |
 |The following image shows a comprehensive visualization of our issue creation process. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/01_IncidentCreation.png) |
 
 ### Issue Identification
+
 | **Identification Process** | - |
 | ------------------ | - |
 |The following image shows a comprehensive visualization of our identification process. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/02_IncidentIdentification.png) |
@@ -89,7 +91,6 @@ The following figure shows a simple visualization of our overall process. This p
 | The following image shows a comprehensive visualization of our diagnosis process. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/03_IncidentDiagnosis.png) |
 
 ### Issue Resolution Process
-
 
 | **Resolution Process** | - |
 | ------------------ | - |
@@ -124,8 +125,11 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 | **2 Step - Create an Incident with the web form** | - |
 ||1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
-**JOEL: Dies stimmt so nicht, es gibt einen unterschied zwischen IMPACT und PRIORITY**
 Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
+**JOEL: Dies stimmt so nicht, es gibt einen unterschied zwischen IMPACT und PRIORITY**
+
+
+
 
 #### Create an Issue using e-Mail
 
@@ -202,7 +206,6 @@ The following tools and software has been used for implementing the incident man
 |Tableau Public "Server" |It is the free version of Tableau Server but hosted on the cloud by Tableau Software. As it is free, it requires that all workbook and data are freely accessible to everybody. In terms of data source, all should be extracts and there is a limit of 1 million rows. |
 
 
-**JOEL: Häääh? Können wir dies ggf. in die tabelle aufnehmen oder irgendwo zusammenführen? falls wir dies brauchen
 ## Automation
 Different automation techniques and languages were used.
 * **Groovy**: Quick changes to variables were realised in groovy. Mostly changes of the status-variable (State Machine)
