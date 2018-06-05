@@ -40,7 +40,6 @@ Tasks were tracked within this documentation and assigned to one of the team mem
 # Process Description (Incident Management)
 The following chapter describes the basic idea behind the incident process we have selected. 
 
-## Process Summary
 ![Media Flows](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
 We have implemented an incident management process. The incident management system runs for a fictional company called “Säntis Corporation”. Incidents are filed out by customer of the company as well as internal staff. The company has different incident managers which work on resolving these issues.
 
@@ -55,7 +54,8 @@ The **communication** with the incident creator is done by e-Mail. In case the i
 
 A **status report** of the ticket is provided by a reporting suite. Two general views were created: An [internal view](https://saentisincident-php.herokuapp.com/views/ticketDashboard.php), for incident managers and their supervisors, giving an overview of all tickets as well as a [external, personal view](https://saentisincident-php.herokuapp.com/views/ticketStatus.php) for the customer, where he may consult his ticket status.
 
-## Process Description
+### Process Description
+**JOEL: Würde ich entfernen... **
 We tried to align this process to the ITIL incident management standard. We have focused on the following four sub-processes. 
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL_2.jpg)
@@ -94,7 +94,6 @@ The following image shows a comprehensive visualization of our diagnosis process
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/03_IncidentDiagnosis.png) |
 
-**JOEL: Wieso kommt hier Issue Resolution?**
 ### Issue Resolution Process
 The following image shows a comprehensive visualization of our resolution process.
 
@@ -137,9 +136,7 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 | ------------------ |
 |At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
 
-----------------------------------------------------------------------------------------------------------------------------------------
 
-----------------------------------------------------------------------------------------------------------------------------------------
 
 #### Create an Incident with the Web Form
 
@@ -186,7 +183,7 @@ Again the incident manager has to select whether the incident has a high priorit
 If the Incident has a high impact and is thus critical, an automatic [tweet](https://twitter.com/search?src=typd&q=saentisgroupinc) will be generated in order to inform other customers of the incident.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png)
-----------------------------------------------------------------------------------------------------------------------------------------
+
 **JOEL: Konsolidieren**
 
 ### Generate a tweet if the incident is Critical (Impact) with Camunda
@@ -220,6 +217,7 @@ If the Incident has a high impact and is thus critical, an automatic [tweet](htt
 |Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
 
 
+**JOEL: Technical Details müsste man auch noch etwas konsolidieren. Tools werden mehrfach beschrieben und erwähnt**
 
 # Technical Details
 ## Variables
@@ -282,6 +280,8 @@ Different automation techniques and languages were used.
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Innerjoin.png)
 - Tableau Public does not support live connection of the data nor does it support scattered schedules for the extracts. Therefore, the data is loaded manually from Tableau Desktop to the Tableau Public Server through extracts by the Tableau ETL process. 
 - The dashboard of Tableau is displayed on the [Säntis PHP Website](https://saentisincident-php.herokuapp.com/views/ticketDashboard.php) via an embedded view script. The script is stored in the [GitHub Repo](https://github.com/DigiBP/digibp-saentis-2/tree/master/web/views) in the ticketStatus.php file. 
+
+**JOEL: Hier müssten wir wohl noch sämtliche Logins hinterlegen, ZAPIER; TWITTER; GOOGLE ACCOUNT, TABLEAU am besten das PW Andreas per E-Mail zusenden?**
 
 ## Instructions for Testing
 Following steps provide instructions on how to test the Incident Management process as described in the Process chapter.
