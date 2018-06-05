@@ -55,12 +55,10 @@ The **communication** with the incident creator is done by e-Mail. In case the i
 A **status report** of the ticket is provided by a reporting suite. Two general views were created: An [internal view](https://saentisincident-php.herokuapp.com/views/ticketDashboard.php), for incident managers and their supervisors, giving an overview of all tickets as well as a [external, personal view](https://saentisincident-php.herokuapp.com/views/ticketStatus.php) for the customer, where he may consult his ticket status.
 
 ### Process Description
-**JOEL: Würde ich entfernen... **
-We tried to align this process to the ITIL incident management standard. We have focused on the following four sub-processes. 
+**JOEL: Würde ich entfernen...**
+| ** We tried to align this process to the ITIL incident management standard. We have focused on the following four sub-processes.** This screenshot shows the overall process workflow. You can see the sub-processes (outlined in red) that we used for our project. 
+| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL_2.jpg) |
 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL_2.jpg)
-
-This screenshot shows the overall process workflow. You can see the sub-processes (outlined in red) that we used for our project. 
 
 ## Overall Process
 The following figure shows a simple visualization of our overall process. This process is divided in four sub processes.
@@ -68,56 +66,37 @@ The following figure shows a simple visualization of our overall process. This p
 - Issue Identification
 - Issue Diagnosis
 - Issue Resolution
-**JOEL: Hier wäre jeweils kurz eine Beschreibung gut was passiert beim Jeweiligen sub-process, unter anderem auch was für notations e.g. BPMN, CMMN, sowie DMN die verwendet wurden und was für Schnittstellen involviert sind**
+**JOEL: Hier wäre jeweils kurz eine Beschreibung gut was passiert beim Jeweiligen sub-process, unter anderem auch was für notations e.g. BPMN, CMMN, sowie DMN die verwendet wurden und was für Schnittstellen involviert sind (nur wenns reicht)**
 
 | **Overall Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
 ### Issue Creation Process
-The following image shows a comprehensive visualization of our issue creation process.
-
-| **Issue Creation Process** |
-| ------------------ |
-|![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/01_IncidentCreation.png) |
+| **Issue Creation Process** | - |
+| ------------------ | - |
+|The following image shows a comprehensive visualization of our issue creation process. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/01_IncidentCreation.png) |
 
 ### Issue Identification
-The following image shows a comprehensive visualization of our identification process.
-
-| **Identification Process** |
-| ------------------ |
-|![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/02_IncidentIdentification.png) |
+| **Identification Process** | - |
+| ------------------ | - |
+|The following image shows a comprehensive visualization of our identification process. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/02_IncidentIdentification.png) |
 
 ### Issue Diagnosis Process
-The following image shows a comprehensive visualization of our diagnosis process.
 
-| **Diagnosis Process** |
-| ------------------ |
-|![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/03_IncidentDiagnosis.png) |
+| **Diagnosis Process** | - |
+| ------------------ | - |
+| The following image shows a comprehensive visualization of our diagnosis process. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/03_IncidentDiagnosis.png) |
 
 ### Issue Resolution Process
-The following image shows a comprehensive visualization of our resolution process.
 
-| **Resolution Process** |
-| ------------------ |
-|![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
+
+| **Resolution Process** | - |
+| ------------------ | - |
+| The following image shows a comprehensive visualization of our resolution process. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
 
 
 ## Camunda Processes Step by Step Guide
-
-**JOEL: Ist hier wohl am falschen Ort?? und vermutlich auch nicht notwendig, ggf. beim Prozess-Schritt erwähnen**
-
-This chapter will explain in more detail the Camunda processes. Depending on which application is affected, different tasks are generated. Not all possibilities will be shown in the upcoming documentation. As for example if it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support. All other incidents will be prioritized and the impact will be redefined if the incident is supported. 
-
-**JOEL: Ist hier wohl am falschen Ort?? und vermutlich auch nicht notwendig, ggf. beim Prozess-Schritt erwähnen**
-For the following applications are used within the company:
-- None
-- Excel
-- Word
-- Lotus Notes
-- Outlook
-- Website
-- SAP
 
 ### Issue Creation Process
 The incident can be started in several ways (see Big Picture). In this chapter all possibilities are explained step by step. 
@@ -125,10 +104,10 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 
 #### Create an Issue using Camunda
 **JOEL: Tabellen würde ich wiefolgt formatieren:**
-**JOEL: Zudem Links bitte mit der entsprechenden Syntax ''[text](link)'' erfassen
+**JOEL: Zudem Links falls möglich bei den Links die Syntax ''[text](link)'' brauchen
 
-| **1 Step** |- |
-| ------------------ |- |
+| **1 Step** | - |
+| ------------------ | - |
 |1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on task list 4. After that click on start Overall Process | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
 | **2 Step - Incident Creation** |- |
 |Fill out all fields (As in the example) and click on Start to start the Process | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
@@ -137,34 +116,26 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 | **4 Step - Add Incident Details** | - |
 |At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the incident is terminated in our case and passed on to the next position. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
 
-
-
 #### Create an Incident with the Web Form
 
-| **1 Step - Go to the Webpage** |
-| ------------------ |
-|1. Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 2. Create a new incident 3. Retrieve incident status 4. Dashboard (Overview) which shows the current incidents 5. Landing page 6. You can also access the individual actions through the yellow-bordered area. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png)|
+| **1 Step - Go to the Webpage** | - |
+| ------------------ | - |
+|1. Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 2. Create a new incident 3. Retrieve incident status 4. Dashboard (Overview) which shows the current incidents 5. Landing page 6. You can also access the individual actions through the yellow-bordered area. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png) |
+| **2 Step - Create an Incident with the web form** | - |
+||1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
-| **2 Step - Create an Incident with the web form** |
-| ------------------ |
-|1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
-
-**JOEL: Dies stimmt so nicht, es gibt einen unterschied zwischen IMPACT und PRIORITY!**
+**JOEL: Dies stimmt so nicht, es gibt einen unterschied zwischen IMPACT und PRIORITY**
 Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
 
 #### Create an Issue using e-Mail
 
-**JOEL: So würde ich die Step by Step aufbauen**
-| **1 Step** |- |
-| ------------------ |- |
-|Write an eMail to this e-mail: [t700agmb@robot.zapier.com] | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
+| **1 Step** | - |
+| ------------------ | - |
+| Write an eMail to this e-mail: [t700agmb@robot.zapier.com] | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
 
 
 ### Incident Identification
-As soon as the incident process has started (all necessary information has been entered) the first question comes up as whether the incident is supported or not.
-**JOEL: Selbe Darstellung wie Issue Creation**
-
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentSupportedYesOrNo.png)
+| As soon as the incident process has started (all necessary information has been entered) the first question comes up as whether the incident is supported or not. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentSupportedYesOrNo.png)|
 
 **Is the Incident Supported?**
 The incident manager has to decide if the incident is supported, if yes, further information about the incident has to be entered in Camunda. If not, the customer gets notified that his incident will not be supported.
@@ -173,6 +144,17 @@ The incident manager has to decide if the incident is supported, if yes, further
 
 **Add Ticket Details**
 The system ID and the affected application have been entered by the incident manager. Depending which applications is affected, the incident might be redirected to an external support such as Microsoft or SAP products.
+
+Depending on which application is affected, different tasks are generated. Not all possibilities will be shown in the upcoming documentation. As for example if it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support. All other incidents will be prioritized and the impact will be redefined if the incident is supported. 
+
+For the following applications are used within the company:
+- None
+- Excel
+- Word
+- Lotus Notes
+- Outlook
+- Website
+- SAP
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical.png)
 
@@ -186,30 +168,14 @@ If the Incident has a high impact and is thus critical, an automatic [tweet](htt
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png)
 
-**JOEL: Konsolidieren**
-
-### Generate a tweet if the incident is Critical (Impact) with Camunda
-**JOEL: Meiner Meinung nach Löschen, stimmt so nicht**
-
-| **1 Step - Login in to Camunda** |
-| ------------------ |
-|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the username and demo for the password 3. Click on task list 4. After that click on start overall process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
-
-| **2 Step - Incident Creation (with Crititcal Impact)** |
-| ------------------ |
-|1. Fill out all fields (As in the example) and click on start to start the process 2. The tweet is only triggered if the impact status is on CRITICAL. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMaskCritical.png) |
-
-| **3 Step - Incident Identification (with Crititcal Impact)** |
-| ------------------ |
-|After the second step follows the incident identification process. The incident manager confirms whether the Incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentificationCritical.png) |
-
-| **4 Step - Add Incident Details (with Critical Impact)** |
-| ------------------ |
-|At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetailsCritical.png)|
 
 **JOEL: Vollständigkeitshalber müssten wir noch Issue Diagnosis und Issue Resultion erwähnenè**
+## Issue Diagnosis & Resolution
 
-**JOEL: Nachfolgendes braucht ein Titel, unter anderem müsste man auch noch das Dashboard erwähnen, die Inhalte existieren bereits, nur der aufbau müsste etwas strukturiert werden **
+
+### Tableau
+**JOEL: Schreib doch hier ganz kurz was man auf Tableau sieht und wie man einlogged, nur link keine printscreens**
+
 ### Check for Incident Status via eMail (Webformular)
 
 | **1 Step** |- |
@@ -219,9 +185,9 @@ If the Incident has a high impact and is thus critical, an automatic [tweet](htt
 |Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
 
 
-**JOEL: Technical Details müsste man auch noch etwas konsolidieren. Tools werden mehrfach beschrieben und erwähnt**
+**JOEL: Technical Details müsste man auch noch etwas konsolidieren. Tools werden mehrfach beschrieben und erwähnt (trivial! wenns nit längt isch halb so wild! :-) **
 
-# Technical Details
+# Developer Documentation
 ## Variables
 The following set of variables was introduced in our process. We choose to define all variables in a structured matter and describe, for who they are visible. This allowed us to easier work together. These variables were all initialized automatically, so one could count on the instanciation of the variables.
 ![Variables](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Variables.png | width=100)
@@ -264,7 +230,6 @@ Different automation techniques and languages were used.
 * **JavaScript**: Slightly more complex requests were programmed in JavaScript. For example the Twitter integration.
 * **Java**: More complex cases were programmed in Java. For example, the variable initialisation and the e-Mail interface was realized in Java.
 
-**JOEL: Irrelevant**
 ## E-Mails
 **E-Mail Outbound**
 - Hook: https://hooks.zapier.com/hooks/catch/3017214/katznf/
@@ -273,7 +238,6 @@ Different automation techniques and languages were used.
 **E-Mail Inbound**
 - Hook: t700agmb@robot.zapier.com
 
-**JOEL: Konsolidieren**
 ## Tableau
 - The ticket dashboard was realized with [Tableau Desktop Pro Version 10.5](https://www.tableau.com/support/releases/desktop/10.5).
 - The dashboard is published on the [Tableau Public Server](https://public.tableau.com).
