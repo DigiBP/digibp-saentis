@@ -10,7 +10,7 @@ ________  .__       .______________________    _________  _ _  __  .__
                                                                           
 | Summary | Quicklinks |
 | ------------------ | - |
-| This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalization of the Business Processes (SS18) Module at the FHNW. Check out our [Presentation Slides](https://speakerdeck.com/joelschmid91/santis-group-digitalisation-of-business-processes) to get an overview of the process as well as the tools and technologies used. | [Camunda BPN Incident Management]( https://saentisincident.herokuapp.com/ ) [PHP Web Incident Management](https://saentisincident-php.herokuapp.com/)  [t700agmb@robot.zapier.com](Create a Issue by E-Mail|
+| This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalization of the Business Processes (SS18) Module at the FHNW. Check out our [Presentation Slides](https://speakerdeck.com/joelschmid91/santis-group-digitalisation-of-business-processes) to get an overview of the process as well as the tools and technologies used. | [Camunda BPN Incident Management]( https://saentisincident.herokuapp.com/ ) [PHP Web Incident Management](https://saentisincident-php.herokuapp.com/)  [Create an Issue by E-Mail](mailto:t700agmb@robot.zapier.com)|
 
 *Authors*
 * Jaime Ramirez, [jaime.ramirez@students.fhnw.ch](mailto:jaime.ramirez@students.fhnw.ch)
