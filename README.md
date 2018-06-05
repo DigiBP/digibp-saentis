@@ -236,7 +236,7 @@ The following picture shows an example of a triggered tweet.
 # Technical Details
 ## Variables
 The following set of variables was introduced in our process. We choose to define all variables in a structured matter and describe, for who they are visible. This allowed us to easier work together. These variables were all initialized automatically, so one could count on the instanciation of the variables.
-![Variables](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Variables.png){ width=50% }
+![Variables](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Variables.png | width=100)
 
 ## Integrations
 Our solution is integrated with multiple third party solution:
@@ -287,13 +287,13 @@ Different automation techniques and languages were used.
 - The dashboard is published on the Tableau Public Server [https://public.tableau.com].
 - Through the pro-license the PostgreSQL database of Heroku could be connected directly [https://data.heroku.com/datastores/de020a0e-4eba-4e7d-b4c1-7ce92a1ad729#administration]. 
 - The following picture shows which data from Heroku is relevant for the integration on Tableau. 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/HerokuDatabase.png)
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/HerokuDatabase.png | width=100)
 - The following picture shows how the relevant data of Heroku was integrated into Tableau. It is important to activate SSL during the connection. 
 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/TableauHerokuConnection.png) 
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/TableauHerokuConnection.png | width=100) 
 - The following two tables were linked with an inner join to display the relevant data from the Heroku database on a tableau. 
 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Innerjoin.png)
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Innerjoin.png | width=100)
 
 - Tableau Public does not support live connection of the data nor does it support scattered schedules for the extracts. Therefore, the data is loaded manually from Tableau Desktop to the Tableau Public Server through extracts by the Tableau ETL process. 
 
