@@ -148,6 +148,7 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 | ------------------ |
 |1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
+**JOEL: Dies stimmt so nicht, es gibt einen unterschied zwischen IMPACT und PRIORITY!**
 Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
 
 #### Create an Issue using e-Mail
