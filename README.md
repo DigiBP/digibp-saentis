@@ -140,9 +140,7 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 | As soon as the incident process has started (all necessary information has been entered) the first question comes up as whether the incident is supported or not. The incident manager has to decide if the incident is supported, if yes, further information about the incident has to be entered in Camunda. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentSupportedYesOrNo.png) |
 |  If not, the customer gets notified that his incident will not be supported. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png) |
 | **Add Ticket Details**| - |
-| ------------------ | - |
 | The system ID and the affected application have been entered by the incident manager. Depending which applications is affected, the incident might be redirected to an external support such as Microsoft or SAP products.
-
 Depending on which application is affected, different tasks are generated. Not all possibilities will be shown in the upcoming documentation. As for example if it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support. All other incidents will be prioritized and the impact will be redefined if the incident is supported. 
 For the following applications are used within the company:
 - None
@@ -153,10 +151,8 @@ For the following applications are used within the company:
 - Website
 - SAP | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsSupported.png) |
 | **Indicent Priority**| - |
-| ------------------ | - |
 Again the incident manager has to select whether the incident has a high priority or not. If the incident has a high priority, then the supervising case manger should be informed. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical.png) |
 | **Incident Impact**| - |
-| ------------------ | - |
 | If the Incident has a high impact and is thus critical, an automatic [tweet](https://twitter.com/search?src=typd&q=saentisgroupinc) will be generated in order to inform other customers of the incident. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical2.png) |
 
 
