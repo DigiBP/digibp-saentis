@@ -64,7 +64,7 @@ This screenshot shows the overall process workflow. You can see the sub-processe
 
 ## Overall Process
 The following figure shows a simple visualization of our overall process. This process is divided in four sub processes.
-- Create Issue
+- Issue Creation
 - Issue Identification
 - Issue Diagnosis
 - Issue Resolution
@@ -102,11 +102,11 @@ The following image shows a comprehensive visualization of our resolution proces
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
 
-**JOEL: Würde ich Step by Step benennen**
-## Camunda Processes in Detail
+## Camunda Processes Step by Step Guide
+**JOEL: Ist hier wohl am falschen Ort??
+
 This chapter will explain in more detail the Camunda processes. Depending on which application is affected, different tasks are generated. Not all possibilities will be shown in the upcoming documentation. As for example if it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support. All other incidents will be prioritized and the impact will be redefined if the incident is supported. 
 
-**JOEL: Nachfolgende Applik. irrelevant > Löschen**
 For the following applications are used within the company:
 - None
 - Excel
@@ -116,8 +116,54 @@ For the following applications are used within the company:
 - Website
 - SAP
 
-## Incident Identification
+### Issue Creation Process
+The incident can be started in several ways (see Big Picture). In this chapter all possibilities are explained step by step. 
+![Big Picture](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
+
+#### Create an Issue using Camunda
+| **1 Step** |
+| ------------------ |
+|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on task list 4. After that click on start Overall Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
+
+| **2 Step - Incident Creation** |
+| ------------------ |
+|Fill out all fields (As in the example) and click on Start to start the Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
+
+| **3 Step - Incident Identification** |
+| ------------------ |
+|After the second step follows the incident identification process. The incident manager confirms whether the incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
+
+| **4 Step - Add Incident Details** |
+| ------------------ |
+|At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+#### Create an Incident with the Web Form
+
+| **1 Step - Go to the Webpage** |
+| ------------------ |
+|1. Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 2. Create a new incident 3. Retrieve incident status 4. Dashboard (Overview) which shows the current incidents 5. Landing page 6. You can also access the individual actions through the yellow-bordered area. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png)|
+
+| **2 Step - Create an Incident with the web form** |
+| ------------------ |
+|1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
+
+Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
+
+#### Create an Issue using e-Mail
+
+**JOEL: So würde ich die Step by Step aufbauen**
+| **1 Step** |- |
+| ------------------ |- |
+|Write an eMail to this e-mail: [t700agmb@robot.zapier.com] | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
+
+
+### Incident Identification
 As soon as the incident process has started (all necessary information has been entered) the first question comes up as whether the incident is supported or not.
+**JOEL: Selbe Darstellung wie Issue Creation**
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentSupportedYesOrNo.png)
 
@@ -142,28 +188,6 @@ If the Incident has a high impact and is thus critical, an automatic [tweet](htt
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png)
 ----------------------------------------------------------------------------------------------------------------------------------------
 **JOEL: Konsolidieren**
-### Create an incident with Camunda
-The incident can be started in several ways (see Big Picture). In this chapter all possibilities are explained step by step. 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
-Picture description: Big Picture
-
-| **1 Step** |
-| ------------------ |
-|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on task list 4. After that click on start Overall Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
-
-| **2 Step - Incident Creation** |
-| ------------------ |
-|Fill out all fields (As in the example) and click on Start to start the Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
-
-| **3 Step - Incident Identification** |
-| ------------------ |
-|After the second step follows the incident identification process. The incident manager confirms whether the incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
-
-| **4 Step - Add Incident Details** |
-| ------------------ |
-|At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
-
-----------------------------------------------------------------------------------------------------------------------------------------
 
 ### Generate a tweet if the incident is Critical (Impact) with Camunda
 **JOEL: Meiner Meinung nach Löschen, stimmt so nicht**
@@ -184,35 +208,15 @@ Picture description: Big Picture
 | ------------------ |
 |At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the Incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetailsCritical.png)|
 
-----------------------------------------------------------------------------------------------------------------------------------------
+**JOEL: Vollständigkeitshalber müssten wir noch Issue Diagnosis und Issue Resultion erwähnenè**
 
-### Create an Incident with the web form
-
-| **1 Step - Go to the Webpage** |
-| ------------------ |
-|1. Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 2. Create a new incident 3. Retrieve incident status 4. Dashboard (Overview) which shows the current incidents 5. Landing page 6. You can also access the individual actions through the yellow-bordered area. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png)|
-
-| **2 Step - Create an Incident with the web form** |
-| ------------------ |
-|1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
-
-Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
-
-### Create an incident via e-Mail
-
-**JOEL: So würde ich die Step by Step aufbauen**
-| **1 Step** |- |
-| ------------------ |- |
-|Write an eMail to this e-mail: [t700agmb@robot.zapier.com] | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
-
-
+**JOEL: Nachfolgendes braucht ein Titel, unter anderem müsste man auch noch das Dashboard erwähnen, die Inhalte existieren bereits, nur der aufbau müsste etwas strukturiert werden **
 ### Check for Incident Status via eMail (Webformular)
 
 | **1 Step** |- |
 | ------------------ |- |
 |Go to the following URL https://saentisincident-php.herokuapp.com/ and klick on "Check Incident Status". | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
 | **2 Step** |- |
-| ------------------ |- |
 |Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
 
 
