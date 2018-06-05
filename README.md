@@ -201,19 +201,19 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 ### Create an incident via e-Mail
 
 **JOEL: SO würde ich die Step by Step aufbauen für Ticket creation würde ich aber nur erwähnen wie man diese erstellen kann**
-| **1 Step** | |
-| ------------------ | |
+| **1 Step** |- |
+| ------------------ |- |
 |Write an eMail to this e-mail: [t700agmb@robot.zapier.com] | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
 
 
 ### Check for Incident Status via eMail (Webformular)
 
-| **1 Step** | |
-| ------------------ | |
+| **1 Step** |- |
+| ------------------ |- |
 |Go to the following URL https://saentisincident-php.herokuapp.com/ and klick on "Check Incident Status". | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
 
-| **2 Step** | |
-| ------------------ | |
+| **2 Step** |- |
+| ------------------ |- |
 |Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is. | 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
 
