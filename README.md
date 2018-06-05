@@ -113,38 +113,36 @@ For the following applications are used within the company:
 - Website
 - SAP
 
-## Incident Identification - Is the Incident Supported or not?
+## Incident Identification
 As soon as the incident process has started (all necessary information has been entered) the first question comes up as whether the incident is supported or not.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentSupportedYesOrNo.png)
 
-**Is the Incident Supported**
-If the incident is supported, the incident manager is asked to enter further information about the incident in Camunda.
+**Is the Incident Supported?**
+The incident manager has to decide if the incident is supported, if yes, further information about the incident has to be entered in Camunda. If not, the customer gets notified that his incident will not be supported.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsSupported.png)
 
-**Is the Incident Supported and Critical**
-The system ID and the affected application have been entered and the incident manager has to decided whether the incident is critical or not.
+**Add Ticket Details**
+The system ID and the affected application have been entered by the incident manager. Depending which applications is affected, the incident might be redirected to an external support such as Microsoft or SAP products.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical.png)
 
-**Is the Incident Supported, Critical and the Impact is Critical**
-Again the incident manager has to select whether the impact is critical or not. If critically rated, a Twitter message will be sent.
+**Indicent Priority**
+Again the incident manager has to select whether the incident has a high priority or not. If the incident has a high priority, then the supervising case manger should be informed. 
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical2.png)
 
-**The Incident is not Supported**
-If the Incident is not supported, the incident is rejected. 
+**Incident Impact**
+If the Incident has a high impact and is thus critical, an automatic tweet will be generated in order to inform other customers of the incident.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png)
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-## Step by Step Guide
-The incident can be started in several ways (see picture Big Picture). In this chapter all possibilities are explained step by step. 
+### Create an incident with Camunda
+The incident can be started in several ways (see Big Picture). In this chapter all possibilities are explained step by step. 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
 Picture description: Big Picture
-
-### Create an incident with Camunda
 
 | **1 Step** |
 | ------------------ |
