@@ -236,7 +236,7 @@ The following picture shows an example of a triggered tweet.
 # Technical Details
 ## Variables
 The following set of variables was introduced in our process. We choose to define all variables in a structured matter and describe, for who they are visible. This allowed us to easier work together. These variables were all initialized automatically, so one could count on the instanciation of the variables.
-![Variables](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Variables.png)
+![Variables](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Variables.png =100)
 
 ## Integrations
 Our solution is integrated with multiple third party solution:
@@ -274,7 +274,7 @@ Different automation techniques and languages were used.
 * **JavaScript**: Slightly more complex requests were programmed in JavaScript. For example the Twitter integration.
 * **Java**: More complex cases were programmed in Java. For example, the variable initialisation and the e-Mail interface was realized in Java.
 
-##
+## E-Mails
 **E-Mail Outbound**
 - Hook: https://hooks.zapier.com/hooks/catch/3017214/katznf/
 - Test with:  curl -v -H "Accept: application/json"         -H "Content-Type: application/json"         -X POST         -d '{"email":"moritz.armingeon@gmail.com","msg":"This is a Test","title":"Incident Notification123"}'    https://hooks.zapier.com/hooks/catch/3017214/katznf/
@@ -282,7 +282,7 @@ Different automation techniques and languages were used.
 **E-Mail Inbound**
 - Hook: t700agmb@robot.zapier.com
 
-## Tableau
+## Tableau
 - The ticket dashboard was realized with Tableau Desktop Pro Version 10.5 [https://www.tableau.com/support/releases/desktop/10.5].
 - The dashboard is published on the Tableau Public Server [https://public.tableau.com].
 - Through the pro-license the PostgreSQL database of Heroku could be connected directly [https://data.heroku.com/datastores/de020a0e-4eba-4e7d-b4c1-7ce92a1ad729#administration]. 
