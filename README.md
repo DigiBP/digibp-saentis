@@ -68,6 +68,7 @@ The following figure shows a simple visualization of our overall process. This p
 - Issue Identification
 - Issue Diagnosis
 - Issue Resolution
+**JOEL: Hier wäre jeweils kurz eine Beschreibung gut was passiert beim Jeweiligen sub-process, unter anderem auch was für notations e.g. BPMN, CMMN, sowie DMN die verwendet wurden und was für Schnittstellen involviert sind**
 
 | **Overall Process** |
 | ------------------ |
@@ -100,6 +101,7 @@ The following image shows a comprehensive visualization of our resolution proces
 | **Resolution Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
+
 
 ## Camunda Processes Step by Step Guide
 
