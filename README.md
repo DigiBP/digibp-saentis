@@ -94,6 +94,7 @@ The following image shows a comprehensive visualization of our diagnosis process
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/03_IncidentDiagnosis.png) |
 
+**JOEL: Wieso kommt hier Issue Resolution?**
 ### Issue Resolution Process
 The following image shows a comprehensive visualization of our resolution process.
 
@@ -101,9 +102,11 @@ The following image shows a comprehensive visualization of our resolution proces
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
 
+**JOEL: Würde ich Step by Step benennen**
 ## Camunda Processes in Detail
 This chapter will explain in more detail the Camunda processes. Depending on which application is affected, different tasks are generated. Not all possibilities will be shown in the upcoming documentation. As for example if it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support. All other incidents will be prioritized and the impact will be redefined if the incident is supported. 
 
+**JOEL: Nachfolgende Applik. irrelevant > Löschen**
 For the following applications are used within the company:
 - None
 - Excel
@@ -138,7 +141,7 @@ If the Incident has a high impact and is thus critical, an automatic [tweet](htt
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png)
 ----------------------------------------------------------------------------------------------------------------------------------------
-
+**JOEL: Konsolidieren**
 ### Create an incident with Camunda
 The incident can be started in several ways (see Big Picture). In this chapter all possibilities are explained step by step. 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
@@ -163,6 +166,7 @@ Picture description: Big Picture
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 ### Generate a tweet if the incident is Critical (Impact) with Camunda
+**JOEL: Meiner Meinung nach Löschen, stimmt so nicht**
 
 | **1 Step - Login in to Camunda** |
 | ------------------ |
@@ -182,7 +186,7 @@ Picture description: Big Picture
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-### Ceate an Incident with the web form
+### Create an Incident with the web form
 
 | **1 Step - Go to the Webpage** |
 | ------------------ |
@@ -196,9 +200,9 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 
 ### Create an incident via e-Mail
 
-| **1 Step** |
-| ------------------ |
-|Write an eMail to this eMailadress: [t700agmb@robot.zapier.com]| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
+| **1 Step** ||
+| ------------------ ||
+|Write an eMail to this eMailadress: [t700agmb@robot.zapier.com] | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
 
 
 ### Check for Incident Status via eMail (Webformular)
