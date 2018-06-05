@@ -120,7 +120,7 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 
 | **1 Step - Go to the Webpage** | - |
 | ------------------ | - |
-|1. Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 2. Create a new incident 3. Retrieve incident status 4. Dashboard (Overview) which shows the current incidents 5. Landing page 6. You can also access the individual actions through the yellow-bordered area. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png) |
+| 1. Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 2. Create a new incident 3. Retrieve incident status 4. Dashboard (Overview) which shows the current incidents 5. Landing page 6. You can also access the individual actions through the yellow-bordered area. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png) |
 | **2 Step - Create an Incident with the web form** | - |
 ||1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
@@ -136,10 +136,12 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 
 ### Incident Identification
 | **Is the Incident Supported?** | - |
-| As soon as the incident process has started (all necessary information has been entered) the first question comes up as whether the incident is supported or not. The incident manager has to decide if the incident is supported, if yes, further information about the incident has to be entered in Camunda. If not, the customer gets notified that his incident will not be supported. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentSupportedYesOrNo.png) |
-
+| ------------------ | - |
+| As soon as the incident process has started (all necessary information has been entered) the first question comes up as whether the incident is supported or not. The incident manager has to decide if the incident is supported, if yes, further information about the incident has to be entered in Camunda. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentSupportedYesOrNo.png) |
+|  If not, the customer gets notified that his incident will not be supported. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png) |
 | **Add Ticket Details**| - |
-The system ID and the affected application have been entered by the incident manager. Depending which applications is affected, the incident might be redirected to an external support such as Microsoft or SAP products.
+| ------------------ | - |
+| The system ID and the affected application have been entered by the incident manager. Depending which applications is affected, the incident might be redirected to an external support such as Microsoft or SAP products.
 
 Depending on which application is affected, different tasks are generated. Not all possibilities will be shown in the upcoming documentation. As for example if it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support. All other incidents will be prioritized and the impact will be redefined if the incident is supported. 
 For the following applications are used within the company:
@@ -150,15 +152,12 @@ For the following applications are used within the company:
 - Outlook
 - Website
 - SAP | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsSupported.png) |
-
-
- 
 | **Indicent Priority**| - |
+| ------------------ | - |
 Again the incident manager has to select whether the incident has a high priority or not. If the incident has a high priority, then the supervising case manger should be informed. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical.png) |
-
 | **Incident Impact**| - |
-| If the Incident has a high impact and is thus critical, an automatic [tweet](https://twitter.com/search?src=typd&q=saentisgroupinc) will be generated in order to inform other customers of the incident.| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png)|
-| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical2.png) |
+| ------------------ | - |
+| If the Incident has a high impact and is thus critical, an automatic [tweet](https://twitter.com/search?src=typd&q=saentisgroupinc) will be generated in order to inform other customers of the incident. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical2.png) |
 
 
 ## Issue Diagnosis & Resolution
