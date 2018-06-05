@@ -8,7 +8,9 @@ ________  .__       .______________________    _________  _ _  __  .__
         \/  /_____/            \/                    \/     \/             \/ 
 ```                                                                       
                                                                           
-This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalization of the Business Processes (SS18) Module at the FHNW. Check out our [Presentation Slides](https://speakerdeck.com/joelschmid91/santis-group-digitalisation-of-business-processes) to get an overview of the process as well as the tools and technologies used.
+| Summary | Quicklinks |
+| ------------------ | - |
+| This repository contains an incident management workflow running on [Camunda BPM](https://docs.camunda.org). This repository is part of the group assignment of the Digitalization of the Business Processes (SS18) Module at the FHNW. Check out our [Presentation Slides](https://speakerdeck.com/joelschmid91/santis-group-digitalisation-of-business-processes) to get an overview of the process as well as the tools and technologies used. | https://saentisincident.herokuapp.com/ |
 
 *Authors*
 * Jaime Ramirez, [jaime.ramirez@students.fhnw.ch](mailto:jaime.ramirez@students.fhnw.ch)
