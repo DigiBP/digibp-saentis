@@ -15,58 +15,55 @@ This repository contains an incident management workflow running on [Camunda BPM
 * Moritz Armingeon, [moritz.armingeon@students.fhnw.ch](mailto:moritz.armingeon@students.fhnw.ch)
 * Joël Schmid, [joel.schmid@students.fhnw.ch](mailto:joel.schmid@students.fhnw.ch)
 
-## Disclaimer
-We assume that the reader is familiar with BPMN 2.0. The processes and their flows are not described or explained in this project. 
 
-## Methodology and approach
+# Methodology and Approach
+Please be aware that the reader should be familiar with BPMN 2.0. The processes and their flows are not described or explained in this project. 
 
-The present project was approached according to the KISS (keep it simple, stupid) principle. With the KISS principle, a simple solution can be sought to solve a required problem. In addition to the KISS principle, the project team has chosen the agile approach to ensure the development and finalization of the project.
+This project was approached using the KISS (keep it simple, stupid) principle. With the KISS principle, a simple solution can be found to solve a complex problem. In addition to the KISS principle, the project team has chosen an agile approach to enable a high flexibility during the implementation and further to increase the success rate of the project.
 
-### Design approach
-Already after the first lesson, we could execute the first workflow. Although it was not very rich in functionality, it was a valuable experience and thought the group the new technologies. First documentation and design plans were drawn, and first tests were executed. Every lecture followed this principle: Every lesson in class was one complete iteration or development sprint.
+## Design Approach
+After the first lesson, we were able to execute the first workflow by running the Camunda BPM Engine on Heroku. Although with a limited functionality. It was a valuable experience for the group as new technologies were used. Furthermore, documentation and design plans were crafted and some tests were conducted. We treated every lesson and the following development and adaptions to the product as one sprint.
 
-### Collaboration
-Git version control system was used in order to work collaborative on the project. The GitHub platform enabled storage of the development artefacts, documentation and test management.
+## Collaboration
+Git Version control was used in order to work collaboratively on the project. GitHub was used for the versioning of the development increments, as well as to create the technical documentation.
 
-We work with two Heroku instances and two GitHub Repositories. Both GitHub and Heroku pair up between each other.
-- 1 Camunda / Tomcat: This instance holds the Camunda codebase. Camunda be tested locally on the developer's machine and then, after committing, is automatically deployed to Heroku
-- 2 Web Form / PHP: This instance contains the web-based components of our solution: The web-form, status page and tableau dashboards. After committing, it is also automatically deployed to Heroku
+We work with two Heroku instances and two GitHub Repositories. GitHub and Heroku can be seamlessly integrated with eachother, allowing a continous delivery of the implemented increment. 
+- 1 Camunda / Tomcat: This instance holds the Camunda codebase. Camunda was firstly tested locally on the developer's machine and then  committed. Once committed, the repo is automatically deployed on Heroku.
+- 2 Web Form / PHP: This instance contains the web-based components of our solution: The web-form to create new incidents, a status page to check the status of the tickets and an overview using the Tableau dashboards. 
 
-### Testing
-In order to minimalize defects, many functional tests were carried out. We created test-cases from an external view (black box) as well as testing every decision path.
-Detected issues were tracked with the Github issue management system.
+## Testing
+In order to minimalize defects, various functional tests were conducted. We created test-cases from an external view (black box). Furthermore, different decision paths were tested. Detected issues were tracked with the [Github issue management](https://github.com/DigiBP/digibp-saentis/issues) as well as with the tasks stored in the README.md file.
 
-### Project Management
-Tasks were tracked within this documentation. A flat hierarchy without designated project leader was chosen.
+## Project Management
+Tasks were tracked within this documentation and assigned to one of the team members. For such as small team, no designated project leader was chosen. Tasks were taken by the each teammember individually.
 
-## Incident Process Idea - Process Description (Incident Management Workflow)
-This chapter describes the basic idea behind the incident process we have selected. 
-### Process Summary
+# Process Description (Incident Management)
+The following chapter describes the basic idea behind the incident process we have selected. 
+
+## Process Summary
 ![Media Flows](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v2.png)
-We have implemented an incident management process. The incident management system is run by a fictional company “Säntis Corporation” and incidents are filed by customer of Säntis – both, external and internal. Incident managers working for Säntis work on resolving these issues.
-We have three main strategies to open a ticket:
-* **e-Mail:** Send an e-Mail to the support address and automatically a process is triggered
-* **Web form:** Fill out the web-form describing the ticket
-* **Camunda:** Create the issue directly in Camunda. For example, issues received by phone can then directly entered
-Note that these medias are all bound to the process engine by a REST interface and therefore could be easily extended by further channels.
+We have implemented an incident management process. The incident management system runs for a fictional company called “Säntis Corporation”. Incidents are filed out by customer of the company as well as internal staff. The company has different incident managers which work on resolving these issues.
 
-The **communication** with the user is then always by e-Mail. In case the incident identified is critical, which concerns a larger user base, a tweet is sent out, in order to quickly inform customers, that Säntis is working on resolving the issue. This should reduce the amount of similar issues received.
+We have three main options to open a ticket:
+* **e-Mail:** Send an e-Mail to the support address [t700agmb@robot.zapier.com] to automatically create a ticket
+* **Web form:** Fill out the [web-form](https://saentisincident-php.herokuapp.com/views/createTicket.php) to create a new incident
+* **Camunda:** Create the issue directly in [Camunda BPM](https://saentisincident.herokuapp.com/app/welcome/default/). For example, an issue received by phone can then directly recoreded.
 
-Status **report** on the ticket is provided by a reporting suite. Two general views are provided: The internal view, for ticket managers and their supervisors, giving an overview for all tickets and a personal view for the customer, where he may consult his ticket status.
-### Process Description
+Please be aware that all these channels are all using the REST API of Camunda. Therefore, further channels can be easiliy added in the future.
 
-For this project we have adhered to the ITIL incident management standard. We have focused on the following four sub-processes. 
+The **communication** with the incident creator is done by e-Mail. In case the identified incident is critical, the case manager gets informed. If the indicent has a impact for different customers a automatic tweet is generated to quickly inform other customers and to prevent the incident managers from further interruptions. Consequently, this should reduce the amount of similar issues received.
 
-- 1 Incident Creation Process
-- 2 Incident Identification Process (Incident Categorization and Incident prioritization) 
-- 3 Incident Resolution Process
+A **status report** of the ticket is provided by a reporting suite. Two general views were created: An [internal view](https://saentisincident-php.herokuapp.com/views/ticketDashboard.php), for incident managers and their supervisors, giving an overview of all tickets as well as a [external, personal view](https://saentisincident-php.herokuapp.com/views/ticketStatus.php) for the customer, where he may consult his ticket status.
+
+## Process Description
+We tried to align this process to the ITIL incident management standard. We have focused on the following four sub-processes. 
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Incident_Management_ITIL_2.jpg)
 
-This screenshot shows the ITIL incident management process. You can see the sub-processes (outlined in red) that we used for our project. 
+This screenshot shows the overall process workflow. You can see the sub-processes (outlined in red) that we used for our project. 
 
-### Overall Process
-The following image shows a simple visualization of our overall process. This process is divided in four sub processes.
+## Overall Process
+The following figure shows a simple visualization of our overall process. This process is divided in four sub processes.
 - Create Issue
 - Issue Identification
 - Issue Diagnosis
@@ -77,38 +74,38 @@ The following image shows a simple visualization of our overall process. This pr
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
 ### Issue Creation Process
-The following image shows a simple visualization of our issue creation process.
+The following image shows a comprehensive visualization of our issue creation process.
 
 | **Issue Creation Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/01_IncidentCreation.png) |
 
 ### Issue Identification
-The following image shows a simple visualization of our identification process.
+The following image shows a comprehensive visualization of our identification process.
 
 | **Identification Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/02_IncidentIdentification.png) |
 
 ### Issue Diagnosis Process
-The following image shows a simple visualization of our diagnosis process.
+The following image shows a comprehensive visualization of our diagnosis process.
 
 | **Diagnosis Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/03_IncidentDiagnosis.png) |
 
 ### Issue Resolution Process
-The following image shows a simple visualization of our resolution process.
+The following image shows a comprehensive visualization of our resolution process.
 
 | **Resolution Process** |
 | ------------------ |
 |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/04_IncidentResolution.png) |
 
-# Camunda Processes in Detail
-This chapter will explain in detail the Camunda processes.
+## Camunda Processes in Detail
+This chapter will explain in more detail the Camunda processes. Depending on which application is affected, different tasks are generated. Not all possibilities will be shown in the upcoming documentation. As for example if it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support. All other incidents will be prioritized and the impact will be redefined if the incident is supported. 
 
-For the following applications, an incident can be filed:
- - None
+For the following applications are used within the company:
+- None
 - Excel
 - Word
 - Lotus Notes
@@ -116,26 +113,23 @@ For the following applications, an incident can be filed:
 - Website
 - SAP
 
-Depending on which application is affected, different processes or flows are started. Not all possibilities will be shown in the upcoming documentation. If it is an **SAP** or **Microsoft (Outlook)** incident, it is forwarded to the "external" support.  All other incidents are reprioritized and the impact is redefined. 
-
-
 ## Incident Identification - Is the Incident Supported or not?
-As soon as the incident process has started (all necessary information has been entered) the first question comes up as to whether the incident is supported or not.
+As soon as the incident process has started (all necessary information has been entered) the first question comes up as whether the incident is supported or not.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentSupportedYesOrNo.png)
 
 **Is the Incident Supported**
-If the incident is supported, the user in Camunda is asked to enter further information about the incident.
+If the incident is supported, the incident manager is asked to enter further information about the incident in Camunda.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsSupported.png)
 
 **Is the Incident Supported and Critical**
-If the system ID and the affected application have been entered, it must be decided whether the incident is critical or not.
+The system ID and the affected application have been entered and the incident manager has to decided whether the incident is critical or not.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical.png)
 
 **Is the Incident Supported, Critical and the Impact is Critical**
-It must be selected again whether the impact is critical or not. If critically rated, a Twitter message will be sent.
+Again the incident manager has to select whether the impact is critical or not. If critically rated, a Twitter message will be sent.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical2.png)
 
