@@ -134,7 +134,7 @@ Again the incident manager has to select whether the incident has a high priorit
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IsTheIncidentCritical2.png)
 
 **Incident Impact**
-If the Incident has a high impact and is thus critical, an automatic tweet will be generated in order to inform other customers of the incident.
+If the Incident has a high impact and is thus critical, an automatic [tweet](https://twitter.com/search?src=typd&q=saentisgroupinc) will be generated in order to inform other customers of the incident.
 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIsNotSupported.png)
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -194,8 +194,7 @@ Picture description: Big Picture
 
 Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
 
-----------------------------------------------------------------------------------------------------------------------------------------
-### Create an incident via eMail
+### Create an incident via e-Mail
 
 | **1 Step** |
 | ------------------ |
@@ -203,7 +202,6 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
 
 
-----------------------------------------------------------------------------------------------------------------------------------------
 ### Check for Incident Status via eMail (Webformular)
 
 | **1 Step** |
@@ -215,30 +213,14 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 |Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is.
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
 
-----------------------------------------------------------------------------------------------------------------------------------------
-## Twitter Message
 
-If the incident has been reprioritized and the impact and priority are critical, a tweet is sent.
-This is only triggered if the following applications are involved. 
 
-- None
-- Excel
-- Word
-- Lotus Notes
-- Website
-
-The Twitter status can be viewed at: [https://twitter.com/search?src=typd&q=saentisgroupinc]
-
-The following picture shows an example of a triggered tweet.
-
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Twitter.png)
-----------------------------------------------------------------------------------------------------------------------------------------
 # Technical Details
 ## Variables
 The following set of variables was introduced in our process. We choose to define all variables in a structured matter and describe, for who they are visible. This allowed us to easier work together. These variables were all initialized automatically, so one could count on the instanciation of the variables.
 ![Variables](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Variables.png | width=100)
 
-## Integrations
+## Integrations & Interfaces
 Our solution is integrated with multiple third party solution:
 * e-Mail: REST API to Zapier (Gmail, inbound and outbound)
 * Twitter: REST API to Zapier
@@ -283,22 +265,17 @@ Different automation techniques and languages were used.
 - Hook: t700agmb@robot.zapier.com
 
 ## Tableau
-- The ticket dashboard was realized with Tableau Desktop Pro Version 10.5 [https://www.tableau.com/support/releases/desktop/10.5].
-- The dashboard is published on the Tableau Public Server [https://public.tableau.com].
-- Through the pro-license the PostgreSQL database of Heroku could be connected directly [https://data.heroku.com/datastores/de020a0e-4eba-4e7d-b4c1-7ce92a1ad729#administration]. 
+- The ticket dashboard was realized with [Tableau Desktop Pro Version 10.5](https://www.tableau.com/support/releases/desktop/10.5).
+- The dashboard is published on the [Tableau Public Server](https://public.tableau.com).
+- Through the pro-license the [PostgreSQL database of Heroku](https://data.heroku.com/datastores/de020a0e-4eba-4e7d-b4c1-7ce92a1ad729#administration) could be connected directly. 
 - The following picture shows which data from Heroku is relevant for the integration on Tableau. 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/HerokuDatabase.png | width=100)
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/HerokuDatabase.png)
 - The following picture shows how the relevant data of Heroku was integrated into Tableau. It is important to activate SSL during the connection. 
-
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/TableauHerokuConnection.png | width=100) 
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/TableauHerokuConnection.png) 
 - The following two tables were linked with an inner join to display the relevant data from the Heroku database on a tableau. 
-
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Innerjoin.png | width=100)
-
+![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Innerjoin.png)
 - Tableau Public does not support live connection of the data nor does it support scattered schedules for the extracts. Therefore, the data is loaded manually from Tableau Desktop to the Tableau Public Server through extracts by the Tableau ETL process. 
-
-
-- The dashboard of Tableau is displayed on[https://saentisincident-php.herokuapp.com/views/ticketDashboard.php] via an embedded view script. The script is stored[https://github.com/DigiBP/digibp-saentis-2/tree/master/web/views] in the ticketStatus.php file. 
+- The dashboard of Tableau is displayed on the [Säntis PHP Website](https://saentisincident-php.herokuapp.com/views/ticketDashboard.php) via an embedded view script. The script is stored in the [GitHub Repo](https://github.com/DigiBP/digibp-saentis-2/tree/master/web/views) in the ticketStatus.php file. 
 
 ## Instructions for Testing
 Following steps provide instructions on how to test the Incident Management process as described in the Process chapter.
