@@ -122,21 +122,16 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 ![Big Picture](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
 
 #### Create an Issue using Camunda
-| **1 Step** |
-| ------------------ |
-|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on task list 4. After that click on start Overall Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
-
-| **2 Step - Incident Creation** |
-| ------------------ |
-|Fill out all fields (As in the example) and click on Start to start the Process ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
-
-| **3 Step - Incident Identification** |
-| ------------------ |
-|After the second step follows the incident identification process. The incident manager confirms whether the incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
-
-| **4 Step - Add Incident Details** |
-| ------------------ |
-|At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the incident is terminated in our case and passed on to the next position.  ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
+** JOEL: Tabellen würde ich wiefolgt formatieren:**
+| **1 Step** |- |
+| ------------------ |- |
+|1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on task list 4. After that click on start Overall Process| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
+| **2 Step - Incident Creation** |- |
+|Fill out all fields (As in the example) and click on Start to start the Process |![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
+| **3 Step - Incident Identification** |- |
+|After the second step follows the incident identification process. The incident manager confirms whether the incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text]|(https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
+| **4 Step - Add Incident Details** |- |
+|At this point, the incident manager can add the "Affected Application" and the SystemID. This additional information is confirmed with the "Complete" button. After confirmation, the incident is terminated in our case and passed on to the next position. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
 
 
 
