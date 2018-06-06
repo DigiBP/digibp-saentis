@@ -165,7 +165,7 @@ This chapter describes what you can see in the Ticket Dashboard. The Dashboard/C
 | **Ticket Status** | - |
 |This "Ticket Status" view shows the Number of records relating to the Ticket Status. It is differentiated whether a ticket is "New" "Open" Rejected" or "Solved". The ticket status and whether the ticket is"Active" or "Completed" is also visible on this view.| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardStatus.png) |
 | **Tickets/Time** | - |
-|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardTime.png) |
+|This "Tickets/Time" view shows the ticket over the Time. It differentiate between when a ticket was opened and when a ticket was ended. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardTime.png) |
 
 ### Check for Incident Status via eMail (Webformular)
 
