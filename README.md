@@ -161,9 +161,9 @@ This chapter describes what you can see in the Ticket Dashboard. The Dashboard/C
 
 | **Overview** | - |
 | ------------------ | - |
-|This "overview" view shows the number of data records in relation to the affected applications and the customer. The individual case can be viewed and filtered using the "Case ID" View.It is differentiated whether a ticket is "New" "Open" Rejected" or "Solved". The ticket status and whether the ticket is"Active" or "Completed" is also visible on this view.| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardOverview.png) |
+|This "overview" view shows the number of data records in relation to the affected applications and the customer. The individual case can be viewed and filtered using the "Case ID" View.| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardOverview.png) |
 | **Ticket Status** | - |
-|This "Ticket Status" view shows the Number of records relating to the Ticket Status.| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardStatus.png) |
+|This "Ticket Status" view shows the Number of records relating to the Ticket Status. It is differentiated whether a ticket is "New" "Open" Rejected" or "Solved". The ticket status and whether the ticket is"Active" or "Completed" is also visible on this view.| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardStatus.png) |
 | **Tickets/Time** | - |
 |...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardTime.png) |
 
