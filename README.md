@@ -70,8 +70,8 @@ The following figure shows a simple visualization of our overall process. This p
 - Issue Resolution
 
 
-| **Overall Process** | - |
-| ------------------ | - |
+| **Overall Process** | 
+| ------------------ | 
 | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
 ### Issue Creation Process
@@ -126,9 +126,7 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 | **2 Step - Create an Incident with the web form** | - |
 ||1. Click on "Open a new Incident (First point on the Picture above) 2. Fill out all fields like this example an click "create ticket" ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHP.png) 3.The Incident was successfully transmitted when "Success" appears. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationPHPSuccess.png)|
 
-Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
-**JOEL: Dies stimmt so nicht, es gibt einen unterschied zwischen IMPACT und PRIORITY**
-
+Note: **If the incident has a high Impact , a Twitter message is generated directly.**
 
 #### Create an Issue using e-Mail
 
@@ -152,8 +150,7 @@ Again the incident manager has to select whether the incident has a high priorit
 
 
 ## Issue Diagnosis & Resolution
-**JOEL: Vollständigkeitshalber müssten wir noch Issue Diagnosis und Issue Resultion erwähnenè**
-
+For the Issue Diagnosis CMMN is used in order to allow the incident manager to use discretionary tasks and provide the necessary flexibility to solve cases with different characteristics. Finally, in the issue resolution process, the customer gets informed that the ticket will be closed and furthermore, if the incident was tweetet, a new manual tweet has to be generated, informing the customers about the resolution and the actions taken.
 
 ### Tableau Dashboard
 
@@ -174,9 +171,6 @@ This chapter describes what you can see in the Ticket Dashboard. The Dashboard/C
 |Go to the following URL https://saentisincident-php.herokuapp.com/ and klick on "Check Incident Status".| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
 | **2 Step** |- |
 |Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
-
-
-**JOEL: Technical Details müsste man auch noch etwas konsolidieren. Tools werden mehrfach beschrieben und erwähnt (trivial! wenns nit längt isch halb so wild! :-) **
 
 # Developer Documentation
 ## Variables
@@ -242,7 +236,6 @@ Different automation techniques and languages were used.
 - The dashboard of Tableau is displayed on the [Säntis PHP Website](https://saentisincident-php.herokuapp.com/views/ticketDashboard.php) via an embedded view script. The script is stored in the [GitHub Repo](https://github.com/DigiBP/digibp-saentis-2/tree/master/web/views) in the ticketStatus.php file. 
 
 
-**JOEL: Hier müssten wir wohl noch sämtliche Logins hinterlegen, ZAPIER; TWITTER; GOOGLE ACCOUNT, TABLEAU am besten das PW Andreas per E-Mail zusenden?**
 ## Instructions for Testing
 Following steps provide instructions on how to test the Incident Management process as described in the Process chapter.
 - Open the [Säntis Heroku App](https://saentisincident.herokuapp.com/) (this might take a while zZZzzZZZ)
