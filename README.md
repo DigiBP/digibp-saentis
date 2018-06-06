@@ -72,7 +72,7 @@ The following figure shows a simple visualization of our overall process. This p
 
 | **Overall Process** | - |
 | ------------------ | - |
-|**JOEL: Hier wäre jeweils kurz eine Beschreibung gut was passiert beim Jeweiligen sub-process, unter anderem auch was für notations e.g. BPMN, CMMN, sowie DMN die verwendet wurden und was für Schnittstellen involviert sind (nur wenns reicht)** | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
+| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
 ### Issue Creation Process
 
