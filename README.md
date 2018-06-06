@@ -68,11 +68,11 @@ The following figure shows a simple visualization of our overall process. This p
 - Issue Identification
 - Issue Diagnosis
 - Issue Resolution
-**JOEL: Hier wäre jeweils kurz eine Beschreibung gut was passiert beim Jeweiligen sub-process, unter anderem auch was für notations e.g. BPMN, CMMN, sowie DMN die verwendet wurden und was für Schnittstellen involviert sind (nur wenns reicht)**
+
 
 | **Overall Process** | - |
 | ------------------ | - |
-|TEXT | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
+|**JOEL: Hier wäre jeweils kurz eine Beschreibung gut was passiert beim Jeweiligen sub-process, unter anderem auch was für notations e.g. BPMN, CMMN, sowie DMN die verwendet wurden und was für Schnittstellen involviert sind (nur wenns reicht)** | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
 ### Issue Creation Process
 
@@ -109,7 +109,7 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 **JOEL: Tabellen würde ich wiefolgt formatieren:**
 **JOEL: Zudem Links falls möglich bei den Links die Syntax ''[text](link)'' brauchen
 
-| **1 Step** | - |
+| **1 Step - Go to Camunda | - |
 | ------------------ | - |
 |1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on task list 4. After that click on start Overall Process | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
 | **2 Step - Incident Creation** |- |
@@ -121,7 +121,7 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 
 #### Create an Incident with the Web Form
 
-| **1 Step - Go to the Webpage** | - |
+| **1 Step - Go to the Webpage | - |
 | ------------------ | - |
 | 1. Click the following URL to go to our Heroku PHP site: https://saentisincident-php.herokuapp.com/ 2. Create a new incident 3. Retrieve incident status 4. Dashboard (Overview) which shows the current incidents 5. Landing page 6. You can also access the individual actions through the yellow-bordered area. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/WebformularPHP.png) |
 | **2 Step - Create an Incident with the web form** | - |
@@ -135,7 +135,7 @@ Note: **If the incident is "Critical", a Twitter message is generated directly. 
 
 #### Create an Issue using e-Mail
 
-| **1 Step** | - |
+| **1 Step | - |
 | ------------------ | - |
 | Write an eMail to this e-mail: [t700agmb@robot.zapier.com] | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/EmailTo.png) |
 
