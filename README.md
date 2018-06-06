@@ -161,7 +161,7 @@ This chapter describes what you can see in the Ticket Dashboard. The Dashboard/C
 
 | **Overview** | - |
 | ------------------ | - |
-|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardOverview.png) |
+|This "overview" view shows the number of data records in relation to the affected applications and the customer. The individual case can be viewed and filtered using the "Case ID" View.  | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardOverview.png) |
 | **Ticket Status** | - |
 |...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardStatus.png) |
 | **Tickets/Time** | - |
