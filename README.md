@@ -156,7 +156,8 @@ Again the incident manager has to select whether the incident has a high priorit
 
 
 ### Tableau Dashboard
-**JOEL: Schreib doch hier ganz kurz was man auf Tableau sieht und wie man einlogged, nur link keine printscreens**
+
+This chapter describes what you can see in the Ticket Dashboard. The Dashboard/Cockpit was created with Tableau. The dashboard/cockpit contains three tabs which are structured as follows:
 
 | **Overview** | - |
 | ------------------ | - |
