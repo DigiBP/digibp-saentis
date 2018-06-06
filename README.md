@@ -174,8 +174,7 @@ This chapter describes what you can see in the Ticket Dashboard. The Dashboard/C
 
 # Developer Documentation
 ## Variables
-The following set of variables was introduced in our process. We choose to define all variables in a structured matter and describe, for who they are visible. This allowed us to easier work together. These variables were all initialized automatically, so one could count on the instanciation of the variables.
-![Variables](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Variables.png | width=100)
+The following set of variables was introduced in our process. We choose to define all variables in a structured matter and describe, for who they are visible. This allowed us to easier work together. These variables were all initialized automatically, so one could count on the instanciation of the variables. | ![Variables](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Variables.png) |
 
 ## Integrations & Interfaces
 Our solution is integrated with multiple third party solution:
