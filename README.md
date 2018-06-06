@@ -161,11 +161,11 @@ This chapter describes what you can see in the Ticket Dashboard. The Dashboard/C
 
 | **Overview** | - |
 | ------------------ | - |
-|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
+|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardOverview.png) |
 | **Ticket Status** | - |
-|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
+|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardStatus.png) |
 | **Tickets/Time** | - |
-|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
+|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/SaentisDashboardTime.png) |
 
 ### Check for Incident Status via eMail (Webformular)
 
