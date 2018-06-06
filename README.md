@@ -227,13 +227,20 @@ Different automation techniques and languages were used.
 - The dashboard is published on the [Tableau Public Server](https://public.tableau.com).
 - Through the pro-license the [PostgreSQL database of Heroku](https://data.heroku.com/datastores/de020a0e-4eba-4e7d-b4c1-7ce92a1ad729#administration) could be connected directly. 
 - The following picture shows which data from Heroku is relevant for the integration on Tableau. 
-![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/HerokuDatabase.png)
 - The following picture shows how the relevant data of Heroku was integrated into Tableau. It is important to activate SSL during the connection. 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/TableauHerokuConnection.png) 
 - The following two tables were linked with an inner join to display the relevant data from the Heroku database on a tableau. 
 ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/Innerjoin.png)
 - Tableau Public does not support live connection of the data nor does it support scattered schedules for the extracts. Therefore, the data is loaded manually from Tableau Desktop to the Tableau Public Server through extracts by the Tableau ETL process. 
 - The dashboard of Tableau is displayed on the [Säntis PHP Website](https://saentisincident-php.herokuapp.com/views/ticketDashboard.php) via an embedded view script. The script is stored in the [GitHub Repo](https://github.com/DigiBP/digibp-saentis-2/tree/master/web/views) in the ticketStatus.php file. 
+
+
+## Instructions for Testing
+Following steps provide instructions on how to test the Incident Management process as described in the Process chapter.
+- Open the [Säntis Heroku App](https://saentisincident.herokuapp.com/) (this might take a while zZZzzZZZ)
+- Login using the following user (Username: `demo`, Password: `demo`)
+- Start a new process by clicking on `Home` > `Tasklist` and choose `Start process`
+- Choose the `Overall process` to start the entire incident management workflow
 
 ## License
 - [Apache License, Version 2.0](https://github.com/DigiBP/digibp-archetype-camunda-boot/blob/master/LICENSE)
