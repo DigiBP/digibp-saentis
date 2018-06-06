@@ -171,8 +171,7 @@ This chapter describes what you can see in the Ticket Dashboard. The Dashboard/C
 
 | **1 Step** |- |
 | ------------------ | - |
-|Go to the following URL https://saentisincident-php.herokuapp.com/ and klick on "Check Incident Status". It is differentiated whether a ticket is "New" "Open" Rejected" or "Solved". The ticket status and whether the ticket 
- is"Active" or "Completed" is also visible on this view.| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
+|Go to the following URL https://saentisincident-php.herokuapp.com/ and klick on "Check Incident Status". It is differentiated whether a ticket is "New" "Open" Rejected" or "Solved". The ticket status and whether the ticket is"Active" or "Completed" is also visible on this view.| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
 | **2 Step** |- |
 |Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
 
