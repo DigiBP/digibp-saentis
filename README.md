@@ -68,11 +68,11 @@ The following figure shows a simple visualization of our overall process. This p
 - Issue Identification
 - Issue Diagnosis
 - Issue Resolution
-**JOEL: Hier wäre jeweils kurz eine Beschreibung gut was passiert beim Jeweiligen sub-process, unter anderem auch was für notations e.g. BPMN, CMMN, sowie DMN die verwendet wurden und was für Schnittstellen involviert sind (nur wenns reicht)**
+
 
 | **Overall Process** | - |
 | ------------------ | - |
-|TEXT | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
+|**JOEL: Hier wäre jeweils kurz eine Beschreibung gut was passiert beim Jeweiligen sub-process, unter anderem auch was für notations e.g. BPMN, CMMN, sowie DMN die verwendet wurden und was für Schnittstellen involviert sind (nur wenns reicht)** | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/00_Overall.png) |
 
 ### Issue Creation Process
 
@@ -106,13 +106,12 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 ![Big Picture](https://github.com/DigiBP/digibp-saentis/blob/master/pics/BigPicture_v1.png)
 
 #### Create an Issue using Camunda
-**JOEL: Tabellen würde ich wiefolgt formatieren:**
-**JOEL: Zudem Links falls möglich bei den Links die Syntax ''[text](link)'' brauchen
 
-| **1 Step** | - |
+
+| **1 Step - Go to Camunda** | - |
 | ------------------ | - |
 |1. Click the following URL to go to our Heroku website: https://saentisincident.herokuapp.com/app/welcome/default/ 2. login with demo for the Username and demo for the Password 3. Click on task list 4. After that click on start Overall Process | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
-| **2 Step - Incident Creation** |- |
+| **2 Step - Incident Creation** | - |
 |Fill out all fields (As in the example) and click on Start to start the Process | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentCreationMask.png) |
 | **3 Step - Incident Identification** | - |
 |After the second step follows the incident identification process. The incident manager confirms whether the incident is supported. In our case yes - so the check mark at "Is this Incident supported" is set and this is confirmed with the "complete" button. ![alt text]|(https://github.com/DigiBP/digibp-saentis/blob/master/pics/IncidentIdentification.png) |
@@ -129,8 +128,6 @@ The incident can be started in several ways (see Big Picture). In this chapter a
 
 Note: **If the incident is "Critical", a Twitter message is generated directly. The same procedure as when you want to enter an incident in Camunda that is classified as "Critical".** 
 **JOEL: Dies stimmt so nicht, es gibt einen unterschied zwischen IMPACT und PRIORITY**
-
-
 
 
 #### Create an Issue using e-Mail
@@ -159,12 +156,21 @@ Again the incident manager has to select whether the incident has a high priorit
 
 
 ### Tableau Dashboard
-**JOEL: Schreib doch hier ganz kurz was man auf Tableau sieht und wie man einlogged, nur link keine printscreens**
+
+This chapter describes what you can see in the Ticket Dashboard. The Dashboard/Cockpit was created with Tableau. The dashboard/cockpit contains three tabs which are structured as follows:
+
+| **Overview** | - |
+| ------------------ | - |
+|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/StartProcess.png) |
+| **Ticket Status** | - |
+|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
+| **Tickets/Time** | - |
+|...| ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/AddIncidentDetails.png) |
 
 ### Check for Incident Status via eMail (Webformular)
 
 | **1 Step** |- |
-| ------------------ |- |
+| ------------------ | - |
 |Go to the following URL https://saentisincident-php.herokuapp.com/ and klick on "Check Incident Status". | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckIncidentStatusEmail.png)|
 | **2 Step** |- |
 |Enter the email you used to write an Incident on [t700agmb@robot.zapier.com] an cklick on "Check Ticket Status" to see what the status of the Incident is. | ![alt text](https://github.com/DigiBP/digibp-saentis/blob/master/pics/CheckTicketStatusButton.png)|
